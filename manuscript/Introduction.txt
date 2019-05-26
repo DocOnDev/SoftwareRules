@@ -1,6 +1,10 @@
 # Introduction #
 
+# Hello.
+
 My name is Doc Norton and I make software.
+
+## We were nerds. And we didn't care.
 
 I've been making software of some form or another since 1982. 1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week. We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II. A minute or two later, our creations would be ready for us to review, modify, and run.
 
@@ -11,3 +15,65 @@ We were using BASIC. No teacher. No mentor. Just the three of us and a BASIC lan
 It was fun. We were nerds. And we didn't care. We were making things. Building new worlds. Creating.
 
 No. It was more than fun. It was awesome.
+
+As happens in life, Matt, Steve, and I eventually drifted apart. We developed other interests like sports, science, drama, and girls. We made new friends who shared those interests. And we spent less time together as we got older. Eventually, we each went to a different college.
+
+But during that year, seeds were planted for me. I learned that I liked creating. I liked solving problems. Despite my lackluster interest in school, I really enjoyed being challenged and learning new things when it came to computers and writing code.
+
+## My hobby becomes my profession
+
+My hobby transformed into my career as I took on new challenges and learned new languages. BASIC, Pascal, Fortran, COBOL, RPG, and WANG VS Batch (it's a language) were my first few languages. I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989.
+
+From there, I learned Assembler for the PC and spent about 6 months writing low level disk editing software and TSR-style utilities before I grew frustrated with how slow Assembler was to write in and I moved on to C.
+
+At the time, I was using Microsoft's IDE and compiler. It was a logical jump from Microsoft's Macro Assembler tools. But my friend and colleague, Joe Sladick, suggested I try Borland's IDE instead. It ran faster, had a better debugger, and could be run on OS/2, which I was playing with at the time. Borland's Turbo C++ came as part of the package deal and it wasn't long before I was trying to figure out this Object Oriented stuff.
+
+## An interesting opportunity
+During that same time period, Joe and I were working for a law firm that needed some software written quickly. Their docketing department had been running on an old mini computer that was out of warranty, dying, and proprietary. They needed a replacement. And fast.
+
+Joe pitched them on FoxBASE as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
+
+Joe was persuasive and they agreed to allow him to work on it as a plan B while they figured out a real solution. They would allow him to play around, but he had 3 months. IT Management had a due date of 3 months for completion of their comprehensive requirements. If Joe's little experiment met the requirements, it would be considered for final evaluation.
+
+Joe invited me to join him. We could not allow it to disrupt our core duties. This was a "spare time" initiative. It was going to be extra hours, the odds were against us, and we had little sincere support from management. Oh, and the customer wasn't all that interested either.
+
+I jumped at the opportunity.
+
+It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxBASE. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxBASE. 
+
+Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxBASE in FoxBASE. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
+
+## Building in small pieces
+We built the docketing system in small pieces. We didn't iterate necessarily, but we did deliver incrementally. And Joe was a stickler for quality. He didn't mind the cleverness now and then, but he was quite annoyed with long functions or procedures. So I quickly developed a habit of writing small independent things and piecing them together.
+
+While our managers were holding meetings to document requirements and combing through the existing system to devise a comprehensive feature for feature comparison, we were building a replacement one small step at a time. We started with the core work; the things they did every day, multiple times per day. We'd hand draw a few screen mock-ups on paper and talk them over with the docketing department. With their nod, we'd go build that screen in a matter of days and bring it back to them for feedback.
+
+## Getting customer feedback
+Quite often, we'd make a mock-up based on their existing system. They'd take a look at it and nod their heads. And the docketing manager would give her approval.
+
+"Yes. Uh-Huh. That's right. That looks good. Just like the existing system. Let's go with this.", she'd say.
+
+So we'd confirm, "Perfect. So we'll build it just like this. And you want this button here to load the court calendar on the next screen, right? Just like in the existing system."
+
+"Well....", she'd reply with hesitation in her voice, "I never really liked the way that functioned. Half the stuff I need for the case is on the prior screen. I keep a notepad next to my desk to write down the key case information so that I can refer to it while looking at the court calendar."
+
+"Interesting.", Joe would say, "So, if you could design it differently, what would that look like?", and he'd slide her a legal pad and pencil.
+
+45 minutes later, we'd have a new screen design or maybe a few screens. And we'd go off and build those. Always focusing on specific pieces of functionality that solved a targeted core business problem. If the screen design had summary data or other stuff that was useful, but not critical, we didn't build it yet.
+
+These incremental changes meant that the database structure would need to change to support new requirements. Changing the database meant we risked losing data. So we became adept at writing short install scripts that would back everything up, migrate the old data to the new structure and install the new application. Boom!
+
+In a matter of a couple months, we'd developed new scheduling screens that the docketing department really loved. These new screens were much easier to use. They didn't want to wait. So we devised a way to marshal data back and forth between the mini and the PC which allowed them to use both systems.
+
+Then things changed. The docketing department didn't want to write any more detailed requirements. They didn't want to create comprehensive feature lists. They wanted to keep building the application in this incremental way.
+
+IT Management warned them of the risks. This was not how corporate software was written. This was a prototype, at best. Requirements would surely be missed. Documentation would not exist! It would be chaos!! We at least needed a step by step plan with due dates and resource allocations and Gantt charts.
+
+But the docketing team was having none of it. They were able to see regular progress in the form of working software. They could make the call on whether or not a feature got developed now or later and they had near complete control over the design.
+
+Plan B became Plan A.
+
+This meant we could focus on the software full time. We set up a war room where Joe and I worked together, side by side. We'd go visit the Docketing department and they'd come visit us. We were in near constant communication. We did field visits to the courts to see how things really worked. We did docket runs with couriers to see how what we did impacted their lives. It was fast paced. It was intense. It was fun.
+
+But it wasn't perfect. At the start, we were able to test all new functionality on our machines before showing it to anyone else. Now that we were both moving faster and dealing with a larger system, we were spending more and more time testing and less and less time coding. Docketing clerks picked up a lot of the testing, which helped, but now they were seeing pre-release in detail and were starting to wonder if maybe the solution was too buggy. And, as the solution grew, it became even harder to diagnose and fix the issues. Due, in no small part, to FoxBASE's loose scopes and looser types.
+
