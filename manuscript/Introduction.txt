@@ -144,7 +144,9 @@ Whoops.
 So we laid down some rules.
 
 First, no private variables. It didn't matter if it was convenient on occasion. It was trouble. So make them local and handle them properly. This also meant no declaration by use, which required a lot of clean-up.
+
 Second, before you change the return type of a method, make sure you know all the places where it is called. Not just the places you personally wrote. Consider wrapping the type change in another method rather than changing the base method. You might have missed where some dynamic code is calling the base method (remember that clever stuff?).
+
 Third, Test more. Test better. Test faster.
 
 Testing was already difficult. The application kept getting bigger and bigger. There was more and more to test.
@@ -172,7 +174,7 @@ From XP to Scrum to Agile to Lean Startup to Design Thinking and on and on, I ke
 
 This book is an homage to Joe Sladick and the lessons I learned from him.
 
-I owe a great many thanks to those who have helped me along the way.
+I owe a great many thanks to those who have helped me along the way, but Joe was the first. He was the first in a long line of mentors and friends who taught me new things by their instruction, example, and argument. And some of them, like Joe, made me feel like maybe, just maybe, I could do that too.
 
 The 7 Rules are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others. People who are are uncovering better ways of developing software by doing it and helping others do it[^AgileManifesto].
 
