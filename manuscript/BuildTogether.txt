@@ -1,9 +1,9 @@
 {#build_together}
 # Build Together #
 
-{class: quote}
-> The strength of the team is each individual member. The strength of each member is the team.
-> --Phil Jackson
+{class: quote-left}
+B> The strength of the team is each individual member. The strength of each member is the team.
+B> --Phil Jackson
 
 # A story
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non risus felis. Phasellus faucibus ut lacus vitae vestibulum. Duis accumsan et nulla non pellentesque. In nec felis id lorem ultricies blandit. Proin eget nulla arcu. Ut vehicula est congue nulla volutpat, nec rhoncus ligula posuere. Nullam porta ullamcorper orci ac bibendum. Nullam interdum quis turpis ac semper. Morbi feugiat ut quam ut bibendum. Integer elementum nibh vitae ultricies facilisis.
