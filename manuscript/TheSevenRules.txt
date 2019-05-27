@@ -9,3 +9,5 @@ Building on those lessons learned early on, I've slowly but surely collected a s
 ## [Solve the problems you have](#solve_problems_you_have)
 ## [Release ridiculously often](#release_often)
 ## [Automation over documentation](#automation_over_documentation)
+
+Each section of this book explores the rule in detail. We'll take a look what each rule means in depth, how it is applied in the creation of software,  and how it is supported by science.
