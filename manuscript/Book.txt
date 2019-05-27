@@ -1,4 +1,5 @@
 Introduction.txt
+TheSevenRules.txt
 BuildTogether.txt
 CreateSimpleThings.txt
 BeMeticulousAboutComposition.txt
