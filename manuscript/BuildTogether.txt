@@ -7,7 +7,7 @@ B> -- Steve Jobs
 
 # A story
 {icon: book-open}
-B> # The story of building together.
+The story of building together.
 
 
 
