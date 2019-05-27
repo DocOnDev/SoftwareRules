@@ -111,27 +111,31 @@ global
 : Scoped to the entire application. Once declared, global variables are accessible by any method anywhere in the code.
 : Must be explicitly declared.
 
+#### An example of FoxPro's scope issues
 Now let's imagine we both write a method. Yours calculates sales tax on an order and mine calculates the entire invoice, including tax. I will, of course, call your method to calculate the tax.
 
 I have a variable that holds the subtotal. I've named it subtotal. Because that makes sense to me. I get order data, calculate the subtotal, and then pass the order data to you for tax calculation. I then add the taxes to the subtotal to get the order total. And all is well.
 
 Fast forward a few months and the tax rules have changed. Now, you have to calculate different tax rates for different types of products. So you subtotal taxes for product types into a variable you call subtotal. Because that makes sense to you.
 
-And now my method starts returning wrong information. When it is wrong, the total is always less than it should be. Never over. Always under. And sometimes, but not often, it is correct.
+And now my method starts intermittently returning wrong information. When it is wrong, the total is always less than it should be. Never over. Always under.
 
 As it turns out, I declared the variable subtotal by use. And that means that when I call your method, the variable subtotal is in scope for you. I didn't pass it to you, but you still have access to it.
 
 As you might recall, you also called your variable subtotal. And it turns out that you also declared subtotal by use. Or at least you thought you did. But when your method gets called by my method, the subtotal you are referencing is actually mine. You aren't declaring by use because there is already a subtotal variable in scope for you. You are simply using it.
 
-So your method appears to work just fine and mine doesn't. But it is your method that is messing mine up. Sort of. In the process of calculating the tax on the order, you overwrite my subtotal. So when I finish my calculation, I am using whatever subtotal you last calculated. Even though you didn't return that value to me.
+In the process of calculating the tax on the order, you overwrite my subtotal. When I finish my calculation, I am using whatever subtotal you last calculated. Even though you didn't return that value to me. You modified a variable I declared by use and was thereby in scope for your method when called by mine.
 
-You can imagine how this could cause very strange behaviors, especially if the method overwriting your private variables is three or four layers away in the call stack and is called conditionally. Intermittent errors that have a root cause in a place that is no longer in the stack by the time the error occurs.
+Sometimes, your subtotal and my subtotal match because all the items on the order have the same tax rate. And sometimes, your subtotal is less than mine because you subtotal by tax type and re-use the variable for each tax type. Hence the intermittent failure and the low total for every failure.
 
+You can imagine how this could cause very strange behaviors, especially if the method overwriting your private variables is three or four layers away in the call stack and is called conditionally. You get intermittent errors that have a root cause in a place that is no longer in the stack by the time the error occurs.
+
+### Types in FoxPro
 And there were other issues with type. You could, for example, initialize a variable as an integer and then later assign a string to that same variable. You'd get no runtime errors when you changed types. But you might get an error when you later tried to execute a mathematical operator on a string that you expected to be an integer.
 
 Imagine I have a method that will tell you the date that is N days from now. You pass it a number of days and I return to you the date that is that many days from today. I return it as a DATE(). You find this useful and you use it with success.
 
-I later decide that my method doesn't need to return a DATE(). Every time I call it, I transform the date into a string format. So, to reduce duplication, I change the method to return a string and I change all the methods that I know of that call the days from now method. I test all my changes. All is well.
+I later decide that my method doesn't need to return a DATE(). Every time I call it, I transform the date into a string format. So, to reduce duplication, I change the method to return a string and I change all the methods that I know of that call the days from now method. I manually test all my changes. All is well.
 
 That is until your area of the application bombs because it is trying to do date math on a string.
 
@@ -140,9 +144,9 @@ Whoops.
 ## Automated tests
 So we laid down some rules.
 
-First off, no private variables. It didn't matter if it was convenient on occasion. It was trouble. So make them local and handle them properly. This also meant no declaration by use, which required a lot of clean-up.
-Second, before you change the return type of a method, make sure you know all the places where it is called. Not just the places you personally wrote. And consider wrapping the type change in another method rather than changing the base method. You might have missed where some dynamic code is calling the base method (remember that clever stuff?).
-Third, Test more.
+First, no private variables. It didn't matter if it was convenient on occasion. It was trouble. So make them local and handle them properly. This also meant no declaration by use, which required a lot of clean-up.
+Second, before you change the return type of a method, make sure you know all the places where it is called. Not just the places you personally wrote. Consider wrapping the type change in another method rather than changing the base method. You might have missed where some dynamic code is calling the base method (remember that clever stuff?).
+Third, Test more. Test better. Test faster.
 
 Testing was already difficult. The application kept getting bigger and bigger. There was more and more to test.
 
@@ -159,14 +163,18 @@ No and then.
 
 Well, okay, a little and then.
 
+It took us about a year to complete the entire application. It had many more features then the original and worked exactly as they wanted it to. The application lived on for another decade before being replaced by a module in a commercial suite of legal firm management software.
+
 As happens in life, Joe and I eventually drifted apart. We talked for a while about starting a software consultancy together, but I was young and impatient and left the law firm to find more exciting work. Soon thereafter, I started my own consultancy and Joe and I talked less and less.
 
 Over the years, I expanded on the things I learned in those early days. In 1999, with an introduction to eXtreme Programming (XP), I felt I'd found my tribe. I imagined that somewhere in that tribe was Joe Sladick, but I never did see him again.
 
 From XP to Scrum to Agile to Lean Startup to Design Thinking and on and on, I kept learning and applying new ideas where I could. Through all of it, many of those base lessons held true.
 
-This book is an homage to Joe Sladick and the lessons I learned from him. It is about where I am today thanks to those who helped me along the way.
+This book is an homage to Joe Sladick and the lessons I learned from him.
 
-The 7 Rules are not my own. I believe these to be universal truths for software development. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others.
+I owe a great many thanks to those who have helped me along the way.
+
+The 7 Rules are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others.
 
 May the 7 Rules serve you well.
