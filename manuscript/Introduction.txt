@@ -1,6 +1,8 @@
 # Introduction #
 
-# Hello.
+# First, a little history.
+
+## Hello.
 
 My name is Doc Norton and I make software.
 
@@ -10,7 +12,7 @@ We wrote a lot of the classics - Print my name a hundred times, paper fortune te
 
 We were using BASIC. No teacher. No mentor. Just the three of us and a BASIC language reference.
 
-## We were nerds. And we didn't care.
+### We were nerds. And we didn't care.
 It was fun. We were nerds. And we didn't care. We were making things. Building new worlds. Creating.
 
 No. It was more than fun. It was awesome.
@@ -19,7 +21,7 @@ As happens in life, Matt, Steve, and I eventually drifted apart. We developed ot
 
 But during that year, seeds were planted for me. I learned that I liked creating. I liked solving problems. Despite my lackluster interest in school, I really enjoyed being challenged and learning new things when it came to computers and writing code.
 
-## My hobby becomes my profession
+### My hobby becomes my profession
 
 My hobby transformed into my career as I took on new challenges and learned new languages. BASIC, Pascal, Fortran, COBOL, RPG, and WANG VS Batch (it's a language) were my first few languages. I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989.
 
@@ -27,7 +29,7 @@ From there, I learned Assembler for the PC and spent about 6 months writing low 
 
 At the time, I was using Microsoft's IDE and compiler. It was a logical jump from Microsoft's Macro Assembler tools. But my friend and colleague, Joe Sladick, suggested I try Borland's IDE instead. It ran faster, had a better debugger, and could be run on OS/2, which I was playing with at the time. Borland's Turbo C++ came as part of the package deal and it wasn't long before I was trying to figure out this Object Oriented stuff.
 
-## An interesting opportunity
+### An interesting opportunity
 During that same time period, Joe and I were working for a law firm that needed some software written quickly. Their docketing department had been running on an old mini computer that was out of warranty, dying, and proprietary. They needed a replacement. And fast.
 
 Joe pitched them on FoxPro as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
@@ -40,17 +42,17 @@ Joe invited me to join him. We could not allow it to disrupt our core duties. Th
 
 I jumped at the opportunity.
 
-## FoxPro is awesome
+### FoxPro is awesome
 It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
 
 Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxBASE in FoxBASE. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
 
-## Building in small pieces
+### Building in small pieces
 We built the docketing system in small pieces. We didn't iterate necessarily, but we did deliver incrementally. And Joe was a stickler for quality. He didn't mind the cleverness now and then, but he was quite annoyed with long functions or procedures. So I quickly developed a habit of writing small independent things and piecing them together.
 
 While our managers were holding meetings to document requirements and combing through the existing system to devise a comprehensive feature for feature comparison, we were building a replacement one small step at a time. We started with the core work; the things they did every day, multiple times per day. We'd hand draw a few screen mock-ups on paper and talk them over with the docketing department. With their nod, we'd go build that screen in a matter of days and bring it back to them for feedback.
 
-## Getting customer feedback
+### Getting customer feedback
 Quite often, we'd make a mock-up based on their existing system. They'd take a look at it and nod their heads. And the docketing manager would give her approval.
 
 "Yes. Uh-Huh. That's right. That looks good. Just like the existing system. Let's go with this.", she'd say.
@@ -63,12 +65,12 @@ So we'd confirm, "Perfect. So we'll build it just like this. And you want this b
 
 45 minutes later, we'd have a new screen design or maybe a few screens. And we'd go off and build those. Always focusing on specific pieces of functionality that solved a targeted core business problem. If the screen design had summary data or other stuff that was useful, but not critical, we didn't build it yet.
 
-## Automating manually intensive changes
+### Automating manually intensive changes
 These incremental changes meant that the database structure would need to change to support new requirements. Changing the database meant we risked losing data. So we became adept at writing short install scripts that would back everything up, migrate the old data to the new structure and install the new application. Boom!
 
 In a matter of a couple months, we'd developed new scheduling screens that the docketing department really loved. These new screens were much easier to use. They didn't want to wait. So we devised a way to marshal data back and forth between the mini and the PC which allowed them to use both systems.
 
-## A small victory
+### A small victory
 Then things changed. The docketing department didn't want to write any more detailed requirements. They didn't want to create comprehensive feature lists. They wanted to keep building the application in this incremental way.
 
 IT Management warned them of the risks. This was not how corporate software was written. This was a prototype, at best. Requirements would surely be missed. Documentation would not exist! It would be chaos!! We at least needed a step by step plan with due dates and resource allocations and Gantt charts.
@@ -77,26 +79,26 @@ But the docketing team was having none of it. They were able to see regular prog
 
 Plan B became Plan A.
 
-## Building Together
+### Building Together
 This meant we could focus on the software full time. We set up a war room where Joe and I worked together, side by side. The war room was just outside the docket department so we could interact more often.
 
 We were in near constant communication. We did field visits to the courts to see how things really worked. We did docket runs with couriers to see how what we did impacted their lives. It was fast paced. It was intense. It was fun.
 
-## Finding defects
+### Finding defects
 When we first started writing the code, we were able to test all new functionality on our machines before showing it to anyone else. Now that we were moving faster, sitting together, and dealing with a larger system, our customer was more exposed to the raw first drafts. This was concerning for them. It seemed there were a lot more bugs than they remembered.
 They weren't wrong. We were spending more and more time fixing strange errors and manually testing. And we were spending less and less proportional time coding.
 
-## So many issues
+### So many issues
 Docketing clerks picked up a lot of the testing, which helped, but now they were seeing pre-release in detail and were starting to wonder if maybe the solution was too buggy. And, as the solution grew, it became even harder to diagnose and fix the issues. Due, in no small part, to Fox's loose scopes and looser types.
 
-## FoxPro is awful
+### FoxPro is awful
 FoxPro allowed you to declare a variable by use. Simply assign a value to a variable and you've declared that variable. No need to waste a line of code merely declaring a variable. Think of how much faster you could code by not declaring variables. Whoah.
 
 FoxPro also had an interesting concept of scope. There were local, private, and global variables. Local was scoped strictly to the method that declared it. Private variables were accessible by the declaring method and any methods it called. And a global variable was available to anything and everything once it was declared.
 
 Local and global variables needed to be explicitly declared as such. Any variable that was declared by use was automatically private. That meant that any method lower in the call chain of the declaring method also had access to that variable.
 
-### Scope in FoxPro
+#### Scope in FoxPro
 local
 : Scoped strictly to the declaring method.
 : Must be explicitly declared.
@@ -110,7 +112,7 @@ global
 : Scoped to the entire application. Once declared, global variables are accessible by any method anywhere in the code.
 : Must be explicitly declared.
 
-#### An example of FoxPro's scope issues
+##### An example of FoxPro's scope issues
 Now let's imagine we both write a method. Yours calculates sales tax on an order and mine calculates the entire invoice, including tax. I will, of course, call your method to calculate the tax.
 
 I have a variable that holds the subtotal. I've named it subtotal. Because that makes sense to me. I get order data, calculate the subtotal, and then pass the order data to you for tax calculation. I then add the taxes to the subtotal to get the order total. And all is well.
@@ -129,7 +131,7 @@ Sometimes, your subtotal and my subtotal match because all the items on the orde
 
 You can imagine how this could cause very strange behaviors, especially if the method overwriting your private variables is three or four layers away in the call stack and is called conditionally. You get intermittent errors that have a root cause in a place that is no longer in the stack by the time the error occurs.
 
-### Types in FoxPro
+#### Types in FoxPro
 And there were other issues with type. You could, for example, initialize a variable as an integer and then later assign a string to that same variable. You'd get no runtime errors when you changed types. But you might get an error when you later tried to execute a mathematical operator on a string that you expected to be an integer.
 
 Imagine I have a method that will tell you the date that is N days from now. You pass it a number of days and I return to you the date that is that many days from today. I return it as a DATE(). You find this useful and you use it with success.
@@ -140,7 +142,7 @@ That is until your area of the application bombs because it is trying to do date
 
 Whoops.
 
-## Automated tests
+### Automated tests
 So we laid down some rules.
 
 First, no private variables. It didn't matter if it was convenient on occasion. It was trouble. So make them local and handle them properly. This also meant no declaration by use, which required a lot of clean-up.
@@ -159,7 +161,7 @@ We didn't have comprehensive coverage (we didn't have code coverage metrics at a
 
 These new standards along with the tests helped to significantly reduce the number of issues being found by docket clerks and get us back on track for continued rapid delivery.
 
-## And then ...
+### And then ...
 No and then.
 
 Well, okay, a little and then.
