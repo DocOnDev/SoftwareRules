@@ -5,11 +5,36 @@
 B> Great things in business are never done by one person; they're done by a team of people.
 B> -- Steve Jobs
 
-# A story
+# Joining forces
 {icon: book-open}
-The story of building together.
 
+In 1986, shortly after he was forced out of Apple, Steve Jobs bought a small computer manufacturer named (drumroll) Pixar.
 
+In 2000, he relocated the company[^TechnologyNotEnough] to an abandoned Del Monte canning factory. The original plan called for three buildings, with separate offices for computer scientists, animators, and the Pixar executives. Jobs immediately scrapped it. Instead of three buildings, there was going to be a single vast space, with an atrium at its centre.
+
+“The philosophy behind this design is that it’s good to put the most important function at the heart of the building. Well, what’s our most important function? It’s the interaction of our employees. That’s why Steve put a big empty space there. He wanted to create an open area for people to always be talking to each other.” – Ed Catmull, the president of Pixar.[^PixarCollectiveCreativity]
+
+But for Jobs, it was not just about creating a space: he needed to make people go there. The primary challenge for Pixar, as he saw it, was getting its different cultures to work together and collaborate.
+
+John Lasseter, the chief creative officer at Pixar, describes the equation this way: “Technology inspires art, and art challenges the technology.”[^PixarPurpose]
+
+Jobs saw the separated offices as a design problem. He began with shifting the mailboxes to the atrium. He then moved the meeting rooms, the cafeteria, the coffee bar, and the gift shop to the centre of the building.
+
+Brad Bird, the director of “The Incredibles” and “Ratatouille,” said, “The atrium initially might seem like a waste of space. But Steve realised that when people run into each other when they make eye contact, things happen.”[^PixarInnovationLessons]
+
+Even if it came at the expense of convenience, the emphasis on consilience has always been a defining trait of Steve Jobs. Jobs insisted that the best creations occurred when people from disparate fields were connected, especially in an age of intellectual fragmentation.
+
+The Latin crest of Pixar University says it all: Alienus Non-Diutius. Alone no longer.[^DisneyAddsPixar]
+
+[^TechnologyNotEnough]: Lehrer, J., & Lehrer, J. (2017, June 20). Steve Jobs: "Technology Alone Is Not Enough". Retrieved from https://www.newyorker.com/news/news-desk/steve-jobs-technology-alone-is-not-enough
+
+[^PixarCollectiveCreativity]: Catmull, E., Hill, L. A., Brandeau, G., Truelove, E., & Lineback, K. (2019, February 25). How Pixar Fosters Collective Creativity. Retrieved from https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
+
+[^PixarInnovationLessons]: Innovation lessons from Pixar: An interview with Oscar-winning director Brad Bird. (n.d.). Retrieved from https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/innovation-lessons-from-pixar-an-interview-with-oscar-winning-director-brad-bird
+
+[^PixarPurpose]: Building a sense of purpose at Pixar. (n.d.). Retrieved from https://www.mckinsey.com/industries/media-and-entertainment/our-insights/building-a-sense-of-purpose-at-pixar
+
+[^DisneyAddsPixar]: Taylor, W. C., & Labarre, P. (2006, January 29). How Pixar Adds a New School of Thought to Disney. Retrieved from https://www.nytimes.com/2006/01/29/business/yourmoney/how-pixar-adds-a-new-school-of-thought-to-disney.html
 
 # The science
 {icon: book-open}
