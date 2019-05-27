@@ -31,7 +31,9 @@ At the time, I was using Microsoft's IDE and compiler. It was a logical jump fro
 ## An interesting opportunity
 During that same time period, Joe and I were working for a law firm that needed some software written quickly. Their docketing department had been running on an old mini computer that was out of warranty, dying, and proprietary. They needed a replacement. And fast.
 
-Joe pitched them on FoxBASE as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
+Joe pitched them on FoxPro as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
+
+Besides, FoxPro was brand new. Still in early release, FoxPro was Fox Software's move from FoxBASE, which was procedural, to an object oriented implementation. If we were going to write something for a PC, which was silly talk, why wouldn't we use a real language , like C, from a real company, like Microsoft.
 
 Joe was persuasive and they agreed to allow him to work on it as a plan B while they figured out a real solution. They would allow him to play around, but he had 3 months. IT Management had a due date of 3 months for completion of their comprehensive requirements. If Joe's little experiment met the requirements, it would be considered for final evaluation.
 
@@ -39,8 +41,8 @@ Joe invited me to join him. We could not allow it to disrupt our core duties. Th
 
 I jumped at the opportunity.
 
-## FoxBASE is awesome
-It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxBASE. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxBASE. 
+## FoxPro is awesome
+It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
 
 Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxBASE in FoxBASE. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
 
@@ -76,22 +78,38 @@ But the docketing team was having none of it. They were able to see regular prog
 
 Plan B became Plan A.
 
-## Testing Woes
-This meant we could focus on the software full time. We set up a war room where Joe and I worked together, side by side. We'd go visit the Docketing department and they'd come visit us. We were in near constant communication. We did field visits to the courts to see how things really worked. We did docket runs with couriers to see how what we did impacted their lives. It was fast paced. It was intense. It was fun.
+## Building Together
+This meant we could focus on the software full time. We set up a war room where Joe and I worked together, side by side. The war room was just outside the docket department so we could interact more often.
 
-But it wasn't perfect. At the start, we were able to test all new functionality on our machines before showing it to anyone else. Now that we were both moving faster and dealing with a larger system, we were spending more and more time testing and less and less time coding.
+We were in near constant communication. We did field visits to the courts to see how things really worked. We did docket runs with couriers to see how what we did impacted their lives. It was fast paced. It was intense. It was fun.
 
-In the midst of all this, FoxBASE became FoxPro and started adding object oriented features to the language. We switched to FoxPro and started adding in OO where we could, but much of the application was still primarily procedural.
+## Finding defects
+When we first started writing the code, we were able to test all new functionality on our machines before showing it to anyone else. Now that we were moving faster, sitting together, and dealing with a larger system, our customer was more exposed to the raw first drafts. This was concerning for them. It seemed there were a lot more bugs than they remembered.
+They weren't wrong. We were spending more and more time fixing strange errors and manually testing. And we were spending less and less proportional time coding.
 
 ## So many issues
 Docketing clerks picked up a lot of the testing, which helped, but now they were seeing pre-release in detail and were starting to wonder if maybe the solution was too buggy. And, as the solution grew, it became even harder to diagnose and fix the issues. Due, in no small part, to Fox's loose scopes and looser types.
 
 ## FoxPro is stupid
-FoxPro allowed you to declare a variable by use. Simply assign a value to a variable and you've declared that variable. No need to waste a line merely declaring a variable when you could declare it by use and do an assignment at the same time.
+FoxPro allowed you to declare a variable by use. Simply assign a value to a variable and you've declared that variable. No need to waste a line of code merely declaring a variable. Think of how much faster you could code by not declaring variables. Whoah.
 
 FoxPro also had an interesting concept of scope. There were local, private, and global variables. Local was scoped strictly to the method that declared it. Private variables were accessible by the declaring method and any methods it called. And a global variable was available to anything and everything once it was declared.
 
 Local and global variables needed to be explicitly declared as such. Any variable that was declared by use was automatically private. That meant that any method lower in the call chain of the declaring method also had access to that variable.
+
+### Scope in FoxPro
+local
+: Scoped strictly to the declaring method.
+: Must be explicitly declared.
+
+private
+: Scoped to the declaring method and any methods subsequent in the declaring methods call stack.
+: May be explicitly declared.
+: Declaration by use creates a private variable.
+
+global
+: Scoped to the entire application. Once declared, global variables are accessible by any method anywhere in the code.
+: Must be explicitly declared.
 
 Now let's imagine we both write a method. Yours calculates sales tax on an order and mine calculates the entire invoice, including tax. I will, of course, call your method to calculate the tax.
 
