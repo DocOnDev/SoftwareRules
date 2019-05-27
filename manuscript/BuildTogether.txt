@@ -1,14 +1,18 @@
 {#build_together}
 # Build Together #
 
-{class: quote-left}
+{icon: quote-left}
 B> Great things in business are never done by one person; they're done by a team of people.
 B> -- Steve Jobs
 
-{class: book-open}
-B> 
 # A story
+{icon: book-open}
+B> The story of building together.
+
+
 
 # The science
+{icon: book-open}
+B> The story of building together.
 
 # Getting started
