@@ -2,6 +2,8 @@
 
 Building on those lessons learned early on, I've slowly but surely collected a set of 7 rules that I use for guidance when I am coaching organizations or building teams. These 7 rules don't comprehensively cover all situations. They are not a playbook or a magic formula. They are rules/principles that guide my thinking and help me to make decisions. They are distillations of years of reading, experiencing, and failing, succeeding, and learning. They are, of course, based on my personal experience, but more important to me is that they are all supported by scientific study.
 
+Each section of this book explores one rule in detail.
+
 1. [Build Together](#build_together)
 1. [Create simple things in small steps](#create_simple_things)
 1. [Be meticulous about composition](#meticulous_about_composition)
@@ -9,5 +11,3 @@ Building on those lessons learned early on, I've slowly but surely collected a s
 1. [Solve the problems you have](#solve_problems_you_have)
 1. [Release ridiculously often](#release_often)
 1. [Automation over documentation](#automation_over_documentation)
-
-Each section of this book explores the rule in detail. We'll take a look what each rule means in depth, how it is applied in the creation of software,  and how it is supported by science.
