@@ -89,7 +89,7 @@ They weren't wrong. We were spending more and more time fixing strange errors an
 ## So many issues
 Docketing clerks picked up a lot of the testing, which helped, but now they were seeing pre-release in detail and were starting to wonder if maybe the solution was too buggy. And, as the solution grew, it became even harder to diagnose and fix the issues. Due, in no small part, to Fox's loose scopes and looser types.
 
-## FoxPro is stupid
+## FoxPro is awful
 FoxPro allowed you to declare a variable by use. Simply assign a value to a variable and you've declared that variable. No need to waste a line of code merely declaring a variable. Think of how much faster you could code by not declaring variables. Whoah.
 
 FoxPro also had an interesting concept of scope. There were local, private, and global variables. Local was scoped strictly to the method that declared it. Private variables were accessible by the declaring method and any methods it called. And a global variable was available to anything and everything once it was declared.
