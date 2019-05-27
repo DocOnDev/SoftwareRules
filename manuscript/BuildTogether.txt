@@ -1,7 +1,7 @@
 {#build_together}
-# Build together. #
+# The First Rule #
 
-# Build Together
+# Build Together.
 
 ## A story
 
