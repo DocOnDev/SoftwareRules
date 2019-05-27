@@ -1,1 +1,2 @@
+{#validate_always}
 # Validate before, during, and after. #

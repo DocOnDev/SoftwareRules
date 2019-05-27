@@ -183,3 +183,4 @@ The 7 Rules are not really my own. I believe them to be merely my articulation o
 [^AgileManifesto]: Beck, K., Beedle, M., Van Bennekum, A., Cockburn, A., Cunningham, W., Fowler, M., . . . Thomas, D. (2001). Manifesto for Agile Software Development. Retrieved from https://agilemanifesto.org/
 
 May the 7 Rules serve you well.
+

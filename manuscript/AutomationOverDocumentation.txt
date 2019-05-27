@@ -1,1 +1,2 @@
+{#automation_over_documentation}
 # Automation over documentation. #
