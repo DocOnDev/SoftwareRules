@@ -2,8 +2,8 @@
 # Build Together #
 
 {class: quote-left}
-B> The strength of the team is each individual member. The strength of each member is the team.
-B> --Phil Jackson
+B> Great things in business are never done by one person; they're done by a team of people.
+B> -- Steve Jobs
 
 {class: book-open}
 B> 
