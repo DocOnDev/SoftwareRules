@@ -1,6 +1,6 @@
 Introduction.txt
 TheSevenRules.txt
-BuildTogether.txt
+WorkTogether.txt
 CreateSimpleThings.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt

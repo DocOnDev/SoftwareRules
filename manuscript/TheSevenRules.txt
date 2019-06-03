@@ -4,7 +4,7 @@ Building on those lessons learned early on, I've slowly but surely collected a s
 
 Each section of this book explores one rule in detail.
 
-1. [Build Together](#build_together)
+1. [Work Together](#work_together)
 1. [Create simple things in small steps](#create_simple_things)
 1. [Be meticulous about composition](#meticulous_about_composition)
 1. [Validate before, during, and after](#validate_always)

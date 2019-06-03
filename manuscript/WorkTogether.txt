@@ -1,0 +1,96 @@
+{#work_together}
+# Work Together #
+
+{icon: quote-left}
+B> Great things in business are never done by one person; they're done by a team of people.
+B> -- Steve Jobs
+
+# Bringing Pixar Together
+{icon: book-open}
+B> In 1986, shortly after departing Apple, Steve Jobs bought the computer division of Lucas Films which up until that point had done short animation sequences for a some of Lucas' films including _Star Trek II: The Wrath of Khan_ and _Young Sherlock Holmes_.[^PixarStoryPageOne] These short animations were developed with their own proprietary system known as the Pixar Image Computer. With the purchase, Jobs launched a new company; Pixar.
+
+In 2000, he relocated the company[^TechnologyNotEnough] to an abandoned Del Monte canning factory. The original plan called for three buildings, with separate offices for computer scientists, animators, and the Pixar executives. Jobs immediately scrapped it. Instead of three buildings, there was going to be a single vast space, with an atrium at its centre.
+
+“The philosophy behind this design is that it’s good to put the most important function at the heart of the building. Well, what’s our most important function? It’s the interaction of our employees. That’s why Steve put a big empty space there. He wanted to create an open area for people to always be talking to each other.” – Ed Catmull, the president of Pixar.[^PixarCollectiveCreativity]
+
+But for Jobs, it was not just about creating a space: he needed to make people go there. The primary challenge for Pixar, as he saw it, was getting its different cultures to work together and collaborate.
+
+John Lasseter, the chief creative officer at Pixar, describes the equation this way: “Technology inspires art, and art challenges the technology.”[^PixarPurpose]
+
+Jobs saw the separated offices as a design problem. He began with shifting the mailboxes to the atrium. He then moved the meeting rooms, the cafeteria, the coffee bar, and the gift shop to the centre of the building.
+
+Brad Bird, the director of “The Incredibles” and “Ratatouille,” said, “The atrium initially might seem like a waste of space. But Steve realised that when people run into each other when they make eye contact, things happen.”[^PixarInnovationLessons]
+
+Even if it came at the expense of convenience, the emphasis on consilience has always been a defining trait of Steve Jobs. Jobs insisted that the best creations occurred when people from disparate fields were connected, especially in an age of intellectual fragmentation.
+
+The Latin crest of Pixar University says it all: Alienus Non-Diutius. Alone no longer.[^DisneyAddsPixar]
+
+* * *
+
+Wikipedia on Pixar - The Braintrust operates under a philosophy of a "filmmaker-driven studio," in which creatives help each other move their films forward through a process somewhat like peer review, as opposed to the traditional Hollywood approach of an "executive-driven studio" in which directors are micromanaged through "mandatory notes" from development executives ranking above the producers.[35][36] According to Catmull, it evolved out of the working relationship between Lasseter, Stanton, Docter, Unkrich, and Joe Ranft on Toy Story.[34]
+
+Look at "Innovate the Pixar Way"
+
+https://www.fastcompany.com/3027135/inside-the-pixar-braintrust - Excerpt from Creativity, Inc.
+
+* * * 
+
+Wreck-It Ralph has been the beneficiary of all that positive energy and then some. How the turnaround happened:
+
+- A new 'tude. Disney has always been an executive-led studio, Lasseter says, with layers of bosses deciding what the talent that actually makes the movies should do, including mandatory notes on changes. "That's the way most animation studios are set up," he says.
+
+But not Pixar. And now, not Disney, either. Instead, a so-called creative brain trust made up filmmakers is responsible for generating ideas that can be turned into scripts. They then pitch the best ones at a meeting, and directors are assigned to the ones that have the most potential.
+
+That way, says Lasseter, there is a personal investment that everyone shares. "We want to empower creative people," he says. "When they feel it's their child, they bend over backwards to raise it properly." As a result, "You are what you direct. You see bits and pieces of all of us in our work."
+
+From - https://www.usatoday.com/story/life/movies/2012/10/31/wreckitralph-disney-movie-animation/1667373/
+
+* * *
+
+
+Have you brought other elements of the Pixar sensibility to Disney?
+One thing that Ed Catmull and I brought from Pixar is the philosophy of making it a filmmaker-driven studio, not an executive-driven studio. An executive-driven studio is where you have layers of development executives who give the director mandatory notes. And when I came in to Disney, the term I heard from filmmakers was that they felt like they’d lost their compass. They spent most of their time trying to address mandatory notes, and a lot of them were contradictory, instead of focusing on what’s going to make the movie best.
+
+Back in the second heyday of the Disney Animation Studio, when “The Little Mermaid” and “Beauty and the Beast” and “Aladdin” and “The Lion King” were made, they kind of fell into a rut. Those films were great, but they felt like every film had to be that way.
+
+And so we instituted what we have developed at Pixar, which is a filmmaker-driven studio. Each movie is screened internally roughly every three months, and then we get together and give notes. And none of these notes, including mine, are mandatory. It’s just a group of peers around the table, and the director knows that everybody is helping them make the movie the best it can be.
+
+*AND*
+
+
+When you were first came to Disney out of CalArts in the late ’70s, was it an executive-driven studio?
+Well, it was interesting, because it was being led by the group of second-tier animators during Walt’s time. They became in charge through attrition, as all the great Disney animators, what they called Disney’s “Nine Old Men,” retired. And just after they came in, they started this training program to bring young people in — but as all this young talent started coming in, these guys felt threatened.
+
+And you have to understand how on fire we were coming out of CalArts. “Star Wars” came out in May of 1977, and then “Close Encounters of the Third Kind,” “Raging Bull”… It was so exciting to us, especially “Star Wars.” I sat in the Chinese theater on opening weekend after standing in line for six hours, and the way the film entertained people was unlike anything I’d ever experienced. I walked out of that theater saying, “I want to entertain people to this level, but do it with animation.” And that’s what we all felt.
+
+And these guys were really threatened by us. They kept us under their thumb, and eventually most of us left. Brad Bird left, Tim Burton left, I eventually got fired because I felt so strongly about computer animation and I wouldn’t take no for an answer. But I had made connections with Ed Catmull up at LucasFilm, so Ed hired me up there. And then we formed Pixar, and in 1986 Steve Jobs bought us from George Lucas.
+
+
+
+From - https://www.thewrap.com/disney-fired-john-lasseter-came-back-heal-studio/
+
+
+* * * 
+
+
+
+
+
+
+[^PixarStoryPageOne]: Our Story. (n.d.). Retrieved from https://www.pixar.com/our-story-1
+
+[^TechnologyNotEnough]: Lehrer, J., & Lehrer, J. (2017, June 20). Steve Jobs: "Technology Alone Is Not Enough". Retrieved from https://www.newyorker.com/news/news-desk/steve-jobs-technology-alone-is-not-enough
+
+[^PixarCollectiveCreativity]: Catmull, E., Hill, L. A., Brandeau, G., Truelove, E., & Lineback, K. (2019, February 25). How Pixar Fosters Collective Creativity. Retrieved from https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
+
+[^PixarInnovationLessons]: Innovation lessons from Pixar: An interview with Oscar-winning director Brad Bird. (n.d.). Retrieved from https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/innovation-lessons-from-pixar-an-interview-with-oscar-winning-director-brad-bird
+
+[^PixarPurpose]: Building a sense of purpose at Pixar. (n.d.). Retrieved from https://www.mckinsey.com/industries/media-and-entertainment/our-insights/building-a-sense-of-purpose-at-pixar
+
+[^DisneyAddsPixar]: Taylor, W. C., & Labarre, P. (2006, January 29). How Pixar Adds a New School of Thought to Disney. Retrieved from https://www.nytimes.com/2006/01/29/business/yourmoney/how-pixar-adds-a-new-school-of-thought-to-disney.html
+
+# The science
+{icon: book-open}
+B> The story of building together.
+
+# Getting started
