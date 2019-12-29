@@ -104,7 +104,7 @@ local
 : Must be explicitly declared.
 
 private
-: Scoped to the declaring method and any methods subsequent in the declaring methods call stack.
+: Scoped to the declaring method and any methods subsequent in the declaring method's call stack.
 : May be explicitly declared.
 : Declaration by use creates a private variable.
 
