@@ -1,0 +1,3 @@
+# Getting started
+{icon: book-open}
+B> How to get started working together.

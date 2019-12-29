@@ -5,38 +5,51 @@
 B> Great things in business are never done by one person; they're done by a team of people.
 B> -- Steve Jobs
 
-# Bringing Pixar Together
-{icon: book-open}
-B> In 1986, shortly after departing Apple, Steve Jobs bought the computer division of Lucas Films which up until that point had done short animation sequences for some of Lucas' films including _Star Trek II: The Wrath of Khan_ and _Young Sherlock Holmes_.[^PixarStoryPageOne] These short animations were developed with their own proprietary system known as the Pixar Image Computer. With the purchase, Jobs launched a new company; Pixar.
+# How Pixar Saved Apple
+In 1985, shortly after exiting Apple, Steve Jobs launched NeXT, Inc., a company focused on creating powerful computers for business and educational purposes. The strategy was to combine powerful hardware with cutting edge software to create a product that significantly out-performed all other desktop computers available on the PC market.[^NeXTHistory]
+
+[^NeXTHistory]: Full Circle: A Brief History of NeXT. (2016, June 24). Retrieved June 19, 2019, from http://lowendmac.com/2014/full-circle-a-brief-history-of-next/
+
+Then, in 1986, Jobs took an interest in a subsidiary of Lucas Films. The subsidiary, recently launched as Pixar, was spun out of the Lucas Films' Computer Division which was originally founded in 1979 with the intention of bringing computer graphics to feature films. In the seven year span from 1979 to 1986, the group had completed only a few short animation sequences for some of Lucas' films including _Star Trek II: The Wrath of Khan_ and _Young Sherlock Holmes_.[^PixarStoryPageOne]. ß, they were years away from being able to release longer, more complicated sequences, much less feature length films and the continued investment was getting harder and harder for Lucas to justify, especially with Lucas Films revenue in decline. In an attempt to keep the division running through self-funding, it was launched as a hardware company, selling a proprietary system known as the Pixar Image Computer to government agencies along with the scientific and medical communities.
 
 [^PixarStoryPageOne]: Our Story. (n.d.). Retrieved from https://www.pixar.com/our-story-1
 
-Between 1995 and 2005, beginning with the release of "Toy Story," Pixar forever changed the art of animation, won 19 Academy Awards, and grossed more than $3 billion at the box office[^PixarSchoolOfThoughtToDisney]. And Pixar is still going strong today. Due in great part to the way they approach work.
+It was the PIC line of business that Jobs was interested in. This would make a nice compliment and partner to NeXT computer. The companies could target significantly different markets and both would benefit from their respective innovations happening in hardware and software. After some negotiations, Lucas sold the technology rights to Jobs for $5 million. Jobs then invested another $5 million as capital into the company and joined the board of directors as chairman.
+
+Jobs bought Pixar for the hardware. The movies were a cute little side venture that helped to generate some operating capital, but Jobs knew that PIC was the wave of the future.
+
+*** Content regarding the dismal sales, Jobs as the grand visionary plowing forward, Catmull and crew showing him how collaboration makes for better outcomes ***
+
+In 1995, beginning with the release of "Toy Story," Pixar changed the art of animation and revolutionized an industry, through software[^PixarSchoolOfThoughtToDisney]. With over 19 box office hits, winning over 380 awards, including fifteen Academy Awards, nine Golden Globes, and eleven Grammys, Pixar has generated over 19.25 Billion in box-office revenue. And Pixar is still going strong today due in great part to the way they approach work.
 
 [^PixarSchoolOfThoughtToDisney]: Taylor, W. C., & Labarre, P. (2006, January 29). How Pixar Adds a New School of Thought to Disney. Retrieved from https://www.nytimes.com/2006/01/29/business/yourmoney/how-pixar-adds-a-new-school-of-thought-to-disney.html
 
-In 2000, Pixar[^TechnologyNotEnough] relocated to an abandoned Del Monte canning factory. The original plan called for three separate buildings. Computer scientists, animators, and the Pixar executives would each have their own space. But Steve Jobs wasn't having it. Instead of three buildings, they created one spacious building with a central atrium.
+
+By 2000, when Pixar[^TechnologyNotEnough] relocated to an abandoned Del Monte canning factory. The original plan called for three separate buildings. Computer scientists, animators, and the Pixar executives would each have their own space. But instead of three buildings, they created one spacious building with a central atrium.
 
 [^TechnologyNotEnough]: Lehrer, J., & Lehrer, J. (2017, June 20). Steve Jobs: "Technology Alone Is Not Enough". Retrieved from https://www.newyorker.com/news/news-desk/steve-jobs-technology-alone-is-not-enough
 
-
-{icon: quote-left}
-B> “The philosophy behind this design is that it’s good to put the most important function at the heart of the building. Well, what’s our most important function? It’s the interaction of our employees. That’s why Steve put a big empty space there. He wanted to create an open area for people to always be talking to each other.” – Ed Catmull, the president of Pixar.[^PixarCollectiveCreativity]
-
-"Then there’s our building. Steve Jobs basically designed this building. In the center, he created this big atrium area, which seems initially like a waste of space. The reason he did it was that everybody goes off and works in their individual areas. People who work on software code are here, people who animate are there, and people who do designs are over there. Steve put the mailboxes, the meetings rooms, the cafeteria, and, most insidiously and brilliantly, the bathrooms in the center—which initially drove us crazy—so that you run into everybody during the course of a day. He realized that when people run into each other, when they make eye contact, things happen. So he made it impossible for you not to run into the rest of the company." - Brad Bird, Pixar Director[^PixarInnovationLessons]
+The intention was to make the most important function of the company central to the building's design. "What’s our most important function? It’s the interaction of our employees.", said Ed Catmul, President of Pixar, "That’s why Steve put a big empty space there. He wanted to create an open area for people to always be talking to each other.” [^PixarCollectiveCreativity]
 
 [^PixarCollectiveCreativity]: Catmull, E., Hill, L. A., Brandeau, G., Truelove, E., & Lineback, K. (2019, February 25). How Pixar Fosters Collective Creativity. Retrieved from https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
 
-But for Jobs, it was not just about creating a space: he needed to make people go there. The primary challenge for Pixar, as he saw it, was getting its different cultures to work together and collaborate.
+{icon: quote-left}
+B> Well, what’s our most important function? It’s the interaction of our employees.
+B> -- Ed Catmull, the president of Pixar.
+
+Creating the space was important, but they needed to make sure people went there. It was key for Pixar that their artists and technologists interacted and collaborated regularly.
 
 John Lasseter, the chief creative officer at Pixar, describes the equation this way: “Technology inspires art, and art challenges the technology.”[^PixarPurpose]
 
 [^PixarPurpose]: Building a sense of purpose at Pixar. (n.d.). Retrieved from https://www.mckinsey.com/industries/media-and-entertainment/our-insights/building-a-sense-of-purpose-at-pixar
 
-
-Jobs saw the separated offices as a design problem. He began with shifting the mailboxes to the atrium. He then moved the meeting rooms, the cafeteria, the coffee bar, and the gift shop to the centre of the building.
+In the end, the center of the building included the open atrium, employee mailboxes, meeting rooms, the cafeteria, a coffee bar, and the gift shop.
 
 Brad Bird, the director of “The Incredibles” and “Ratatouille,” said, “The atrium initially might seem like a waste of space. But Steve realized that when people run into each other when they make eye contact, things happen.”[^PixarInnovationLessons]
+
+[^PixarInnovationLessons]: Innovation lessons from Pixar: An interview with Oscar-winning director Brad Bird. (n.d.). Retrieved from https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/innovation-lessons-from-pixar-an-interview-with-oscar-winning-director-brad-bird
+
+
 
 Even if it came at the expense of convenience, the emphasis on consilience has always been a defining trait of Steve Jobs. Jobs insisted that the best creations occurred when people from disparate fields were connected, especially in an age of intellectual fragmentation.
 
@@ -98,14 +111,7 @@ From - https://www.thewrap.com/disney-fired-john-lasseter-came-back-heal-studio/
 
 
 
-[^PixarInnovationLessons]: Innovation lessons from Pixar: An interview with Oscar-winning director Brad Bird. (n.d.). Retrieved from https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/innovation-lessons-from-pixar-an-interview-with-oscar-winning-director-brad-bird
 
 
 
 [^DisneyAddsPixar]: Taylor, W. C., & Labarre, P. (2006, January 29). How Pixar Adds a New School of Thought to Disney. Retrieved from https://www.nytimes.com/2006/01/29/business/yourmoney/how-pixar-adds-a-new-school-of-thought-to-disney.html
-
-# The science
-{icon: book-open}
-B> The story of building together.
-
-# Getting started
