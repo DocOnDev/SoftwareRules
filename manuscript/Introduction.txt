@@ -45,7 +45,7 @@ I jumped at the opportunity.
 ### FoxPro is awesome
 It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
 
-Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxBASE in FoxBASE. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
+Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxPro in FoxPro. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
 
 ### Building in small pieces
 We built the docketing system in small pieces. We didn't iterate necessarily, but we did deliver incrementally. And Joe was a stickler for quality. He didn't mind the cleverness now and then, but he was quite annoyed with long functions or procedures. So I quickly developed a habit of writing small independent things and piecing them together.
