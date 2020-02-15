@@ -39,7 +39,7 @@ The intention was to make the most important function of the company central to 
 {icon: quote-left}
 B> #### Well, what’s our most important function? It’s the interaction of our employees.
 
-B> ##### -- Ed Catmull, the president of Pixar.
+B> ##### -- Ed Catmull, President of Pixar.
 
 Creating the space was important, but they needed to make sure people went there. It was key for Pixar that their artists and technologists interacted and collaborated regularly.
 
