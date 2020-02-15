@@ -127,29 +127,29 @@ I have a variable that holds the subtotal. I've named it subtotal. Because that 
 
 {format: FoxPro}
 ~~~
-FUNCTION calcInvoice(invoiceNumber)
-  SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
+FUNCTION calcInvoice(invNo)
+  SELECT * from Orders where invoice = invNo INTO CURSOR csrInv
   
-  SELECT csrInvoice
+  SELECT csrInv
   SCAN
-    subtotal = subtotal + OrderData.cost
+    subtotal = subtotal + Orders.cost
   ENDSCAN
   
-  taxAmount = calcTax(invoiceNumber)
+  taxAmount = calcTax(invNo)
   subtotal = subtotal + taxAmount
 
   RETURN subtotal
 ENDFUNC
 
-FUNCTION calcTax(invoiceNumber)
-  SELECT * FROM OrderData where invoice = invoiceNumber INTO CURSOR csrTax
+FUNCTION calcTax(invNo)
+  SELECT * FROM Orders where invoice = invNo INTO CURSOR csrTax
   
   SELECT csrTax
   SCAN
-    priceTotal = priceTotal + OrderData.cost
+    total = total + Orders.cost
   ENDSCAN
   
-  RETURN priceTotal * .07
+  RETURN total * .07
 ENDFUNC
 ~~~
 
@@ -157,40 +157,39 @@ Fast forward a few months and the tax rules have changed. Now, you have to calcu
 
 {format: FoxPro}
 ~~~
-FUNCTION calcInvoice(INT invoiceNumber)
-  SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
+FUNCTION calcInvoice(INT invNo)
+  SELECT * from Orders where invoice = invNo INTO CURSOR csrInv
   
-  SELECT csrInvoice
+  SELECT csrInv
   SCAN
-    subtotal = subtotal + OrderData.cost
+    subtotal = subtotal + Orders.cost
   ENDSCAN
   
-  taxAmount = calcTax(invoiceNumber)
+  taxAmount = calcTax(invNo)
   subtotal = subtotal + taxAmount
 
   RETURN subtotal
 ENDFUNC
 
-FUNCTION calcTax(invoiceNumber)
+FUNCTION calcTax(invNo)
+  SELECT * FROM Orders where invoice = invNo INTO CURSOR csrTax
 
-SELECT * FROM OrderData where invoice = invoiceNumber INTO CURSOR csrTax
+  hasSpecialTax = FALSE
 
-hasSpecialTax = FALSE
-
-SELECT csrTax
-SCAN FOR type = 1
-  subtotal = subtotal + OrderData.cost * .05
-  hasSpecialTax = TRUE
-ENDSCAN
+  SELECT csrTax
+  SCAN FOR type = 1
+    subtotal = subtotal + Orders.cost * .05
+    hasSpecialTax = TRUE
+  ENDSCAN
   
-SCAN FOR type = 3
-  subtotal = subtotal + OrderData.cost * .09
-  hasSpecialTax = TRUE
-ENDSCAN
+  SCAN FOR type = 3
+    subtotal = subtotal + Orders.cost * .09
+    hasSpecialTax = TRUE
+  ENDSCAN
   
-SCAN FOR type = 2
-  taxTotal = taxTotal + OrderData.cost * .07
-ENDSCAN
+  SCAN FOR type = 2
+    taxTotal = taxTotal + Orders.cost * .07
+  ENDSCAN
   
   RETURN IIF(hasSpecialTax, subtotal + taxTotal, taxTotal)
 ENDFUNC
