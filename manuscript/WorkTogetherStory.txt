@@ -2,8 +2,8 @@
 # Work Together #
 
 {icon: quote-left}
-B> ### Great things in business are never done by one person; they're done by a team of people.
-B> #### -- Steve Jobs
+B> ## Great things in business are never done by one person; they're done by a team of people.
+B> ### -- Steve Jobs
 
 # How Pixar Saved Apple
 In 1985, shortly after exiting Apple, Steve Jobs launched NeXT, Inc., a company focused on creating powerful computers for business and educational purposes. The strategy was to combine powerful hardware with cutting edge software to create a product that significantly out-performed all other desktop computers available on the PC market.[^NeXTHistory]
@@ -34,8 +34,8 @@ The intention was to make the most important function of the company central to 
 [^PixarCollectiveCreativity]: Catmull, E., Hill, L. A., Brandeau, G., Truelove, E., & Lineback, K. (2019, February 25). How Pixar Fosters Collective Creativity. Retrieved from https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
 
 {icon: quote-left}
-B> ### Well, what’s our most important function? It’s the interaction of our employees.
-B> -- Ed Catmull, the president of Pixar.
+B> ## Well, what’s our most important function? It’s the interaction of our employees.
+B> ### -- Ed Catmull, the president of Pixar.
 
 Creating the space was important, but they needed to make sure people went there. It was key for Pixar that their artists and technologists interacted and collaborated regularly.
 
