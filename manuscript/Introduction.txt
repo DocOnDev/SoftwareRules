@@ -2,45 +2,47 @@
 
 # Allow myself to introduce ... myself.
 
-## Hello.
+### Hello.
 
 My name is Doc Norton and I make software.
 
-I've been making software of some form or another since 1982.
-1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week.
-We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II.
-A minute or two later, our creations would be ready for us to review, modify, and run.
+I've been making software of some form or another since 1982. 1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week. We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II. A minute or two later, our creations would be ready for us to review, modify, and run.
 
 We wrote a lot of the classics - Print my name a hundred times, paper fortune teller simulator, and dozens of our own mini Zork variants.
 
-We were using BASIC. No teacher.
-No mentor.
-Just the three of us and a BASIC language reference.
+We were using BASIC. No teacher. No mentor. Just the three of us and a BASIC language reference.
 
 ### We were nerds. And we didn't care.
-It was fun.
-We were nerds.
-And we didn't care.
-We were making things. 
-Building new worlds.
-Creating.
+It was fun. We were nerds. And we didn't care. We were making things. Building new worlds. Creating.
 
 No. It was more than fun. It was awesome.
 
-As happens in life, Matt, Steve, and I eventually drifted apart. We developed other interests like sports, science, drama, and girls. We made new friends who shared those interests. And we spent less time together as we got older. Eventually, we each went to a different college.
+As happens in life, Matt, Steve, and I eventually drifted apart. We developed other interests like sports, science, and music. We made new friends who shared those interests. And we spent less time together as we got older. Eventually, we each went to a different college.
 
-But during that year, seeds were planted for me. I learned that I liked creating. I liked solving problems. Despite my lackluster interest in school, I really enjoyed being challenged and learning new things when it came to computers and writing code.
+But, during that year, seeds were planted for me. I learned that I liked creating. I liked solving problems. Despite my lackluster interest in school, I really enjoyed being challenged and learning new things when it came to computers and writing code.
+
+Computers became a mainstay in my life. I got a computer for a birthday, picked up a 300 baud coupling modem from a trade show, and a banana gorilla dot matrix color printer for Christmas. When I wasn't running cross-country (I was the one who got into sports), you could probably find me on a dial-up bulletin board conversing with other geeks and learning more about computers - especially writing software.
 
 ### My hobby becomes my profession
 
-My hobby transformed into my career as I took on new challenges and learned new languages. BASIC, Pascal, Fortran, COBOL, RPG, and WANG VS Batch (it's a language) were my first few languages. I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989.
+My hobby transformed into my career as I took on new challenges and learned new languages. BASIC, Pascal, Fortran, COBOL, RPG, and WANG VS Batch (it's a language) were my first few languages.
 
-From there, I learned Assembler for the PC and spent about 6 months writing low level disk editing software and TSR-style utilities before I grew frustrated with how slow Assembler was to write in and I moved on to C.
+I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989. It was a relatively simple application that automated away a lot of the tedium involved in being a night batch operator in a computer room for a large law firm. 
 
-At the time, I was using Microsoft's IDE and compiler. It was a logical jump from Microsoft's Macro Assembler tools. But my friend and colleague, Joe Sladick, suggested I try Borland's IDE instead. It ran faster, had a better debugger, and could be run on OS/2, which I was playing with at the time. Borland's Turbo C++ came as part of the package deal and it wasn't long before I was trying to figure out this Object Oriented stuff.
+I'd been hired to essentially lift heavy drives in and out of casings and load tapes onto high reels in order to run nightly backups on a set of WANG VS mini computers. I was a perfect fit - I was strong, tall, and geeky.
+
+The job was painfully repetitive. I'd load a drive and/or the first tape in a series. I'd then fill in a rather detailed screen to identify the contents of the backup and the label of the tape reel. An hour later, the tape would be full and I'd need to load the next tape. This involved filling in all of the same data and the new tape reel label. In most cases, the tape reels were labeled in a sequence.
+
+I had to follow this sequence for four mini computers. Each one took about 12 minutes to complete the sequence. So I was moving from terminal to terminal, filling in tediously repetitive screens with 95% identical data over and over again. For every hour of work, I had approximately 10 minutes where I wasn't swapping a tape or standing at a terminal keying in data.
+
+After a few weeks of this mind-numbing work, I started writing an application that would fill in all of the repetitive data for me. I refined the application over the next few months. Eventually, I'd automated away almost all of the data entry. Now the first system would take about 15 minutes to set up and the rest of the systems would each take about five minutes. I could load the first run for all four systems in 30 minutes and every subsequent run in about 20 minutes. This left me with about 30 minutes out of every hour where I could study computers and programming.
+
+In that spare time, I learned Assembler for the PC and spent about 6 months writing low level disk editing software and TSR-style utilities before I grew frustrated with how slow Assembler was to write in and I moved on to C.
+
+At the time, I was using Microsoft's IDE and compiler. It was a logical jump from Microsoft's Macro Assembler tools. But my friend and colleague, Joe Sladick, suggested I try Borland's IDE instead. It ran faster, had a better debugger, and could be run on OS/2, which I was also playing with at the time. Borland's Turbo C++ came as part of the package deal and it wasn't long before I was trying to figure out this Object Oriented stuff.
 
 ### An interesting opportunity
-During that same time period, Joe and I were working for a law firm that needed some software written quickly. Their docketing department had been running on an old mini computer that was out of warranty, dying, and proprietary. They needed a replacement. And fast.
+During that same time period, the law firm that Joe and I were working for needed some software written quickly. Their docketing department had been running on an old mini computer that was out of warranty, dying, and proprietary. They needed a replacement. And fast.
 
 Joe pitched them on FoxPro as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
 
