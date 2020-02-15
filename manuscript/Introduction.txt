@@ -6,14 +6,24 @@
 
 My name is Doc Norton and I make software.
 
-I've been making software of some form or another since 1982. 1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week. We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II. A minute or two later, our creations would be ready for us to review, modify, and run.
+I've been making software of some form or another since 1982.
+1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week.
+We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II.
+A minute or two later, our creations would be ready for us to review, modify, and run.
 
 We wrote a lot of the classics - Print my name a hundred times, paper fortune teller simulator, and dozens of our own mini Zork variants.
 
-We were using BASIC. No teacher. No mentor. Just the three of us and a BASIC language reference.
+We were using BASIC. No teacher.
+No mentor.
+Just the three of us and a BASIC language reference.
 
 ### We were nerds. And we didn't care.
-It was fun. We were nerds. And we didn't care. We were making things. Building new worlds. Creating.
+It was fun.
+We were nerds.
+And we didn't care.
+We were making things. 
+Building new worlds.
+Creating.
 
 No. It was more than fun. It was awesome.
 
