@@ -33,7 +33,7 @@ The intention was to make the most important function of the company central to 
 
 [^PixarCollectiveCreativity]: Catmull, E., Hill, L. A., Brandeau, G., Truelove, E., & Lineback, K. (2019, February 25). How Pixar Fosters Collective Creativity. Retrieved from https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
 
-{icon: quote-left}
+{icon: quote-left, float: right, width: 50%}
 B> Well, what’s our most important function? It’s the interaction of our employees.
 B> -- Ed Catmull, the president of Pixar.
 
