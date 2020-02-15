@@ -3,7 +3,7 @@
 
 {icon: quote-left}
 B> ## In software, when something is painful, the way to reduce the pain is to do it more frequently, not less.
-B> ### - David Farley
+B> ### David Farley
 
 # Release
 
