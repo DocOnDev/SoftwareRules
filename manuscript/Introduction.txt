@@ -217,7 +217,22 @@ And there were other issues with type. You could, for example, initialize a vari
 
 Imagine I have a method that will tell you the date that is N days from now. You pass it a number of days and I return to you the date that is that many days from today. I return it as a DATE(). You find this useful and you use it with success.
 
+{format: FoxPro}
+~~~
+FUNCTION daysFromNow(days)
+  RETURN DATE() + days
+ENDFUNC
+~~~
+
 I later decide that my method doesn't need to return a DATE(). Every time I call it, I transform the date into a string format. So, to reduce duplication, I change the method to return a string and I change all the methods that I know of that call the days from now method. I manually test all my changes. All is well.
+
+{format: FoxPro}
+~~~
+FUNCTION daysFromNow(days)
+  MyDate = DATE() + days
+  RETURN TRANSFORM(MyDate, "@R ####-##-##")
+ENDFUNC
+~~~
 
 That is until your area of the application bombs because it is trying to do date math on a string.
 
