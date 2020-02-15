@@ -129,8 +129,7 @@ Now let's imagine we both write a method. Yours calculates sales tax on an order
 
 I have a variable that holds the subtotal. I've named it subtotal. Because that makes sense to me. I get order data, calculate the subtotal, and then pass the order data to you for tax calculation. I then add the taxes to the subtotal to get the order total. And all is well.
 
-CODE BELONGS RIGHT HERE!!!
-
+{format: guess}
 ~~~
 FUNCTION calcInvoice(INT invoiceNumber)
   SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
@@ -139,8 +138,16 @@ FUNCTION calcInvoice(INT invoiceNumber)
   SCAN
     subtotal = subtotal + OrderData.cost
   ENDSCAN
+  
+  taxAmount = calcTax(invoiceNumber)
+  subtotal = subtotal + taxAmount
 
   RETURN subtotal
+ENDFUNC
+
+FUNCTION calcTax(invoiceNumber)
+  priceTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber
+  RETURN priceTotal * .07
 ENDFUNC
 ~~~
 
