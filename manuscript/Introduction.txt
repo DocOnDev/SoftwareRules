@@ -153,6 +153,40 @@ ENDFUNC
 
 Fast forward a few months and the tax rules have changed. Now, you have to calculate different tax rates for different types of products. So you subtotal taxes for product types into a variable you call subtotal. Because that makes sense to you.
 
+{format: guess}
+~~~
+FUNCTION calcInvoice(INT invoiceNumber)
+  SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
+  
+  SELECT csrInvoice
+  SCAN
+    subtotal = subtotal + OrderData.cost
+  ENDSCAN
+  
+  taxAmount = calcTax(invoiceNumber)
+  subtotal = subtotal + taxAmount
+
+  RETURN subtotal
+ENDFUNC
+
+FUNCTION calcTax(invoiceNumber)
+  lowTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 1
+  IF lowTaxTotal > 0
+    subtotal = lowTaxTotal * .05
+  ENDIF
+  
+  highTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 2
+  IF highTaxTotal > 0
+    subtotal = subtotal + highTaxTotal * .09
+  ENDIF
+  
+  stdTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 3
+
+  
+  RETURN subtotal + (stdTaxTotal * .07)
+ENDFUNC
+~~~
+
 And now my method starts intermittently returning wrong information. When it is wrong, the total is always less than it should be. Never over. Always under.
 
 As it turns out, I declared the variable subtotal by use. And that means that when I call your method, the variable subtotal is in scope for you. I didn't pass it to you, but you still have access to it.
