@@ -208,9 +208,9 @@ As you might recall, you also called your variable subtotal. And it turns out th
 
 In the process of calculating the tax on the order, you overwrite my subtotal. When I finish my calculation, I am using whatever subtotal you last calculated. Even though you didn't return that value to me. You modified a variable I declared by use and was thereby in scope for your method when called by mine.
 
-Sometimes, your subtotal and my subtotal match because all the items on the order have the same tax rate. And sometimes, your subtotal is less than mine because you subtotal by tax type and re-use the variable for each tax type. Hence the intermittent failure and the low total for every failure.
+Sometimes, your subtotal and my subtotal match because all the items on the order have the standard tax rate. And sometimes, your subtotal is less than mine because you subtotal by tax type and re-use the variable for each tax type. Hence the intermittent failure and the low total for every failure.
 
-You can imagine how this could cause very strange behaviors, especially if the method overwriting your private variables is three or four layers away in the call stack and is called conditionally. You get intermittent errors that have a root cause in a place that is no longer in the stack by the time the error occurs.
+This is obviously a contrived example. Neither of us would write that tax calculation logic, right? But, you can imagine how this could cause very strange behaviors, especially if the method overwriting your private variables is three or four layers away in the call stack and is called conditionally. You get intermittent errors that have a root cause in a place that is no longer in the stack by the time the error occurs.
 
 #### Types in FoxPro
 And there were other issues with type. You could, for example, initialize a variable as an integer and then later assign a string to that same variable. You'd get no runtime errors when you changed types. But you might get an error when you later tried to execute a mathematical operator on a string that you expected to be an integer.
