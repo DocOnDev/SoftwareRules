@@ -130,7 +130,18 @@ Now let's imagine we both write a method. Yours calculates sales tax on an order
 I have a variable that holds the subtotal. I've named it subtotal. Because that makes sense to me. I get order data, calculate the subtotal, and then pass the order data to you for tax calculation. I then add the taxes to the subtotal to get the order total. And all is well.
 
 {format: guess}
-![Calculate Invoice](invoice-01.vfp)
+~~~
+FUNCTION calcInvoice(INT invoiceNumber)
+  SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
+  
+  SELECT csrInvoice
+  SCAN
+    subtotal = subtotal + OrderData.cost
+  ENDSCAN
+
+  RETURN subtotal
+ENDFUNC
+~~~
 
 Fast forward a few months and the tax rules have changed. Now, you have to calculate different tax rates for different types of products. So you subtotal taxes for product types into a variable you call subtotal. Because that makes sense to you.
 
