@@ -1,12 +1,12 @@
 {#work_together}
-# Work Together #
+# Work Together
 
 {icon: quote-left}
 B> ## Great things in business are never done by one person; they're done by a team of people.
 B>
 B> #### -- Steve Jobs
 
-# How Pixar Saved Apple
+## The Power of Collaboration
 In 1985, shortly after exiting Apple, Steve Jobs launched NeXT, Inc., a company focused on creating powerful computers for business and educational purposes. The strategy was to combine powerful hardware with cutting edge software to create a product that significantly out-performed all other desktop computers available on the PC market.[^NeXTHistory]
 
 [^NeXTHistory]: Full Circle: A Brief History of NeXT. (2016, June 24). Retrieved June 19, 2019, from http://lowendmac.com/2014/full-circle-a-brief-history-of-next/
