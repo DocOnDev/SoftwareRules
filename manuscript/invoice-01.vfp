@@ -1,0 +1,10 @@
+FUNCTION calcInvoice(INT invoiceNumber)
+  SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
+  
+  SELECT csrInvoice
+  SCAN
+    subtotal = subtotal + OrderData.cost
+  ENDSCAN
+
+  RETURN subtotal
+ENDFUNC
