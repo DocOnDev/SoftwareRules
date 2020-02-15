@@ -2,5 +2,6 @@
 # Automation over documentation. #
 
 {icon: quote-left}
-B> ## The most powerful tool we have as developers is automation. 
-B> ### Scott Hanselman
+B> ### The most powerful tool we have as developers is automation. 
+B>
+B> #### -- Scott Hanselman
