@@ -6,6 +6,8 @@ B> ## Great things in business are never done by one person; they're done by a t
 
 B> ### -- Steve Jobs
 
+{pagebreak}
+
 ## The Power of Collaboration
 In 1985, shortly after exiting Apple, Steve Jobs launched NeXT, Inc., a company focused on creating powerful computers for business and educational purposes. The strategy was to combine powerful hardware with cutting edge software to create a product that significantly out-performed all other desktop computers available on the PC market.[^NeXTHistory]
 
