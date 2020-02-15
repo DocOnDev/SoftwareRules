@@ -20,8 +20,11 @@ Then, in 1986, Jobs took an interest in a subsidiary of Lucas Films. The subsidi
 It was the PIC line of business that Jobs was interested in. This would make a nice compliment and partner to NeXT computer. The companies could target significantly different markets and both would benefit from their respective innovations happening in hardware and software. After some negotiations, Lucas sold the technology rights to Jobs for $5 million. Jobs then invested another $5 million as capital into the company and joined the board of directors as chairman.
 
 Jobs bought Pixar for the hardware. The movies were a cute little side venture that helped to generate some operating capital, but Jobs knew that PIC was the wave of the future.
+*****
 
 *** Content regarding the dismal sales, Jobs as the grand visionary plowing forward, Catmull and crew showing him how collaboration makes for better outcomes ***
+
+*****
 
 In 1995, beginning with the release of "Toy Story," Pixar changed the art of animation and revolutionized an industry, through software[^PixarSchoolOfThoughtToDisney]. With over 19 box office hits, winning over 380 awards, including fifteen Academy Awards, nine Golden Globes, and eleven Grammys, Pixar has generated over 19.25 Billion in box-office revenue. And Pixar is still going strong today due in great part to the way they approach work.
 
