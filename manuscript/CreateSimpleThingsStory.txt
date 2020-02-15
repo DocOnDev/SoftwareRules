@@ -1,2 +1,2 @@
 {#create_simple_things}
-# Create simple things in small steps. #
+# Create simple things in small steps.

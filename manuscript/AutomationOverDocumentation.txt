@@ -1,5 +1,5 @@
 {#automation_over_documentation}
-# Automation over documentation. #
+# Automation over documentation.
 
 {icon: quote-left}
 B> ### The most powerful tool we have as developers is automation. 

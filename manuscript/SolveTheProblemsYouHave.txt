@@ -1,5 +1,5 @@
 {#solve_problems_you_have}
-# Solve the problems you have. #
+# Solve the problems you have.
 
 I've worked with many companies who've conflated delivery of features with delivery of value.
 They begin with the assumption that a feature adds value to the customer.
@@ -13,7 +13,7 @@ Outcome measurements focus on quality of delivery - or more accurately, the impa
 As a result, outcome measures tell us if we are headed in the right direction.
 And speed (output) is beneficial only if you are headed in the right direction (outcome).
 
-### Know The Problem You Are Solving
+## Know The Problem You Are Solving
 I once worked with a client who became so obsessed with immediate revenue metrics that they would not allow themselves to innovate in certain areas.
 Essentially, the only measure that mattered for a new feature was whether or not it had a net positive impact on revenue.
 Revenue was their standard outcome measurement.
@@ -37,7 +37,7 @@ It should always be to solve a problem; realize an outcome.
 
 I tend to use three questions to prompt thinking and help teams figure out the measurements that can help them determine if they've achieved the outcome.
 
-#### 1. What problem are you solving and for whom?
+### 1. What problem are you solving and for whom?
 Here, we identify the key issue and the key person or persona.
 This is a business problem or a customer problem.
 This is not a solution.
@@ -53,7 +53,7 @@ If asking, "What problem are we solving?", doesn't lead to a good answer, then a
 Starting with the implementation request, "Display daily total of calories consumed at bottom of user food log.", ask "Why do our users need that?"
 For each answer given, ask again, "Why?", until you get to a root problem or need.
 
-#### 2. What stories would we hear upon success?
+### 2. What stories would we hear upon success?
 Let's assume we are successful in our efforts.
 Users are now better able to stay within their daily calorie ranges (and they are happy about it).
 What stories would we hear?
@@ -71,7 +71,7 @@ So what stories would they tell?
 What would they rave about?
 What positive things would they say?
 
-#### 3. How could you substantiate their stories?
+### 3. How could you substantiate their stories?
 How could you objectively confirm the happy stories your users might share?
 What measures would you need to prove the stories are factually accurate?
 

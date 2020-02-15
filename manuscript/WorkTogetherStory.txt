@@ -2,7 +2,7 @@
 # Work Together #
 
 {icon: quote-left}
-B> ### Great things in business are never done by one person; they're done by a team of people.
+B> ## Great things in business are never done by one person; they're done by a team of people.
 B>
 B> #### -- Steve Jobs
 
