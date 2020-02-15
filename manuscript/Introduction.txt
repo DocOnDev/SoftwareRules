@@ -131,7 +131,7 @@ I have a variable that holds the subtotal. I've named it subtotal. Because that 
 
 {format: FoxPro}
 ~~~
-FUNCTION calcInvoice(INT invoiceNumber)
+FUNCTION calcInvoice(invoiceNumber)
   SELECT * from OrderData where invoice = invoiceNumber INTO CURSOR csrInvoice
   
   SELECT csrInvoice
@@ -146,7 +146,13 @@ FUNCTION calcInvoice(INT invoiceNumber)
 ENDFUNC
 
 FUNCTION calcTax(invoiceNumber)
-  priceTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber
+  SELECT * FROM OrderData where invoice = invoiceNumber INTO CURSOR csrTax
+  
+  SELECT csrTax
+  SCAN
+    priceTotal = priceTotal + OrderData.cost
+  ENDSCAN
+  
   RETURN priceTotal * .07
 ENDFUNC
 ~~~
@@ -170,20 +176,27 @@ FUNCTION calcInvoice(INT invoiceNumber)
 ENDFUNC
 
 FUNCTION calcTax(invoiceNumber)
-  lowTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 1
-  IF lowTaxTotal > 0
-    subtotal = lowTaxTotal * .05
-  ENDIF
-  
-  highTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 2
-  IF highTaxTotal > 0
-    subtotal = subtotal + highTaxTotal * .09
-  ENDIF
-  
-  stdTaxTotal = SELECT SUM(price) FROM OrderData where invoice = invoiceNumber AND type = 3
 
+SELECT * FROM OrderData where invoice = invoiceNumber INTO CURSOR csrTax
+
+hasSpecialTax = FALSE
+
+SELECT csrTax
+SCAN FOR type = 1
+  subtotal = subtotal + OrderData.cost * .05
+  hasSpecialTax = TRUE
+ENDSCAN
   
-  RETURN subtotal + (stdTaxTotal * .07)
+SCAN FOR type = 3
+  subtotal = subtotal + OrderData.cost * .09
+  hasSpecialTax = TRUE
+ENDSCAN
+  
+SCAN FOR type = 2
+  taxTotal = taxTotal + OrderData.cost * .07
+ENDSCAN
+  
+  RETURN IIF(hasSpecialTax, subtotal + taxTotal, taxTotal)
 ENDFUNC
 ~~~
 
