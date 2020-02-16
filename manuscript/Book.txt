@@ -1,8 +1,6 @@
 Introduction.txt
 TheSevenRules.txt
 WorkTogetherStory.txt
-WorkTogetherScience.txt
-WorkTogetherStarter.txt
 CreateSimpleThingsStory.txt
 CreateSimpleThingsScience.txt
 CreateSimpleThingsStarter.txt
