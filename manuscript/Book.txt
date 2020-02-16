@@ -2,8 +2,6 @@ Introduction.txt
 TheSevenRules.txt
 WorkTogetherStory.txt
 CreateSimpleThingsStory.txt
-CreateSimpleThingsScience.txt
-CreateSimpleThingsStarter.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt
 SolveTheProblemsYouHave.txt
