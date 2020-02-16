@@ -1,2 +1,7 @@
 {#create_simple_things}
 # Create simple things in small steps.
+
+{icon: quote-left}
+B> ## The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
+
+B> ### -- Bjarne Stroustrup
