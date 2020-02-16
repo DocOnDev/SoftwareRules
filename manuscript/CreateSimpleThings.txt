@@ -8,4 +8,20 @@ B> ### -- Bjarne Stroustrup
 
 ## Create Simple Things
 
+What is a simple thing?
+
+For our purposes, simple indicates something that has few components and is easy to understand. This is the essence of well composed solutions - they are comprised of small simple components.
+
+Kent Beck describes Simple Design using 4 rules[^^SimplicityRules]:
+1. Passes all the tests.
+1. Express every idea we need to express.
+1. Duplicates no behavior or configuration.
+1. Has no superfluous parts.
+
+[^^SimplicityRules]: Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
+
+
+
+Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
+
 ## In Small Steps
