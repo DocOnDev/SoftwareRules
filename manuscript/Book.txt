@@ -1,7 +1,7 @@
 Introduction.txt
 TheSevenRules.txt
-WorkTogetherStory.txt
-CreateSimpleThingsStory.txt
+WorkTogether.txt
+CreateSimpleThings.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt
 SolveTheProblemsYouHave.txt
