@@ -135,10 +135,7 @@ FUNCTION calcInvoice(invNo)
     subtotal = subtotal + Orders.cost
   ENDSCAN
   
-  taxAmount = calcTax(invNo)
-  subtotal = subtotal + taxAmount
-
-  RETURN subtotal
+  RETURN subtotal + calcTax(invNo)
 ENDFUNC
 
 FUNCTION calcTax(invNo)
@@ -165,10 +162,7 @@ FUNCTION calcInvoice(INT invNo)
     subtotal = subtotal + Orders.cost
   ENDSCAN
   
-  taxAmount = calcTax(invNo)
-  subtotal = subtotal + taxAmount
-
-  RETURN subtotal
+  RETURN subtotal + calcTax(invNo)
 ENDFUNC
 
 FUNCTION calcTax(invNo)
@@ -188,10 +182,10 @@ FUNCTION calcTax(invNo)
   ENDSCAN
   
   SCAN FOR type = 2
-    taxTotal = taxTotal + Orders.cost * .07
+    total = total + Orders.cost * .07
   ENDSCAN
   
-  RETURN IIF(hasSpecialTax, subtotal + taxTotal, taxTotal)
+  RETURN IIF(hasSpecialTax, subtotal + total, total)
 ENDFUNC
 ~~~
 
