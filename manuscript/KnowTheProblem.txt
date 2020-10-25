@@ -26,7 +26,7 @@ Here, we identify the key issue and the key person or persona. This is a busines
 
 From the former, we know we are done when the total is visible on the bottom of the page, whether or not users see this as valuable or helpful. From the latter, we know we are done when the user is more often staying within calorie ranges, which we believe is solving a problem they currently face.
 
-If asking, "What problem are we solving?", doesn't lead to a good answer, then a simple 5 why approach[^^FiveWhys] may help you get from implementation request to problem definition. Starting with the implementation request, "Display daily total of calories consumed at bottom of user food log.", ask "Why do our users need that?" For each answer given, ask again, "Why?", until you get to a root problem or need.
+If asking, "What problem are we solving?", doesn't lead to a good answer, then a simple 5 why approach[^FiveWhys] may help you get from implementation request to problem definition. Starting with the implementation request, "Display daily total of calories consumed at bottom of user food log.", ask "Why do our users need that?" For each answer given, ask again, "Why?", until you get to a root problem or need.
 
 ### 2. What stories would we hear upon success?
 
@@ -43,4 +43,4 @@ How could you objectively confirm the happy stories your users might share? What
 Knowing the actual problem you are solving helps you think clearly about the data you should track to help you assess whether or not you've actually solved the problem.
 
 
-[^^FiveWhys]: Serrat, and Olivier D. "The Five Whys Technique." Asian Development Bank. November 15, 2017. Accessed Jan 18, 2019. https://www.adb.org/publications/five-whys-technique.
+[^FiveWhys]: Serrat, and Olivier D. "The Five Whys Technique." Asian Development Bank. November 15, 2017. Accessed Jan 18, 2019. https://www.adb.org/publications/five-whys-technique.
