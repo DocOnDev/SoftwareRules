@@ -2,7 +2,7 @@
 
 My name is Doc Norton and I make software.
 
-I've been making software of some form or another since 1982. 1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library after school a couple of days per week. We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II. A minute or two later, our creations would be ready for us to review, modify, and run.
+I've been making software of some form or another since 1982. 1982 is when my friends Matt Craig and Steve Linder used to hang out with me in the school library a couple of days per week. We'd pull a cassette tape out of its hard plastic case and gently place the tape into the magnetic tape reader attached to the school's one and only available computer - the magnificent Tandy Model II. A minute or two later, our creations would be ready for us to review, modify, and run.
 
 We wrote a lot of the classics - Print my name a hundred times, paper fortune teller simulator, and dozens of our own mini Zork variants.
 
@@ -17,7 +17,7 @@ As happens in life, Matt, Steve, and I eventually drifted apart. We developed ot
 
 But, during that year, seeds were planted for me. I learned that I liked creating. I liked solving problems. Despite my lackluster interest in school, I really enjoyed being challenged and learning new things when it came to computers and writing code.
 
-Computers became a mainstay in my life. I got a computer for a birthday, picked up a 300 baud coupling modem from a trade show, and a banana gorilla dot matrix color printer for Christmas. When I wasn't running cross-country (I was the one who got into sports), you could probably find me on a dial-up bulletin board conversing with other geeks and learning more about computers - especially writing software.
+Computers became a mainstay in my life. I got a computer for a birthday, picked up a 300 baud coupling modem from a trade show, and received a banana gorilla dot matrix color printer for Christmas. When I wasn't running cross-country (I was the one who got into sports), you could probably find me on a dial-up bulletin board conversing with other geeks and learning more about computers - especially writing software.
 
 ### My hobby becomes my profession
 
@@ -42,7 +42,7 @@ During that same time period, the law firm that Joe and I were working for neede
 
 Joe pitched them on FoxPro as a possible solution. This was not viable, they declared. It ran on a PC and they were a serious law firm. Very large. Very prestigious. Very professional. Real software ran on real computers. And real computers didn't fit on desks.
 
-Besides, FoxPro was brand new. Still in early release, FoxPro was Fox Software's move from FoxBASE, which was procedural, to an object oriented implementation. If we were going to write something for a PC, which was silly talk, why wouldn't we use a real language, like C, from a real company, like Microsoft.
+Besides, FoxPro was brand new. Still in early release, FoxPro was Fox Software's move from FoxBASE, which was procedural, to an object oriented implementation. If we were going to write something for a PC, which was silly talk, why wouldn't we use a real language, like C, from a real company, like Microsoft?
 
 Joe was persuasive and they agreed to allow him to work on it as a plan B while they figured out a real solution. They would allow him to play around, but he had 3 months. IT Management had a due date of 3 months for completion of their comprehensive requirements. If Joe's little experiment met the requirements, it would be considered for final evaluation.
 
@@ -51,9 +51,9 @@ Joe invited me to join him. We could not allow it to disrupt our core duties. Th
 I jumped at the opportunity.
 
 ### FoxPro is awesome
-It was weird to move back and forth from the Object Orientation and strictness of C++ to the procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
+It was weird to move back and forth from the Object Orientation and strictness of C++ to the primarily procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
 
-Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxPro in FoxPro. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was a bit too clever.
+Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxPro in FoxPro. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was more than a bit too clever.
 
 ### Building in small pieces
 We built the docketing system in small pieces. We didn't iterate necessarily, but we did deliver incrementally. And Joe was a stickler for quality. He didn't mind the cleverness now and then, but he was quite annoyed with long functions or procedures. So I quickly developed a habit of writing small independent things and piecing them together.

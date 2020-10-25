@@ -1,5 +1,5 @@
-{#solve_problems_you_have}
-# Solve the problems you have.
+{#know_the_problem}
+# Know the problem you are solving.
 
 I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value.
 

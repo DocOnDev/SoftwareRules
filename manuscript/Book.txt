@@ -1,9 +1,9 @@
 Introduction.txt
 TheSevenRules.txt
+KnowTheProblem.txt
 WorkTogether.txt
 CreateSimpleThings.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt
-SolveTheProblemsYouHave.txt
 ReleaseRidiculouslyOften.txt
 AutomationOverDocumentation.txt
