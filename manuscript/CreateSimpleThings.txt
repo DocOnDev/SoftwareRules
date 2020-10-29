@@ -8,19 +8,11 @@ B> ### -- Bjarne Stroustrup
 
 ## Create Simple Things
 
-What is a simple thing?
+This sounds easy enough. Create simple things. But, what is a simple thing?
 
-Simple might indicate something that has few components or something that is easy to understand. Simple might also indicate lacking intellect or being gullible. As we are talking about code, which is non-sentient, the former makes more sense.
+Simple might indicate something that has few components or something that is easy to understand. Simple might also indicate something that is lacking intellect or something that is gullible. As we are talking about code, which is non-sentient, the former makes more sense.
 
-
-So we might say code that is simple is code with few components and is easy to understand. But I think this definition lacks something.
-
-This is the essence of well composed solutions - they are comprised of small components that are easy to understand.
-
-But what does it mean for code to be small?
-
-And what does it mean for code to be easy to understand?
-
+So we might say that simple code has few components and is easy to understand. But I think this definition lacks something. I could have code that has few components, is easy to understand, and fails to reliably accomplish the desired outcome.
 
 Kent Beck[^KentBeck], creator of jUnit and a member of the team that created Extreme Programming (XP), describes Simple Design using 4 rules[^SimplicityRules]:
 1. Passes all the tests.
@@ -32,7 +24,32 @@ Kent Beck[^KentBeck], creator of jUnit and a member of the team that created Ext
 
 [^SimplicityRules]: Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
 
+First and foremost, Kent's idea of simple includes tests. Now, he doesn't specify automated tests, much less unit tests or Test Driven Design (TDD) in his definition. //TODO: TDD Reference
 
+I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
+
+### Passes all the tests.
+
+All the tests. Not some of the tests. All of them.
+
+All of what tests?
+All of the tests we have?
+All of the tests we decided to write?
+
+No - all of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome.
+
+Now Kent's rules are in order of importance. While rule 2 and 3 have swapped place over the years due to changes in industry trends and more or less utilization of frameworks, rule number one has always been rule number one. Make sure the software does what it is supposed to do.
+
+### Expresses every idea we need to express
+
+
+### Duplicates no behavior or configuration
+
+We hear a lot about duplicate code in the industry. There are linters that look for it and metrics dashboards that tell you how much of it you have. You might think that this is what Kent is talking about. And in a way he is, but he's primarily talking about a broader notion that duplicate code. He's talking about duplicate behavior.
+
+And duplicate behavior is the real problem. When you have duplicate code - duplicate in structure and function - you probably have duplicate behavior. I mean, like probably always. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
+
+//TODO: Example of code that is structurally different, but indicates the same behavior.
 
 Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
 
