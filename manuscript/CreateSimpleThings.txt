@@ -188,7 +188,6 @@ Duplicate behavior is the actual problem. As we've now seen in our example here,
 
 Why is that? Why is duplicate behavior an issue?
 
-Let's return to our example of calculating an average of bowling scores.
 Let's return to our simple example of calculating an average of bowling scores.
 
 Our handy little application is being used by a number of small leagues and amateur bowlers. Eventually, the United States Bowling Congress (USBC)[^USBC] takes notice and wants to use it, but they need it to support handicaps. This means that the screens and reports that currently show scores and averages will need to show the base values along with the values adjusted for handicap.
@@ -199,7 +198,6 @@ To calculate a handicap, you need to take an average of the scores over a minimu
 
 But there's more. In league bowling, your handicap changes over time. As you bowl, you are accumulating new scores. Those scores may very well alter your base average, which will alter your delta, which will alter your handicap. So when we want to show the average score for the season along with the average score with handicap for the season, we will have to calculate multiple averages in order to figure out what the handicap adjusted score would have been and then finally calculate the average of all the handicap adjusted scores.
 
-You might be thinking, "No problem. We'll just record the base score and the handicap adjusted score for every game so that we only need to calculate the handicap once." And you'd be right, except leagues want to run what if scenarios to make sure their basis scores and percentages are fair and it is not unheard of for a local league to adjust their handicap basis score or percentage retro-actively in the middle of a season.
 You might be thinking, "No problem. We'll just record the base score and the handicap adjusted score for every game so that we only need to calculate the handicap once." This seems reasonable, except leagues want to run what if scenarios to make sure their basis scores and percentages are fair and it is not unheard of for a league to adjust their handicap basis score or percentage retro-actively in the middle of a season.
 
 Whoah. Didn't see that one coming, did we?
