@@ -45,11 +45,156 @@ Now Kent's rules are in order of importance. While rule 2 and 3 have swapped pla
 
 ### Duplicates no behavior or configuration
 
-We hear a lot about duplicate code in the industry. There are linters that look for it and metrics dashboards that tell you how much of it you have. You might think that this is what Kent is talking about. And in a way he is, but he's primarily talking about a broader notion that duplicate code. He's talking about duplicate behavior.
+We hear a lot about duplicate code in the industry. There are automated code checkers called linters that look for code duplication and metrics dashboards that tell you how much of it you have. These tools look for patterns in the structure of the code. At a minimum, they look for code that is character for character identical.
 
-And duplicate behavior is the real problem. When you have duplicate code - duplicate in structure and function - you probably have duplicate behavior. I mean, like probably always. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
+Let's say we have a screen that shows the average bowling score for a player during a tournament.
 
-//TODO: Example of code that is structurally different, but indicates the same behavior.
+{format: Java, caption: Average Tournament Score}
+~~~
+// Get tournament scores
+List<Integer> scores = getTournamentScores();
+
+// Calculate Average Score
+Integer total = 0;
+for ( Integer score : scores ) {
+    total += score;
+}
+Double average = Double.valueOf(total / scores.size());
+String displayAverage = average.toString();
+
+// Display the average
+Text averageText = new Text(displayAverage);
+
+Group root = new Group(text);   
+Scene scene = new Scene(root, 600, 300);  
+
+stage.setTitle("Tournament Stats"); 
+stage.setScene(scene); 
+   
+stage.show(); 
+
+~~~
+
+A few months later, we need a PDF report that includes the average bowling score for a player for the current year. So we grab the code for calculating the average from the screen and we drop it in. It works.
+
+{format: Java, caption: Average Annual Score}
+~~~
+// Get annual scores
+List<Integer> scores = getAnnualScores();
+
+// Calculate Average Score
+Integer total = 0;
+for ( Integer score : scores ) {
+    total += score;
+}
+Double average = Double.valueOf(total / scores.size());
+String displayAverage = average.toString();
+
+// Display the average
+Chunk averageChunk = new Chunk(displayAverage, font);
+
+Document document = new Document();
+PdfWriter.getInstance(document, new FileOutputStream("AnnualStats.pdf"));
+ 
+document.open();
+Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+
+document.add(averageChunk);
+
+~~~
+
+Let's say we end up doing this a few times. There are different screens and different reports, all of which show average scores based on different criteria such as player age, gender, or region.
+
+Our linter will catch these because they are all literally identical in the way they calculate the average. Every single one of them has this exact same code.
+
+{format: Java, caption: Our Duplicated Code}
+~~~
+// Calculate Average Score
+Integer total = 0;
+for ( Integer score : scores ) {
+    total += score;
+}
+Double average = Double.valueOf(total / scores.size());
+String displayAverage = average.toString();
+~~~
+
+Now, how likely do you think that is? That we've duplicated the same code a dozen times and nobody made a single change to it?
+
+Yeah. Not likely.
+
+It is far more likely that in the dozen instances of average calculation, we have minor differences. There are probably three or four different variants of the same code. We'll have different variable names because total isn't descriptive enough, whereas annualTotal or tournamentTotal is more descriptive. And we'll have different formatting because some of us think that the for loop is concise enough to fit onto one line and some of us think that for loops should never be on a single line.
+
+{format: Java, caption: Annual Score with new variables}
+~~~
+// Calculate Average Annual Score
+Integer annualTotal = 0;
+for ( Integer score : scores ) {
+    annualTotal += score;
+}
+Double average = Double.valueOf(annualTotal / scores.size());
+String displayAverage = average.toString();
+~~~
+
+{format: Java, caption: Tournament Score with new variables and formatting}
+~~~
+// Calculate Tournament Average
+Integer tournamentTotal = 0;
+Double tournamentAvg = 0;
+Integer scoreCount = scores.size();
+for ( Integer score : scores ) { tournamentTotal += score; }
+tournamentAvg = Double.valueOf(tournamentTotal / scoreCount);
+String displayAverage = tournamentAvg.toString();
+~~~
+
+The more sophisticated linters will still catch this. They ignore insignificant characters such as spaces, tabs and carriage returns. They also ignore comments in the code and can intelligently evaluate variables.
+
+Over time, we make minor modifications to the different areas of the code that calculate averages. Maybe we change where on the screen it is displayed or maybe we want to change the formatting of the display of the average on the screen. Whatever the reasons, the implementation of the various copies of the duplicate code drift over time.
+
+{format: Java, caption: Annual Score with empty check}
+~~~
+// Calculate Average Annual Score
+Integer annualTotal = 0;
+Double average = 0.0;
+
+if (!scores.isEmpty()) {
+  for ( Integer score : scores ) {
+      annualTotal += score;
+  }
+  average = Double.valueOf(annualTotal / scores.size());
+}
+
+String displayAverage = average.toString();
+~~~
+
+{format: Java, caption: Tournament score using streams and summary statistics}
+~~~
+// Calculate Tournament Average
+IntSummaryStatistics summaryStats = tournamentScores.stream()
+        .mapToInt((a) -> a)
+        .summaryStatistics();
+
+String tournamentAverage = summaryStats.getAverage().toString();
+~~~
+
+At this point, these two examples are distinctly different in structure, yet they are identical in behavior - they both calculate the average of a set of scores.
+
+Kent is specific with his words. He doesn't say "Duplicates no code or configuration", he says, "Duplicates no behavior or configuration". Kent is not just talking about duplicate code, he's talking about duplicate behavior. And this is an important distinction.
+
+As it turns out, when you have code that is duplicate in structure and content, you very likely have duplicate behavior. This is what makes code linters helpful. They are able to find places where someone copied code from one area of the source code and pasted it into another. 
+
+Duplicate behavior is the real problem to look for. When you have duplicate code - duplicate in structure and function - you probably have duplicate behavior. I mean, like probably always. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
+
+
+IS IT A CONSTRUCT?
+“Hey, look, there is a case statement with 3 parts in the method that calculates sales tax and a case statement with three parts in the method that determines user authorization roles.”
+
+This is not duplication we care about. We will find a lot of code that looks similar, but performs distinctly different functions.
+
+IS IT LOGIC?
+“Hey, look, here we use a chain of command to determine if a user is authorized to access admin pages and here we use a case statement to determine if a user is authorized to perform specific functions on the data entry page.”
+
+This is duplication we care about. Here, we have different expressions of the same fundamental logic; user authorization. This type of duplication indicates a violation of the Single Responsibility Principal.
+
 
 Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
 
