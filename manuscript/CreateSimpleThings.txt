@@ -55,56 +55,54 @@ Let's say we have a screen that shows the average bowling score for a player dur
 
 {format: Java, caption: Average Tournament Score}
 ~~~
-// Get tournament scores
-List<Integer> scores = getTournamentScores();
+  // Get tournament scores
+  List<Integer> scores = getTournamentScores();
 
-// Calculate Average Score
-Integer total = 0;
-for ( Integer score : scores ) {
-    total += score;
-}
-Double average = Double.valueOf(total / scores.size());
-String displayAverage = average.toString();
+  // Calculate Average Score
+  Integer total = 0;
+  for ( Integer score : scores ) {
+      total += score;
+  }
+  Double average = Double.valueOf(total / scores.size());
+  String displayAverage = average.toString();
 
-// Display the average
-Text averageText = new Text(displayAverage);
+  // Display the average
+  Text averageText = new Text(displayAverage);
 
-Group root = new Group(text);   
-Scene scene = new Scene(root, 600, 300);  
+  Group root = new Group(text);   
+  Scene scene = new Scene(root, 600, 300);  
 
-stage.setTitle("Tournament Stats"); 
-stage.setScene(scene); 
-   
-stage.show(); 
-
+  stage.setTitle("Tournament Stats"); 
+  stage.setScene(scene); 
+     
+  stage.show(); 
 ~~~
 
 A few months later, we need a PDF report that includes the average bowling score for a player for the current year. So we grab the code for calculating the average from the screen and we drop it in. It works.
 
 {format: Java, caption: Average Annual Score}
 ~~~
-// Get annual scores
-List<Integer> scores = getAnnualScores();
+  // Get annual scores
+  List<Integer> scores = getAnnualScores();
 
-// Calculate Average Score
-Integer total = 0;
-for ( Integer score : scores ) {
-    total += score;
-}
-Double average = Double.valueOf(total / scores.size());
-String displayAverage = average.toString();
+  // Calculate Average Score
+  Integer total = 0;
+  for ( Integer score : scores ) {
+      total += score;
+  }
+  Double average = Double.valueOf(total / scores.size());
+  String displayAverage = average.toString();
 
-// Display the average
-Chunk averageChunk = new Chunk(displayAverage, font);
+  // Display the average
+  Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+  Chunk averageChunk = new Chunk(displayAverage, font);
 
-Document document = new Document();
-PdfWriter.getInstance(document, new FileOutputStream("AnnualStats.pdf"));
- 
-document.open();
-Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+  Document document = new Document();
+  PdfWriter.getInstance(document, new FileOutputStream("AnnualStats.pdf"));
+   
+  document.open();
 
-document.add(averageChunk);
-
+  document.add(averageChunk);
 ~~~
 
 Let's say we end up doing this a few times. There are different screens and different reports, all of which show average scores based on different criteria such as player age, gender, or region.
@@ -113,13 +111,13 @@ Our linter will catch these because they are all literally identical in the way 
 
 {format: Java, caption: Our Duplicated Code}
 ~~~
-// Calculate Average Score
-Integer total = 0;
-for ( Integer score : scores ) {
-    total += score;
-}
-Double average = Double.valueOf(total / scores.size());
-String displayAverage = average.toString();
+  // Calculate Average Score
+  Integer total = 0;
+  for ( Integer score : scores ) {
+      total += score;
+  }
+  Double average = Double.valueOf(total / scores.size());
+  String displayAverage = average.toString();
 ~~~
 
 Now, how likely do you think that is? That we've duplicated the same code a dozen times and nobody made a single change to it?
@@ -130,24 +128,24 @@ It is far more likely that in the dozen instances of average calculation, we hav
 
 {format: Java, caption: Annual Score with new variables}
 ~~~
-// Calculate Average Annual Score
-Integer annualTotal = 0;
-for ( Integer score : scores ) {
-    annualTotal += score;
-}
-Double average = Double.valueOf(annualTotal / scores.size());
-String displayAverage = average.toString();
+  // Calculate Average Annual Score
+  Integer annualTotal = 0;
+  for ( Integer score : scores ) {
+      annualTotal += score;
+  }
+  Double average = Double.valueOf(annualTotal / scores.size());
+  String displayAverage = average.toString();
 ~~~
 
 {format: Java, caption: Tournament Score with new variables and formatting}
 ~~~
-// Calculate Tournament Average
-Integer tournamentTotal = 0;
-Double tournamentAvg = 0;
-Integer scoreCount = scores.size();
-for ( Integer score : scores ) { tournamentTotal += score; }
-tournamentAvg = Double.valueOf(tournamentTotal / scoreCount);
-String displayAverage = tournamentAvg.toString();
+  // Calculate Tournament Average
+  Integer tournamentTotal = 0;
+  Double tournamentAvg = 0;
+  Integer scoreCount = scores.size();
+  for ( Integer score : scores ) { tournamentTotal += score; }
+  tournamentAvg = Double.valueOf(tournamentTotal / scoreCount);
+  String displayAverage = tournamentAvg.toString();
 ~~~
 
 The more sophisticated linters will still catch this. They ignore insignificant characters such as spaces, tabs and carriage returns. They also ignore comments in the code and can intelligently evaluate variables. These differences will still get caught by any decent linter.
@@ -156,28 +154,28 @@ Over time, we make minor modifications to the different areas of the code that c
 
 {format: Java, caption: Annual Score with empty check}
 ~~~
-// Calculate Average Annual Score
-Integer annualTotal = 0;
-Double average = 0.0;
+  // Calculate Average Annual Score
+  Integer annualTotal = 0;
+  Double average = 0.0;
 
-if (!scores.isEmpty()) {
-  for ( Integer score : scores ) {
-      annualTotal += score;
+  if (!scores.isEmpty()) {
+    for ( Integer score : scores ) {
+        annualTotal += score;
+    }
+    average = Double.valueOf(annualTotal / scores.size());
   }
-  average = Double.valueOf(annualTotal / scores.size());
-}
 
-String displayAverage = average.toString();
+  String displayAverage = average.toString();
 ~~~
 
 {format: Java, caption: Tournament score using streams and summary statistics}
 ~~~
-// Calculate Tournament Average
-IntSummaryStatistics summaryStats = tournamentScores.stream()
-        .mapToInt((a) -> a)
-        .summaryStatistics();
+  // Calculate Tournament Average
+  IntSummaryStatistics summaryStats = tournamentScores.stream()
+          .mapToInt((a) -> a)
+          .summaryStatistics();
 
-String tournamentAverage = summaryStats.getAverage().toString();
+  String tournamentAverage = summaryStats.getAverage().toString();
 ~~~
 
 At this point, these two examples are distinctly different in structure, yet they are identical in behavior - they both calculate the average of a set of scores.
@@ -203,6 +201,72 @@ You might be thinking, "No problem. We'll just record the base score and the han
 Whoah. Didn't see that one coming, did we?
 
 Okay, maybe you did. But my last league bowling experience was 2004 when my then 10 year old son and I joined a father:son league. As far as I know, they didn't use handicaps.
+
+Given the promise of a lot of new customers, we're happy to add in this new behavior. But how? Where do we begin? Maybe we start with reports and then after we've tested it, we add it into the screens? Maybe we start with the most commonly used aspects of the software?
+
+However we go about this, we're going to need to do a lot of testing. Think about it - the change to annual average is going to be completely different from the change to tournament average. We can't complete the new behavior in one and then copy:paste into the other any more. They're too structurally different for that to work, even though they have the same behavior.
+
+Well, wait a minute... What if we took this opportunity to first get them all back in sync? What if we chose our favorite version of the average calculation - the one that works the fastest or is the easiest to read or maybe is best based on some other set of criteria - and we replaced all of the versions with that one? We could make them all the same again! And that way, we could make the handicap calculation change once and then know it would work for all of them.
+
+That's pretty good. It would prevent us from having to write 12 different versions of the handicap calculation logic. That's handy. (No pun intended) But we still have 12 different copies of the average calculation and we now know that, given time, we'll eventually drift into having 12 different versions of the code floating around. And who knows, what if the USBC does a study and determines that the current handicap calculations need to change in order to be more equitable. Ugh. 12 different changes all over again.
+
+This is the problem with duplicate behavior. Whenever you have duplicate behavior, you have duplicate areas of the code that need to change. Any change, no matter how simple, takes longer for each implementation of the behavior. Not only that - what if you miss one? Or two? Duplicate behavior means more work and more bugs.
+
+What we need to do here is create ONE instance of the average score calculation. It needs to be clean and simple. Calculating an average score needs to be the one job it does; its single responsibility. Anywhere we need an average score calculated, we make a call to this instance, passing it a list of scores, and it give us back the average.
+
+{format: Java, caption: Calculate Average Method}
+~~~
+public class ScoreCalculator {
+  public static Double average(List<Integer> scores) {
+
+    IntSummaryStatistics summaryStats = scores.stream()
+          .mapToInt((a) -> a)
+          .summaryStatistics();
+          
+    return summaryStats.getAverage();
+  }
+}
+~~~
+
+{format: Java, caption: Average Tournament Score}
+~~~
+  // Get tournament scores
+  List<Integer> scores = getTournamentScores();
+
+  // Calculate Average Score
+  String displayAverage = ScoreCalculator.average(scores).toString();
+
+  // Display the average
+  Text averageText = new Text(displayAverage);
+
+  Group root = new Group(text);   
+  Scene scene = new Scene(root, 600, 300);  
+
+  stage.setTitle("Tournament Stats"); 
+  stage.setScene(scene); 
+     
+  stage.show(); 
+~~~
+
+{format: Java, caption: Average Annual Score}
+~~~
+  // Get annual scores
+  List<Integer> scores = getAnnualScores();
+
+  // Calculate Average Score
+  String displayAverage = ScoreCalculator.average(scores).toString();
+
+  // Display the average
+  Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+  Chunk averageChunk = new Chunk(displayAverage, font);
+
+  Document document = new Document();
+  PdfWriter.getInstance(document, new FileOutputStream("AnnualStats.pdf"));
+   
+  document.open();
+
+  document.add(averageChunk);
+~~~
 
 
 
