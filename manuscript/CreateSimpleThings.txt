@@ -172,11 +172,11 @@ Over time, we make minor modifications to the different areas of the code that c
 {format: Java, caption: Tournament score using streams and summary statistics}
 ~~~
   // Calculate Tournament Average
-  IntSummaryStatistics summaryStats = tournamentScores.stream()
-          .mapToInt((a) -> a)
-          .summaryStatistics();
+  IntSummaryStatistics stats = tournamentScores.stream()
+    .mapToInt((a) -> a)
+    .summaryStatistics();
 
-  String tournamentAverage = summaryStats.getAverage().toString();
+  String tournamentAverage = stats.getAverage().toString();
 ~~~
 
 At this point, these two examples are distinctly different in structure, yet they are identical in behavior - they both calculate the average of a set of scores.
@@ -213,18 +213,18 @@ That's pretty good. It would prevent us from having to write 12 different versio
 
 This is the problem with duplicate behavior. Whenever you have duplicate behavior, you have multiple areas of the code that might need to change. Any change, no matter how simple, takes longer for each implementation of the behavior. Not only that - what if you miss one? Or two? Duplicate behavior means more work and more bugs.
 
-What we need to do here is create ONE instance of the average score calculation. It needs to be clean and simple. Calculating an average score needs to be the one job it does; its single responsibility. Anywhere we need an average score calculated, we make a call to this instance, passing it a list of scores, and it give us back the average.
+What we need to do here is create *one* instance of the average score calculation. It needs to be clean and simple. Calculating an average score needs to be the one job it does; its single responsibility. Anywhere we need an average score calculated, we make a call to this instance, passing it a list of scores, and it gives us back the average.
 
 {format: Java, caption: Calculate Average Method}
 ~~~
 public class ScoreCalculator {
   public static Double average(List<Integer> scores) {
 
-    IntSummaryStatistics summaryStats = scores.stream()
-          .mapToInt((a) -> a)
-          .summaryStatistics();
+    IntSummaryStatistics stats = scores.stream()
+      .mapToInt((a) -> a)
+      .summaryStatistics();
           
-    return summaryStats.getAverage();
+    return stats.getAverage();
   }
 }
 ~~~
