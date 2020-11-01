@@ -47,6 +47,10 @@ Now Kent's rules are in order of importance. While rule 2 and 3 have swapped pla
 
 We hear a lot about duplicate code in the industry. There are automated code checkers called linters that look for code duplication and metrics dashboards that tell you how much of it you have. These tools look for patterns in the structure of the code. At a minimum, they look for code that is character for character identical.
 
+But Kent is specific with his words. He doesn't say "Duplicates no code or configuration", he says, "Duplicates no behavior or configuration". Kent is not just talking about duplicate code, he's talking about duplicate behavior. And this is an important distinction.
+
+As it turns out, when you have code that is duplicate in structure and content, you very likely have duplicate behavior. This is what makes code linters helpful. They are able to find places where someone copied code from one area of the source code and pasted it into another. But linters are not good at identifying duplicate behavior.
+
 Let's say we have a screen that shows the average bowling score for a player during a tournament.
 
 {format: Java, caption: Average Tournament Score}
@@ -146,7 +150,7 @@ tournamentAvg = Double.valueOf(tournamentTotal / scoreCount);
 String displayAverage = tournamentAvg.toString();
 ~~~
 
-The more sophisticated linters will still catch this. They ignore insignificant characters such as spaces, tabs and carriage returns. They also ignore comments in the code and can intelligently evaluate variables.
+The more sophisticated linters will still catch this. They ignore insignificant characters such as spaces, tabs and carriage returns. They also ignore comments in the code and can intelligently evaluate variables. These differences will still get caught by any decent linter.
 
 Over time, we make minor modifications to the different areas of the code that calculate averages. Maybe we change where on the screen it is displayed or maybe we want to change the formatting of the display of the average on the screen. Whatever the reasons, the implementation of the various copies of the duplicate code drift over time.
 
@@ -178,22 +182,25 @@ String tournamentAverage = summaryStats.getAverage().toString();
 
 At this point, these two examples are distinctly different in structure, yet they are identical in behavior - they both calculate the average of a set of scores.
 
-Kent is specific with his words. He doesn't say "Duplicates no code or configuration", he says, "Duplicates no behavior or configuration". Kent is not just talking about duplicate code, he's talking about duplicate behavior. And this is an important distinction.
+As we mentioned earlier, the rule is not "Duplicates no code or configuration", but quite deliberately, "Duplicates no behavior or configuration."
 
-As it turns out, when you have code that is duplicate in structure and content, you very likely have duplicate behavior. This is what makes code linters helpful. They are able to find places where someone copied code from one area of the source code and pasted it into another. 
+Duplicate behavior is the actual problem. As we've now seen in our example here, when you have duplicate code - significantly similar in structure and function - you usually have duplicate behavior. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
 
-Duplicate behavior is the real problem to look for. When you have duplicate code - duplicate in structure and function - you probably have duplicate behavior. I mean, like probably always. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
+Why is that? Why is duplicate behavior an issue?
 
+Let's return to our example of calculating an average of bowling scores.
 
-IS IT A CONSTRUCT?
-“Hey, look, there is a case statement with 3 parts in the method that calculates sales tax and a case statement with three parts in the method that determines user authorization roles.”
+Our handy little application is being used by a number of small leagues and amateur bowlers. Eventually, the United States Bowling Congress (USBC)[^USBC] takes notice and wants to use it, but they need it to support handicaps. This means that the screens and reports that currently show scores and averages will need to show the base values along with the values adjusted for handicap.
 
-This is not duplication we care about. We will find a lot of code that looks similar, but performs distinctly different functions.
+[^USBC]: Home - United States Bowling Congress. (n.d.). Retrieved November 01, 2020, from https://bowl.com/
 
-IS IT LOGIC?
-“Hey, look, here we use a chain of command to determine if a user is authorized to access admin pages and here we use a case statement to determine if a user is authorized to perform specific functions on the data entry page.”
+To calculate a handicap, you need to take an average of your scores over a minimum of three most recent games, subtract your average from a league basis score to get a delta, and multiply the delta by a league percentage to get your handicap. This is certainly going to make our code more complicated.
 
-This is duplication we care about. Here, we have different expressions of the same fundamental logic; user authorization. This type of duplication indicates a violation of the Single Responsibility Principal.
+But there's more. In league bowling, your handicap changes over time. As you bowl, you are accumulating new scores. Those scores may very well alter your base average, which will alter your delta, which will alter your handicap. So when we want to show the average score for the season along with the average score with handicap for the season, we will have to calculate multiple averages in order to figure out what the handicap adjusted score would have been and then finally calculate the average of all the handicap adjusted scores.
+
+You might be thinking, "No problem. We'll just record the base score and the handicap adjusted score for every game so that we only need to calculate the handicap once." And you'd be right, except leagues want to run what if scenarios to make sure their basis scores and percentages are fair and it is not unheard of for a local league to adjust their handicap basis score or percentage retro-actively in the middle of a season.
+
+Whoah. Didn't see that one coming, did we?
 
 
 Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
