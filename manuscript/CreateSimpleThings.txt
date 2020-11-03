@@ -41,18 +41,18 @@ Test-driven development is a style of programming that involves a cycle of three
 [^Refactor]: Stuff and Things //TODO: Reference to refactor
 
 - Test
- - write a new single unit test for a very specific behavior
- - run the test and confirm it fails because the program lacks that behavior
+  - write a new single unit test for a very specific behavior
+  - run the test and confirm it fails because the program lacks that behavior
 - Code
- - write rudimentary code in order to make the test pass
-  - might involve duplication, non-expressive names, etc.
- - confirm the new test passes
- - confirm all tests pass
+  - write rudimentary code in order to make the test pass
+    - might involve duplication, non-expressive names, etc.
+  - confirm the new test passes
+  - confirm all tests pass
 - Refactor
- - eliminate duplication
- - clearly express intent
- - remove superfluous parts
- - confirm all tests pass
+  - eliminate duplication
+  - clearly express intent
+  - remove superfluous parts
+  - confirm all tests pass
 {/blurb}
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
