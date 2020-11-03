@@ -15,6 +15,11 @@ Simple might indicate something that has few components or something that is eas
 
 So we might say that simple code has few components and is easy to understand. But I think this definition lacks something. I could have code that has few components, is easy to understand, and fails to reliably accomplish the desired outcome.
 
+//TODO: Reference for jUnit
+//TODO: Blurb for jUnit
+//TODO: Reference for Extreme Programming
+//TODO: Blurb for Extreme Programming
+
 Kent Beck[^KentBeck], creator of jUnit and a member of the team that created Extreme Programming (XP), describes Simple Design using 4 rules[^SimplicityRules]:
 
 1. Passes all the tests.
@@ -26,7 +31,7 @@ Kent Beck[^KentBeck], creator of jUnit and a member of the team that created Ext
 
 [^SimplicityRules]: Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
 
-There are numerous variation of the 4 rules. The order has been changed slightly over the years and different folks, including Kent, have articulated the rules in various ways. But the essence of the rules has not changed. Whether we say "Duplicates no behavior", "Duplicates no logic", or "Contains no duplication" is primarily a matter of preference. The author is making an attempt to be more clear based on their mental models.
+There are numerous variations of the 4 rules. The order has been changed slightly over the years and different folks, including Kent, have articulated the rules in various ways. But the essence of the rules has not changed. Whether we say "Duplicates no behavior", "Duplicates no logic", or "Contains no duplication" is primarily a matter of preference.
 
 ### Passes all the tests.
 
@@ -34,12 +39,13 @@ First and foremost, Kent's idea of simple includes tests. Now, he doesn't specif
 
 [^TDD]: “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
 
-{blurb, class: information}
+{aside}
 #### Test-Driven Development (TDD)
 
 Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor[^Refactor]. The steps can be described as follows:
 
-[^Refactor]: Stuff and Things //TODO: Reference to refactor
+//TODO: Reference to refactor
+[^Refactor]: Stuff and Things
 
 - Test
   - write a unit test specifying a specific behavior
@@ -55,7 +61,7 @@ Test-driven development is a style of programming that involves a cycle of three
   - clearly express intent
   - remove superfluous parts
   - confirm all tests pass
-{/blurb}
+{/aside}
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
 
