@@ -36,13 +36,20 @@ First and foremost, Kent's idea of simple includes tests. Now, he doesn't specif
 {blurb, class: information, width: 60%}
 #### Test-Driven Development (TDD)
 
-When you code, alternate these activities:
-add a test, get it to fail, and write code to pass the test (DoSimpleThings, CodeUnitTestFirst)
-remove duplication (OnceAndOnlyOnce, DontRepeatYourself, ThreeStrikesAndYouAutomate)
-This inner loop pumps the outer loops of ExtremeProgramming - ContinuousIntegration, DailyDeployment, FrequentReleases, and SteeringSoftwareProjects. (Hence the graphic.) Tests help us keep promises regarding the quality, cost, and existence of previously installed features.
-Using this system, all my code is highly decoupled (meaning easy to re-use) because it all already has two users - its clients, and its test rigs. Classes typically resist the transition from one user to two, then the rest are easy. I make reuse easy as a side-effect of coding very fast.
-Then, the "remove duplication" phase forces one to examine code for latent abstractions that one could express via virtual methods and other techniques that naturally make code more extendable. This is the "reuse" that the OO hype of the 1980s screamed about.
+Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor[^Refactor]. The steps can be described as follows:
 
+- Test
+-- write a single unit test for a very specific behavior
+-- run the test and confirm it fails because the program lacks that behavior
+- Code
+-- write the most rudimentary code you can conceive of to make the test pass
+-- confirm the test passes
+-- confirm all tests pass
+- Refactor
+-- refactor the code to
+--- eliminate duplication 
+--- clearly express intent
+--- remove superfluous parts
 {/blurb}
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
