@@ -33,7 +33,7 @@ First and foremost, Kent's idea of simple includes tests. Now, he doesn't specif
 
 [^TDD]: “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
 
-{blurb, class: information}
+{blurb, class: information, width: 60%}
 #### Test-Driven Development (TDD)
 
 When you code, alternate these activities:
