@@ -39,7 +39,7 @@ First and foremost, Kent's idea of simple includes tests. Now, he doesn't specif
 
 [^TDD]: “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
 
-{aside}
+{aside, width: 40%, float: right}
 #### Test-Driven Development (TDD)
 
 Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor[^Refactor]. The steps can be described as follows:
