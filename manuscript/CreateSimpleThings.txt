@@ -22,13 +22,13 @@ Kent Beck[^KentBeck], creator of jUnit[^jUnit] and a member of the team that cre
 1. Duplicates no behavior.
 1. Has no superfluous parts.
 
-[^KentBeck]: “Kent Beck.” Wikipedia. Wikimedia Foundation, February 7, 2020. https://en.wikipedia.org/wiki/Kent_Beck.
+[^KentBeck]: Kent Beck is the creator of extreme programming. Beck was one of the original signatories of the Agile Manifesto. Kent is also known for his work as a proponent of TDD. “Kent Beck.” Wikipedia. Wikimedia Foundation, February 7, 2020. https://en.wikipedia.org/wiki/Kent_Beck.
 
-[^jUnit]: A unit testing framework for Java, originally written by Kent Beck, Erich Gamma, et. al. jUnit was instrumental in fostering the adoption of TDD. “The New Major Version of the Programmer-Friendly Testing Framework for Java.” JUnit 5. Accessed November 3, 2020. https://junit.org/. 
+[^jUnit]: jUnit is a unit testing framework for Java, originally written by Kent Beck, Erich Gamma, et. al. jUnit was instrumental in fostering the adoption of TDD. “The New Major Version of the Programmer-Friendly Testing Framework for Java.” JUnit 5. Accessed November 3, 2020. https://junit.org/. 
 
 [^XP]: You know, like XP // TODO: Reference for Extreme Programming & Blurb for Extreme Programming
 
-[^SimplicityRules]: Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
+[^SimplicityRules]: The simplicity rules, which are a part of XP, are a set of criteria for determining if code is "simple enough." Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
 
 There are numerous variations of the 4 rules. The order has been changed slightly over the years and different folks, including Kent, have articulated the rules in various ways. But the essence of the rules has not changed. Whether we say "Duplicates no behavior", "Duplicates no logic", or "Contains no duplication" is primarily a matter of preference.
 
