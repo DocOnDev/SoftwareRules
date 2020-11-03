@@ -1,10 +1,11 @@
 {#create_simple_things}
 # Create simple things in small steps.
 
-{icon: quote-left}
-B> ## The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
+{blurb, icon: quote-left}
+The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
 
-B> ### -- Bjarne Stroustrup
+C> -- Bjarne Stroustrup
+{/blurb}
 
 ## Create Simple Things
 
@@ -33,7 +34,7 @@ First and foremost, Kent's idea of simple includes tests. Now, he doesn't specif
 
 [^TDD]: “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
 
-{blurb, class: information, width: 60%}
+{blurb, class: information}
 #### Test-Driven Development (TDD)
 
 Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor[^Refactor]. The steps can be described as follows:
@@ -41,8 +42,9 @@ Test-driven development is a style of programming that involves a cycle of three
 [^Refactor]: Stuff and Things //TODO: Reference to refactor
 
 - Test
-  - write a new single unit test for a very specific behavior
-  - run the test and confirm it fails because the program lacks that behavior
+  - write a unit test specifying a specific behavior
+  - run the test
+    - confirm it fails because the program lacks that behavior
 - Code
   - write rudimentary code in order to make the test pass
     - might involve duplication, non-expressive names, etc.
@@ -63,9 +65,9 @@ All of what tests?
 All of the tests we have?
 All of the tests we decided to write?
 
-No - all of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome.
+All of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome.
 
-Now Kent's rules are in order of importance. While rule 2 and 3 have swapped place over the years due to changes in industry trends and more or less utilization of frameworks, rule number one has always been rule number one. Make sure the software does what it is supposed to do.
+Kent's rules are in order of importance. While rule 2 and 3 have swapped place over the years due to changes in industry trends, rule number one has always been rule number one. Make sure the software does what it is supposed to do.
 
 ### Expresses every idea we need to express
 
