@@ -15,20 +15,23 @@ Simple might indicate something that has few components or something that is eas
 So we might say that simple code has few components and is easy to understand. But I think this definition lacks something. I could have code that has few components, is easy to understand, and fails to reliably accomplish the desired outcome.
 
 Kent Beck[^KentBeck], creator of jUnit and a member of the team that created Extreme Programming (XP), describes Simple Design using 4 rules[^SimplicityRules]:
+
 1. Passes all the tests.
 1. Express every idea we need to express.
-1. Duplicates no behavior or configuration.
+1. Duplicates no behavior.
 1. Has no superfluous parts.
 
 [^KentBeck]: “Kent Beck.” Wikipedia. Wikimedia Foundation, February 7, 2020. https://en.wikipedia.org/wiki/Kent_Beck.
 
 [^SimplicityRules]: Cunningham, Ward, Kent Beck, and Ron Jeffries. “XP Simplicity Rules.” wiki.c2.com, November 12, 2014. https://wiki.c2.com/?XpSimplicityRules.
 
+There are numerous variation of the 4 rules. The order has been changed slightly over the years and different folks, including Kent, have articulated the rules in various ways. But the essence of the rules has not changed. Whether we say "Duplicates no behavior", "Duplicates no logic", or "Contains no duplication" is primarily a matter of preference. The author is making an attempt to be more clear based on their mental models.
+
+### Passes all the tests.
+
 First and foremost, Kent's idea of simple includes tests. Now, he doesn't specify automated tests, much less unit tests or Test Driven Design (TDD) in his definition. //TODO: TDD Reference
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
-
-### Passes all the tests.
 
 All the tests. Not some of the tests. All of them.
 
@@ -43,11 +46,11 @@ Now Kent's rules are in order of importance. While rule 2 and 3 have swapped pla
 ### Expresses every idea we need to express
 
 
-### Duplicates no behavior or configuration
+### Duplicates no behavior
 
 We hear a lot about duplicate code in the industry. There are automated code checkers called linters that look for code duplication and metrics dashboards that tell you how much of it you have. These tools look for patterns in the structure of the code. At a minimum, they look for code that is character for character identical.
 
-But Kent is specific with his words. He doesn't say "Duplicates no code or configuration", he says, "Duplicates no behavior or configuration". Kent is not just talking about duplicate code, he's talking about duplicate behavior. And this is an important distinction.
+But Kent is specific with his words. He doesn't say "Duplicates no code", he says, "Duplicates no behavior". Kent is not just talking about duplicate code, he's talking about duplicate behavior. And this is an important distinction.
 
 As it turns out, when you have code that is duplicate in structure and content, you very likely have duplicate behavior. This is what makes code linters helpful. They are able to find places where someone copied code from one area of the source code and pasted it into another. But linters are not good at identifying duplicate behavior.
 
@@ -169,7 +172,7 @@ Over time, we make minor modifications to the different areas of the code that c
   String displayAverage = average.toString();
 ~~~
 
-{format: Java, caption: Tournament score using streams and summary statistics}
+{format: Java, caption: Tournament score using summary statistics}
 ~~~
   // Calculate Tournament Average
   IntSummaryStatistics stats = tournamentScores.stream()
@@ -181,7 +184,7 @@ Over time, we make minor modifications to the different areas of the code that c
 
 At this point, these two examples are distinctly different in structure, yet they are identical in behavior - they both calculate the average of a set of scores.
 
-As we mentioned earlier, the rule is not "Duplicates no code or configuration", but quite deliberately, "Duplicates no behavior or configuration."
+As we mentioned earlier, the rule is not "Duplicates no code", but quite deliberately, "Duplicates no behavior."
 
 Duplicate behavior is the actual problem. As we've now seen in our example here, when you have duplicate code - significantly similar in structure and function - you usually have duplicate behavior. But Kent is talking about _any_ duplicate behavior, even those that are structurally different.
 
@@ -191,7 +194,7 @@ Let's return to our simple example of calculating an average of bowling scores.
 
 Our handy little application is being used by a number of small leagues and amateur bowlers. Eventually, the United States Bowling Congress (USBC)[^USBC] takes notice and wants to use it, but they need it to support handicaps. This means that the screens and reports that currently show scores and averages will need to show the base values along with the values adjusted for handicap.
 
-[^USBC]: Home - United States Bowling Congress. (n.d.). Retrieved November 01, 2020, from https://bowl.com/
+[^USBC]: “Home - United States Bowling Congress.” Accessed November 1, 2020. https://bowl.com/. 
 
 To calculate a handicap, you need to take an average of the scores over a minimum of three most recent games, subtract the average from a league basis score to get a delta, and multiply the delta by a league percentage to get the handicap. This is certainly going to make our code more complicated.
 
@@ -201,7 +204,7 @@ You might be thinking, "No problem. We'll just record the base score and the han
 
 Whoah. Didn't see that one coming, did we?
 
-Okay, maybe you did. But my last league bowling experience was 2004 when my then 10 year old son and I joined a father:son league. As far as I know, they didn't use handicaps.
+Okay, maybe you did. But my last league bowling experience was 2004 when my then 10 year old son and I joined a father:son league. As far as I know, they didn't use handicaps. This craziness was news to me, my friend.
 
 Given the promise of a lot of new customers, we're happy to add in this new behavior. But how? Where do we begin? Maybe we start with reports and then after we've tested it, we add it into the screens? Maybe we start with the most commonly used aspects of the software?
 
@@ -213,7 +216,7 @@ That's pretty good. It would prevent us from having to write 12 different versio
 
 This is the problem with duplicate behavior. Whenever you have duplicate behavior, you have multiple areas of the code that might need to change. Any change, no matter how simple, takes longer for each implementation of the behavior. Not only that - what if you miss one? Or two? Duplicate behavior means more work and more bugs.
 
-What we need to do here is create *one* instance of the average score calculation. It needs to be clean and simple. Calculating an average score needs to be the one job it does; its single responsibility. Anywhere we need an average score calculated, we make a call to this instance, passing it a list of scores, and it gives us back the average.
+What we need to do here is create *one* instance of the average score calculation. It needs to be clean and simple. Calculating an average score needs to be the one job it does; its single responsibility. Anywhere we need an average score calculated, we make a call to this one instance, passing it a list of scores, and it gives us back the average.
 
 {format: Java, caption: Calculate Average Method}
 ~~~
@@ -270,7 +273,13 @@ public class ScoreCalculator {
   document.add(averageChunk);
 ~~~
 
+Having completed that exercise, we now have one place where score averages are calculated. Now, any change to how score averages are calculated can be made in one place and will automatically work everywhere in the application.
 
+One commonly accepted principle of software development is The Single Responsibility Principle (SRP)[^SRP]. SRP states that each software module should have one and only one reason to change. While the principle does not state this explicitly, I tend to add, "Each reason to change should be represented in one and only one module." So each module within a solution has a specific, discrete, unique purpose and is the only module within the solution that provides said purpose.
+
+[^SRP]: “Single Responsibility Principle.” wiki.c2.com, March 23, 2010. https://wiki.c2.com/?SingleResponsibilityPrinciple. 
+
+This is what is means to duplicate no behavior. Each module within a solution has a specific, discrete, unique purpose and is the only module within the solution that provides said purpose.
 
 Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
 
