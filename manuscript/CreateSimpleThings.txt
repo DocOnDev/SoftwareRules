@@ -29,7 +29,21 @@ There are numerous variation of the 4 rules. The order has been changed slightly
 
 ### Passes all the tests.
 
-First and foremost, Kent's idea of simple includes tests. Now, he doesn't specify automated tests, much less unit tests or Test Driven Design (TDD) in his definition. //TODO: TDD Reference
+First and foremost, Kent's idea of simple includes tests. Now, he doesn't specify automated tests, much less unit tests or Test-Driven Development (TDD)[^TDD] in his definition.
+
+[^TDD]: “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
+
+{aside}
+# Test-Driven Development (TDD)
+
+When you code, alternate these activities:
+add a test, get it to fail, and write code to pass the test (DoSimpleThings, CodeUnitTestFirst)
+remove duplication (OnceAndOnlyOnce, DontRepeatYourself, ThreeStrikesAndYouAutomate)
+This inner loop pumps the outer loops of ExtremeProgramming - ContinuousIntegration, DailyDeployment, FrequentReleases, and SteeringSoftwareProjects. (Hence the graphic.) Tests help us keep promises regarding the quality, cost, and existence of previously installed features.
+Using this system, all my code is highly decoupled (meaning easy to re-use) because it all already has two users - its clients, and its test rigs. Classes typically resist the transition from one user to two, then the rest are easy. I make reuse easy as a side-effect of coding very fast.
+Then, the "remove duplication" phase forces one to examine code for latent abstractions that one could express via virtual methods and other techniques that naturally make code more extendable. This is the "reuse" that the OO hype of the 1980s screamed about.
+
+{/aside}
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
 
