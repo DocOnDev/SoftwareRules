@@ -75,7 +75,10 @@ I tell you this because I want you to understand that modern languages are as mu
 
 When we say that the code clearly expresses what we intend, we are talking about how those intentions are expressed to other humans. How clearly have we expressed the intent to the future version of ourselves? How clearly have we expressed the intent to a complete stranger who inherits our project?
 
-Q> 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.' - Martin Fowler
+{blurb, icon:quote}
+ *'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.'*
+ C> - Martin Fowler
+ {/blurb}
 
 Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. You don't need to study the code to figure it out, like a complex math problem; you merely need to read it, like a good story. Code should adhere to the principle of least astonishment - it shouldn't surprise us in any way.
 
