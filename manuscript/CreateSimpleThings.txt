@@ -73,9 +73,11 @@ Okay. That's enough of that.
 
 I tell you this because I want you to understand that modern languages are as much, if not more, about human to human communication than they are about human to machine communication. If we wanted to talk to the machine directly, we would write in machine code. While higher-level languages make it easier for us humans to reason about a problem and think less about how to express that problem in 0s and 1s, they have the additional advantage of being linguistically expressive. We can genuinely convey ideas in code, much like we can in prose.
 
+When we say that the code clearly expresses what we intend, we are talking about how those intentions are expressed to other humans. How clearly have we expressed the intent to the future version of ourselves? How clearly have we expressed the intent to a complete stranger who inherits our project?
 
+Q> 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.' - Martin Fowler
 
-When you look at a piece of code it should immediately tell you what it does and it shouldn’t surprise you. Variable, method, and class names should describe what they do. This is also refered to as the principle of least astonishment or the element of least surprise.
+Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. You don't need to study the code to figure it out, like a complex math problem; you merely need to read it, like a good story. Code should adhere to the principle of least astonishment - it shouldn't surprise us in any way.
 
 ### Duplicates no behavior
 
