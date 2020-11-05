@@ -1,2 +1,34 @@
 {#validate_always}
 # Validate before, during, and after.
+
+
+THINGS TO (possibly) ANSWER IN THIS SECTION
+* What types of tests? - unit tests? What does that mean?
+* What about acceptance and regression?
+* Do all tests need to pass all the time?
+* The assurance you get from passing tests.
+* The cognitive/chemical jolt you get from tests passing.
+* The safety net you get from a set of tests.
+
+
+
+{aside}
+#### Test-Driven Development (TDD)
+
+Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor. The steps can be described as follows:
+
+- Test
+  - write a unit test specifying a specific behavior
+  - run the test
+    - confirm it fails because the program lacks that behavior
+- Code
+  - write rudimentary code in order to make the test pass
+    - might involve duplication, non-expressive names, etc.
+  - confirm the new test passes
+  - confirm all tests pass
+- Refactor
+  - eliminate duplication
+  - clearly express intent
+  - remove superfluous parts
+  - confirm all tests pass
+{/aside}

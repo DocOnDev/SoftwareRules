@@ -41,39 +41,9 @@ There are numerous variations of the 4 rules. The order has been changed slightl
 
 ### Passes all the tests.
 
-What types of tests? - unit tests? What does that mean?
-What about acceptance and regression?
-Do all tests need to pass all the time?
-The assurance you get from passing tests.
-The cognitive/chemical jolt you get from tests passing.
-The safety net you get from a set of tests.
-
-
-
 First and foremost, Kent's idea of simple includes tests. Now, he doesn't specify automated tests, much less unit tests or Test-Driven Development (TDD)[^TDD] in his definition.
 
 [^TDD]: Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor. “Test-Driven Development.” wiki.c2.com, November 5, 2014. http://wiki.c2.com/?TestDrivenDevelopment. 
-
-{aside}
-#### Test-Driven Development (TDD)
-
-Test-driven development is a style of programming that involves a cycle of three activities executed in short cycles: Test, Code, Refactor. The steps can be described as follows:
-
-- Test
-  - write a unit test specifying a specific behavior
-  - run the test
-    - confirm it fails because the program lacks that behavior
-- Code
-  - write rudimentary code in order to make the test pass
-    - might involve duplication, non-expressive names, etc.
-  - confirm the new test passes
-  - confirm all tests pass
-- Refactor
-  - eliminate duplication
-  - clearly express intent
-  - remove superfluous parts
-  - confirm all tests pass
-{/aside}
 
 I think TDD is a fair inference considering these are Kent's rules. But that's not the point at the moment. The point, dear reader, is that Kent's rules for simple design include that the code passes all the tests.
 
@@ -83,9 +53,11 @@ All of what tests?
 All of the tests we have?
 All of the tests we decided to write?
 
-All of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome.
+All of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome, that we have a means of proving to ourselves that it does so, and we have a means of assuring ourselves that it will continue to do so.
 
-What I like about Kent's articulation is that it not only states that the code should reliably accomplish the desired outcome, but that we have a means of proving to ourselves that it does so and assuring ourselves that it will continue to do so.
+{aside}
+For more on testing, take a look at the section entitled, ["Validate before, during, and after"](#validate_always)
+{/aside}
 
 Kent's rules are in order of importance. While rule 2 and 3 have sometimes swapped places over the years due to changes in industry trends, rule number one has always been rule number one. Make sure the software does what it is supposed to do.
 
