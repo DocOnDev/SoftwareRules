@@ -25,7 +25,7 @@ That's not bad. I could live with it.
 As it turns out, the industry has a definition of simplicity that is similar to ours. Kent Beck[^KentBeck], creator of jUnit[^jUnit] and a member of the team that created Extreme Programming (XP)[^XP], describes Simple Design using 4 rules[^SimplicityRules]:
 
 1. Passes all the tests.
-1. Express every idea we need to express.
+1. Clearly expresses what we intend.
 1. Duplicates no behavior.
 1. Has no superfluous parts.
 
@@ -61,8 +61,21 @@ For more on testing, take a look at the section entitled, ["Validate before, dur
 
 Kent's rules are in order of importance. While rule 2 and 3 have sometimes swapped places over the years due to changes in industry trends, rule number one has always been rule number one. Make sure the software does what it is supposed to do.
 
-### Expresses every idea we need to express
+### Clearly expresses what we intend
 
+Source code is an interesting thing. One might think that source code is designed to provide instructions to a machine. And they wouldn't be entirely wrong. Except that most source code these days is several layers away from being able to be truly understood by a computer whereas it is immediately understood by humans (or should be).
+
+Languages like Java or C# are designed for humans to read and write. If we want machines to actually perform the task described by the code, then the source is run through a compiler which translates the source to another language. That language is often also not runnable by a machine, but is an intermediate language that is more easily transformed into machine code. This intermediate language code is then compiled to machine code. The compilation to machine code is often done in real time.
+
+Let's take the Java language as an example. A developer writes some software that does something spiffy, like calculates a bowling score average. When the developer builds the software, the compiler converts the Java code to something called bytecode. This is an intermediate step. Bytecode cannot be run by a computer directly. Instead, when a java application is started, the bytecode is loaded into a Java Virtual Machine (JVM) which is specific to the hardware it is running upon. That JVM then converts the bytecode to machine code in real-time as needed.
+
+Okay. That's enough of that.
+
+I tell you this because I want you to understand that modern languages are as much, if not more, about human to human communication than they are about human to machine communication. If we wanted to talk to the machine directly, we would write in machine code. While higher-level languages make it easier for us humans to reason about a problem and think less about how to express that problem in 0s and 1s, they have the additional advantage of being linguistically expressive. We can genuinely convey ideas in code, much like we can in prose.
+
+
+
+When you look at a piece of code it should immediately tell you what it does and it shouldn’t surprise you. Variable, method, and class names should describe what they do. This is also refered to as the principle of least astonishment or the element of least surprise.
 
 ### Duplicates no behavior
 
@@ -298,6 +311,8 @@ One commonly accepted principle of software development is The Single Responsibi
 [^SRP]: “Single Responsibility Principle.” wiki.c2.com, March 23, 2010. https://wiki.c2.com/?SingleResponsibilityPrinciple. 
 
 This is what is means to duplicate no behavior. Each module within a solution has a specific, discrete, and unique purpose.
+
+Closely related to the SRP initialization is the, perhaps, more memorable DRY acronym. DRY (Don't Repeat Yourself), from the book, The Pragmatic Programmer, states, "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." You might hear a developer refer to code as DRY or not DRY, indicating whether or not it has repeated logic. I've also heard people use the acronym WET "write every time" to refer to code with excessive duplication, but I wouldn't say this has caught on in the industry as a "standard".
 
 Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
 
