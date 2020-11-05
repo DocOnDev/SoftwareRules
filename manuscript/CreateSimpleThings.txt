@@ -75,12 +75,27 @@ I tell you this because I want you to understand that modern languages are as mu
 
 When we say that the code clearly expresses what we intend, we are talking about how those intentions are expressed to other humans. How clearly have we expressed the intent to the future version of ourselves? How clearly have we expressed the intent to a complete stranger who inherits our project?
 
-{blurb, icon:quote}
+{blurb, icon:quote-left}
  *'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.'*
- C> - Martin Fowler
+ C> -- Martin Fowler
  {/blurb}
 
-Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. You don't need to study the code to figure it out, like a complex math problem; you merely need to read it, like a good story. Code should adhere to the principle of least astonishment - it shouldn't surprise us in any way.
+Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. You don't need to study the code to figure it out, like a complex math problem; you merely need to read it, more like a story. Code should adhere to the principle of least astonishment - it shouldn't surprise us in any way.
+
+
+// TODO: Metaphor for this concept - Re-write a user manual?
+// TODO: Talk about really bad code?
+// TODO: Talk about reading the topology?
+
+Let's take a typical piece of code. This is taken from an open-source library. Can you read it? Can you read it like a story?
+
+{format: Java, caption: Code Snippet from open source library}
+~~~
+
+stage.show(); 
+~~~
+
+
 
 ### Duplicates no behavior
 
