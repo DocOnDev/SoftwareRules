@@ -80,7 +80,173 @@ When we say that the code clearly expresses what we intend, we are talking about
  C> -- Martin Fowler
  {/blurb}
 
-Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. You don't need to study the code to figure it out, like a complex math problem; you merely need to read it, more like a story. Code should adhere to the principle of least astonishment - it shouldn't surprise us in any way.
+Our goal here is that when we look at a piece of code, it immediately tells us what it does. Classes, methods, and variables all have names that reveal their purpose. Concepts are expressed independent of one another in concise and unambiguous ways. Good code adheres to the principle of least astonishment[^LeastAstonishment] - it doesn't surprise us in any way.
+
+[^LeastAstonishment]: “Principle of Least Astonishment.” wiki.c2.com, November 26, 2014. https://wiki.c2.com/?PrincipleOfLeastAstonishment.
+
+Let's explore the concepts of clear expression and the principle of least surprise by looking at an excerpt from a story. First we'll read the excerpt and then I'll ask you a few questions about how clearly the details were expressed.
+
+{blurb, icon:book, caption: The Incident}
+Despite anxiously awaiting the knock at the door, Chris still paused to peer through the peephole. Seeing an officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer in a crisp white shirt, blue work pants and heavy black boots, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small table and four chairs.
+
+They sat, he facing the hall and she facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said the officer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+Based on what you read, how would you answer the following questions?
+* What was Chris anxious about?
+* What was Chris wearing during the discussion?
+* What room were they seated in?
+* What was the officer facing when seated?
+* Where was the telescope during the incident?
+* How many people did Chris see in the apartment?
+
+Let's see if we can adjust the story a bit to make the answers to these questions more clear. Our intent is to maintain the integrity of the story; to make it more clear what has transpired without altering the outcome. Let's make small changes, testing each one to ensure it made the story more clear without altering the story itself.
+
+{blurb, icon:book, caption: The Incident - What was Chris anxious about?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Chris heard a knock on the door and peered through the peephole. Seeing an officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer in a crisp white shirt, blue work pants and heavy black boots, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small table and four chairs.
+
+They sat, he facing the hall and she facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said the officer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+We now have additional detail about Chris. Chris is anxious about being late for work. We have additional clarity and we've not altered the outcome of the story. This was a good first change. Let's make another one.
+
+{blurb, icon:book, caption: The Incident - What was Chris wearing?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. While waiting, Chris got dressed for work in a crisp white shirt, blue work pants, and heavy black boots. Finally, Chris heard a knock on the door and peered through the peephole. Seeing an officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small table and four chairs.
+
+They sat, he facing the hall and she facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said the officer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+We've confirmed that Chris was wearing a crisp white shirt, blue work pants, and heavy black boots during the discussion. Did that surprise any of you? The original text was unclear. It would have been easy to assume the officer's attire was being described. The original text mixed different ideas into a single sentence; the greeting and what Chris was wearing. We extracted the attire detail and put it into an independent sentence, making things more clear.
+
+Now that it is independent, we are able to make a judgement about the value of the attire details while maintaining the greeting. Honestly, the attire does not seem relevant to the essence of the story and could be removed entirely. It is a superfluous detail. We'll remove it going forward.
+
+So again, we have additional clarity and we've not altered the outcome of the story. Let's keep going and see if we know what room they're in.
+
+{blurb, icon:book, caption: The Incident - What room were they seated in?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing an officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room.
+
+They sat, he facing the hall and she facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said the officer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+They were in the living room. Did you think they were at a dining table of some sort? Did you guess they were in a dining room or kitchen? I did. I wasn't expecting them to be in the living room. Providing just a little more detail about the table and chairs completely changed my perspective.
+
+So far, so good. We're a lot more clear on the details and we've eliminated concepts that didn't need to be included. And still, we've not altered the outcome of the story.
+
+{blurb, icon:book, caption: The Incident - What was the officer facing?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing a female officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room.
+
+They sat, he facing the hall and she facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said the officer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+The officer was facing a large photo of flowers in a vase. If you're like me, this caused some tension for you. The text didn't indicate anything conclusive about either individual's gender identity. I personally found the referring to "he" and "she" to be jarring. I suddenly had to decide how our characters identified. Chris is a gender neutral name and I didn't know anything more than the officer's last name. I felt tension and then decided that Chris must be female because most police officers are male. That didn't feel great, but it made the most sense to me at the time. I needed to fill the gap in order to move on.
+
+We've cleared some of the tension by introducing a gender identity for the officer. But if we think about it, gender doesn't seem to be material to the story. Let's eliminate the tension altogether by referring to the specific characters and get rid of the "female officer" text.
+
+{blurb, icon:book, caption: The Incident - Eliminate the tension}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing an officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room.
+
+They sat, Chris facing the hall and Officer Mercer facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said Mercer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and I saw them, tall and heavy set, in the apartment with a telescope. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+{blurb, icon:book, caption: The Incident - Where was the telescope?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing a female officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room.
+
+They sat, Chris facing the hall and Officer Mercer facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said Mercer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and noticed something odd in the apartment across the way. So I got out my telescope to take a closer look and I saw them, tall and heavy set, in the apartment. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+The telescope belongs to Chris and was in his apartment. He did not see them holding a telescope. He used his telescope to see them. In the original story, either could have been the case.
+
+{blurb, icon:book, caption: The Incident - How many people did Chris see in the apartment?}
+Worried about being late to work, Chris was anxiously waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing a female officer, Chris opened the door.
+
+"Hello.", said Chris, greeting the officer, "Am I glad to see you."
+"You are Chris Estes?", asked the officer.
+"I am.", said Chris.
+"Officer Mercer. You reported witnessing a crime?"
+"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room.
+
+They sat, Chris facing the hall and Officer Mercer facing a large photo of flowers in a vase.
+
+"Okay. So tell me what you saw.", said Mercer, "Provide as much detail as you can."
+
+"Yes. of course. Well, I just got home from the gym, and noticed something odd in the apartment across the way. So I got out my telescope to take a closer look and I saw two men, one tall and one heavy set, in the apartment. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
+{/blurb}
+
+Chris saw two men. In the original telling, we may have assumed he saw one person who was tall and heavy set. By adding a little more clarity, we now know that there were two man in the apartment, one of whom was tall and the other was heavy set.
+
+
+This still isn't a fantastic story, but it is much better. We've reduced ambiguity, eliminated the superfluous, and lowered friction. This version of the story is far easier to read and we've maintained the essence.
+
 
 
 // TODO: Metaphor for this concept - Re-write a user manual?
