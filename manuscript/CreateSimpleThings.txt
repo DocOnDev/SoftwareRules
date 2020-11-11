@@ -294,20 +294,405 @@ What we've been doing is a practice developers refer to as refactoring[^Refactor
 
 [^Refactoring]: Fowler, Martin. “Refactoring Home Page.” Refactoring. Accessed November 8, 2020. https://refactoring.com/. 
 
+Now that we're conceptually familiar with refactoring and we've seen the notion applied to prose, let's take a look at some code. Take a look at this code. What do you suppose it is intended to do? Does it work as intended? Can you primarily read it or do you need to primarily interpret it?
 
-
-// TODO: Talk about really bad code?
-// TODO: Talk about reading the topology?
-
-Now that we're conceptually familiar with refactoring and we've seen the notion applied to prose, let's take a look at some code. This is taken from an open-source library. Can you read it? Can you read it like a story?
-
-{format: Java, caption: Code Snippet from open source library}
+{format: Java, caption: Example Code - Original}
 ~~~
 
-stage.show(); 
+public class Game
+{
+    public int P1point = 0;
+    public int P2point = 0;
+    
+    public String P1res = "";
+    public String P2res = "";
+    private String player1Name;
+    private String player2Name;
+
+    public Game(String player1Name, String player2Name) {
+        this.player1Name = player1Name;
+        this.player2Name = player2Name;
+    }
+
+    public String getScore(){
+        String score = "";
+        if (P1point == P2point && P1point < 4)
+        {
+            if (P1point==0)
+                score = "Love";
+            if (P1point==1)
+                score = "Fifteen";
+            if (P1point==2)
+                score = "Thirty";
+            score += "-All";
+        }
+        if (P1point==P2point && P1point>=3)
+            score = "Deuce";
+        
+        if (P1point > 0 && P2point==0)
+        {
+            if (P1point==1)
+                P1res = "Fifteen";
+            if (P1point==2)
+                P1res = "Thirty";
+            if (P1point==3)
+                P1res = "Forty";
+            
+            P2res = "Love";
+            score = P1res + "-" + P2res;
+        }
+        if (P2point > 0 && P1point==0)
+        {
+            if (P2point==1)
+                P2res = "Fifteen";
+            if (P2point==2)
+                P2res = "Thirty";
+            if (P2point==3)
+                P2res = "Forty";
+            
+            P1res = "Love";
+            score = P1res + "-" + P2res;
+        }
+        
+        if (P1point>P2point && P1point < 4)
+        {
+            if (P1point==2)
+                P1res="Thirty";
+            if (P1point==3)
+                P1res="Forty";
+            if (P2point==1)
+                P2res="Fifteen";
+            if (P2point==2)
+                P2res="Thirty";
+            score = P1res + "-" + P2res;
+        }
+        if (P2point>P1point && P2point < 4)
+        {
+            if (P2point==2)
+                P2res="Thirty";
+            if (P2point==3)
+                P2res="Forty";
+            if (P1point==1)
+                P1res="Fifteen";
+            if (P1point==2)
+                P1res="Thirty";
+            score = P1res + "-" + P2res;
+        }
+        
+        if (P1point > P2point && P2point >= 3)
+        {
+            score = "Advantage player1";
+        }
+        
+        if (P2point > P1point && P1point >= 3)
+        {
+            score = "Advantage player2";
+        }
+        
+        if (P1point>=4 && P2point>=0 && (P1point-P2point)>=2)
+        {
+            score = "Win for player1";
+        }
+        if (P2point>=4 && P1point>=0 && (P2point-P1point)>=2)
+        {
+            score = "Win for player2";
+        }
+        return score;
+    }
+    
+    public void SetP1Score(int number){
+        
+        for (int i = 0; i < number; i++)
+        {
+            P1Score();
+        }
+            
+    }
+    
+    public void SetP2Score(int number){
+        
+        for (int i = 0; i < number; i++)
+        {
+            P2Score();
+        }
+            
+    }
+    
+    public void P1Score(){
+        P1point++;
+    }
+    
+    public void P2Score(){
+        P2point++;
+    }
+
+    public void wonPoint(String player) {
+        if (player == "player1")
+            P1Score();
+        else
+            P2Score();
+    }
+}
 ~~~
 
+I can see that this is related to tennis. I can infer tennis from the words "Love", "Fifteen", "Thirty", "Forty", "Deuce", and "Advantage". And I can see that there is some notion of winning a point and some notion of score. I can see that there are two players involved. But it is hard to figure out if the scoring works as it should.
 
+Fortunately for us, we have a satisfactory set of automated tests that verify a wide range of possible game scenarios. According to these tests, the code does score games properly. Those tests allow us to make changes to the code and verify that the behavior (the essence) of the code has been maintained. Let's see if we can make this code more readable by refactoring it, much like we did the prose.
+
+Normally, refactoring involves tiny steps. We want to make a small, safe change and verify that everything is still working. We do this over and over again as we improve the code. Small changes are easy to undo should we break something. Small changes mean we spend very little refactoring time in a broken state. When I say very little time, I mean seconds or possibly minutes, but never hours. As a result, we can safely stop refactoring at any time, quickly get to a working state, and check in the code.
+
+This code is in pretty bad shape. And while I actually did the refactoring in tiny steps, I don't want to drag you through it all. So I am going to show the refactoring in larger steps.
+
+Let's start out our refactoring by giving things more descriptive names.
+
+{format: Java, caption: Tennis Class - Descriptive names}
+~~~
+public class TennisGame
+{
+    private String playerOneName;
+    public int playerOnePoints = 0;
+    public String playerOneScore = "";
+
+    private String playerTwoName;
+    public int playerTwoPoints = 0;
+    public String playerTwoScore = "";
+
+
+    public TennisGame(String player1Name, String player2Name) {
+        this.playerOneName = player1Name;
+        this.playerTwoName = player2Name;
+    }
+
+    public String getScore(){
+        String score = "";
+        if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
+        {
+            if (playerOnePoints ==0)
+                score = "Love";
+            if (playerOnePoints ==1)
+                score = "Fifteen";
+            if (playerOnePoints ==2)
+                score = "Thirty";
+            score += "-All";
+        }
+        if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrOver(playerOnePoints))
+            score = "Deuce";
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && playerTwoPoints ==0)
+        {
+            if (playerOnePoints ==1)
+                playerOneScore = "Fifteen";
+            if (playerOnePoints ==2)
+                playerOneScore = "Thirty";
+            if (playerOnePoints ==3)
+                playerOneScore = "Forty";
+            
+            playerTwoScore = "Love";
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && playerOnePoints ==0)
+        {
+            if (playerTwoPoints ==1)
+                playerTwoScore = "Fifteen";
+            if (playerTwoPoints ==2)
+                playerTwoScore = "Thirty";
+            if (playerTwoPoints ==3)
+                playerTwoScore = "Forty";
+            
+            playerOneScore = "Love";
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
+        {
+            if (playerOnePoints ==2)
+                playerOneScore ="Thirty";
+            if (playerOnePoints ==3)
+                playerOneScore ="Forty";
+            if (playerTwoPoints ==1)
+                playerTwoScore ="Fifteen";
+            if (playerTwoPoints ==2)
+                playerTwoScore ="Thirty";
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isFortyOrUnder(playerTwoPoints))
+        {
+            if (playerTwoPoints ==2)
+                playerTwoScore ="Thirty";
+            if (playerTwoPoints ==3)
+                playerTwoScore ="Forty";
+            if (playerOnePoints ==1)
+                playerOneScore ="Fifteen";
+            if (playerOnePoints ==2)
+                playerOneScore ="Thirty";
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isFortyOrOver(playerTwoPoints))
+        {
+            score = "Advantage " + playerOneName;
+        }
+        
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isFortyOrOver(playerOnePoints))
+        {
+            score = "Advantage " + playerTwoName;
+        }
+
+        if (isOverForty(playerOnePoints) && isAheadByTwoOrMore(playerOnePoints, playerTwoPoints))
+        {
+            score = "Win for " + playerOneName;
+        }
+        if (isOverForty(playerTwoPoints) && isAheadByTwoOrMore(playerTwoPoints, playerOnePoints))
+        {
+            score = "Win for " + playerTwoName;
+        }
+        return score;
+    }
+
+    private boolean isAheadByTwoOrMore(int firstPlayerPoints, int secondPlayerPoints) {
+        return (firstPlayerPoints - secondPlayerPoints)>=2;
+    }
+
+    private boolean isOverForty(int playerPoints) {
+        return playerPoints >=4;
+    }
+
+    private boolean isFirstPlayerWinning(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints > secondPlayerPoints;
+    }
+
+    private boolean isFortyOrOver(int playerPoints) {
+        return playerPoints >=3;
+    }
+
+    private boolean isFortyOrUnder(int playerPoints) {
+        return playerPoints < 4;
+    }
+
+    private boolean isTieGame(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints == secondPlayerPoints;
+    }
+
+    public void wonPoint(String player) {
+        if (player == playerOneName)
+            playerOnePoints++;
+        else
+            playerTwoPoints++;
+    }
+}
+~~~
+
+So far, we've given things more descriptive names. For example, P1res became playerOneScore. We've distinguished points (value) from score (description). We took a lot of logic that was a little difficult to parse and we've moved it into methods with more descriptive names. For example, "P1point == P2point && P1point < 4" became "isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints)". The second is more verbose, but reads more like plain english.
+
+Making the code more readable has better exposed some logic issues. For example, let's look at this section of the code:
+
+{format: Java, caption: Tennis Class - Logic flaw}
+~~~
+if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
+{
+    if (playerOnePoints ==0)
+        score = "Love";
+    if (playerOnePoints ==1)
+        score = "Fifteen";
+    if (playerOnePoints ==2)
+        score = "Thirty";
+    score += "-All";
+}
+if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrOver(playerOnePoints))
+    score = "Deuce";
+~~~
+
+We're checking to see if it is a tie game and the score is forty or under. If so, we format a response ending in "-All" to send back. We do not yet return the response. Instead, the code continues to the next section where we check to see if it is a tie game and the score is forty or over. If so, we format a "Deuce" response to send back.
+
+Now, imagine it is a game tied at 40. The first check is true (tied and forty or under), so we format the response accordingly with "...-All". The second check is also true (tied and forty or over), so we replace our already formatted response with "Deuce". Why does the first check include 40 if the second check always overrides it? And what would have happened if somebody moved these around into a different order? Suddenly tests would break because a game tied at 40 would say "Forty-All" instead of "Deuce".
+
+There is also a great deal of duplicate logic in the code. There are lines and lines of code that map points to a description:
+
+{format: Java, caption: Tennis Class - Duplication}
+~~~
+if (playerOnePoints ==2)
+    playerOneScore ="Thirty";
+if (playerOnePoints ==3)
+    playerOneScore ="Forty";
+if (playerTwoPoints ==1)
+    playerTwoScore ="Fifteen";
+if (playerTwoPoints ==2)
+    playerTwoScore ="Thirty";
+~~~
+
+Imagine a change in rules where the score progression goes from "Love, Fifteen, Thirty, Forty, All, Deuce, Advantage, Win", to, "Naught, Twenty-Five, Fifty, Seventy-Five, Each, Even, Up, Victory". I mean, of course that would _never_ happen, but, you know, just what if? There are over 40 lines of code involved in converting a score to a description where the description is limited to 8 possible words. That seems a bit much.
+
+
+
+Well, it is a lot more verbose. And I think it might be a tiny bit more clear. But it is still pretty much impossible to really figure out what is going on.
+
+Let's see if we can figure out some of the score logic by making it more readable. To do this, we'll take formulas and make them more readable. We will give the formulas names by abstracting the formulas into methods with descriptive names. Again, we'll skip a few steps to speed this along. Remember that as a developer, I would make these changes one idea at a time and test as I went along. That is, in fact, how this was done in real life.
+
+{format: Java, caption: Tennis Class - Extract Methods}
+~~~
+public class TennisGame3 implements TennisGame {
+    
+    private int playerTwoScore;
+    private int playerOneScore;
+    private String playerOneName;
+    private String playerTwoName;
+
+    public TennisGame3(String p1Name, String p2Name) {
+        this.playerOneName = p1Name;
+        this.playerTwoName = p2Name;
+    }
+
+    public String getScore() {
+        String description;
+        if (bothPlayersUnderForty() && notTiedAtThirty()) {
+            String[] scoreDescriptions = new String[]{"Love", "Fifteen", "Thirty", "Forty"};
+            description = scoreDescriptions[playerOneScore];
+            return (isTieScore()) ? description + "-All" : description + "-" + scoreDescriptions[playerTwoScore];
+        } else {
+            if (isTieScore())
+                return "Deuce";
+            description = isPlayerOneWinning() ? playerOneName : playerTwoName;
+            return ((playerOneScore - playerTwoScore)*(playerOneScore - playerTwoScore) == 1) ? "Advantage " + description : "Win for " + description;
+        }
+    }
+
+    public void wonPoint(String playerName) {
+        if (playerName == "player1")
+            this.playerOneScore += 1;
+        else
+            this.playerTwoScore += 1;
+
+    }
+
+    private boolean isPlayerOneWinning() {
+        return playerOneScore > playerTwoScore;
+    }
+
+    private boolean isTieScore() {
+        return playerOneScore == playerTwoScore;
+    }
+
+    private boolean notTiedAtThirty() {
+        return !(playerOneScore + playerTwoScore == 6);
+    }
+
+    private boolean bothPlayersUnderForty() {
+        return isScoreUnderForty(playerOneScore) && isScoreUnderForty(playerTwoScore);
+    }
+
+    private boolean isScoreUnderForty(int playerScore) {
+        return playerScore < 4;
+    }
+
+}
+~~~
+
+We added a simple method that gets a score and tells you if that score is under forty. Our tests still pass, so we're doing okay.
+
+{format: Java, caption: Tennis Class - Rename Items}
+~~~
+
+~~~
 
 ### Duplicates no behavior
 
