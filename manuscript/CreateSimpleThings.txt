@@ -437,7 +437,7 @@ public class Game
 
 I can see that this is related to tennis. I can infer tennis from the words "Love", "Fifteen", "Thirty", "Forty", "Deuce", and "Advantage". And I can see that there is some notion of winning a point and some notion of score. I can see that there are two players involved. But it is hard to figure out if the scoring works as it should.
 
-Fortunately for us, we have a satisfactory set of automated tests that verify a wide range of possible game scenarios. According to these tests, the code does score games properly. Those tests allow us to make changes to the code and verify that the behavior (the essence) of the code has been maintained. Let's see if we can make this code more readable by refactoring it, much like we did the prose.
+Fortunately for us, we have a satisfactory set of automated tests that verify a wide range of possible game scenarios. According to these tests, the code does score games properly. Those tests allow us to make changes to the code and verify that the behavior (the essence) of the code has been maintained. Let's see if we can make this code more readable by refactoring it, much like we did the prose. We are going to concentrate on the getScore() method. I'll show you all the code as we go along, but if you'd prefer not to read all of it, then just take notice of the changes to getScore().
 
 Normally, refactoring involves tiny steps. We want to make a small, safe change and verify that everything is still working. We do this over and over again as we improve the code. Small changes are easy to undo should we break something. Small changes mean we spend very little refactoring time in a broken state. When I say very little time, I mean seconds or possibly minutes, but never hours. As a result, we can safely stop refactoring at any time, quickly get to a working state, and check in the code.
 
@@ -586,7 +586,7 @@ So far, we've given things more descriptive names. For example, P1res became pla
 
 Making the code more readable has better exposed some logic issues. For example, let's look at this section of the code:
 
-{format: Java, caption: Tennis Class - Logic flaw}
+{format: Java, caption: Tennis - Logic flaw}
 ~~~
 if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
 {
@@ -608,7 +608,7 @@ Now, imagine it is a game tied at 40. The first check is true (tied and forty or
 
 There is also a great deal of duplicate logic in the code. There are lines and lines of code that map points to a description:
 
-{format: Java, caption: Tennis Class - Duplication}
+{format: Java, caption: Tennis - Duplication}
 ~~~
 if (playerOnePoints ==2)
     playerOneScore ="Thirty";
@@ -622,78 +622,298 @@ if (playerTwoPoints ==2)
 
 Imagine a change in rules where the score progression goes from "Love, Fifteen, Thirty, Forty, All, Deuce, Advantage, Win", to, "Naught, Twenty-Five, Fifty, Seventy-Five, Each, Even, Up, Victory". I mean, of course that would _never_ happen, but, you know, just what if? There are over 40 lines of code involved in converting a score to a description where the description is limited to 8 possible words. That seems a bit much.
 
+Let's reduce this duplication and see what happens.
 
-
-Well, it is a lot more verbose. And I think it might be a tiny bit more clear. But it is still pretty much impossible to really figure out what is going on.
-
-Let's see if we can figure out some of the score logic by making it more readable. To do this, we'll take formulas and make them more readable. We will give the formulas names by abstracting the formulas into methods with descriptive names. Again, we'll skip a few steps to speed this along. Remember that as a developer, I would make these changes one idea at a time and test as I went along. That is, in fact, how this was done in real life.
-
-{format: Java, caption: Tennis Class - Extract Methods}
+{format: Java, caption: Tennis - Remove Duplication}
 ~~~
-public class TennisGame3 implements TennisGame {
-    
-    private int playerTwoScore;
-    private int playerOneScore;
+public class TennisGame
+{
+    public List<String> Scores = Arrays.asList(new String[]{"Love", "Fifteen", "Thirty", "Forty"});
+
     private String playerOneName;
+    public int playerOnePoints = 0;
+    public String playerOneScore = "";
+
     private String playerTwoName;
+    public int playerTwoPoints = 0;
+    public String playerTwoScore = "";
 
-    public TennisGame3(String p1Name, String p2Name) {
-        this.playerOneName = p1Name;
-        this.playerTwoName = p2Name;
+
+    public TennisGame(String player1Name, String player2Name) {
+        this.playerOneName = player1Name;
+        this.playerTwoName = player2Name;
     }
 
-    public String getScore() {
-        String description;
-        if (bothPlayersUnderForty() && notTiedAtThirty()) {
-            String[] scoreDescriptions = new String[]{"Love", "Fifteen", "Thirty", "Forty"};
-            description = scoreDescriptions[playerOneScore];
-            return (isTieScore()) ? description + "-All" : description + "-" + scoreDescriptions[playerTwoScore];
-        } else {
-            if (isTieScore())
-                return "Deuce";
-            description = isPlayerOneWinning() ? playerOneName : playerTwoName;
-            return ((playerOneScore - playerTwoScore)*(playerOneScore - playerTwoScore) == 1) ? "Advantage " + description : "Win for " + description;
+    public String getScore(){
+        String score = "";
+        if (isTieGame(playerOnePoints, playerTwoPoints) && isUnderHighestScore(playerOnePoints))
+        {
+            score = getScore(playerOnePoints) + "-All";
         }
+        if (isTieGame(playerOnePoints, playerTwoPoints) && isHighestScoreOrOver(playerOnePoints))
+            score = "Deuce";
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && playerTwoPoints ==0)
+        {
+            playerOneScore = getScore(playerOnePoints);
+            playerTwoScore = getScore(playerTwoPoints);
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && playerOnePoints ==0)
+        {
+            playerOneScore = getScore(playerOnePoints);
+            playerTwoScore = getScore(playerTwoPoints);
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isHighestScoreOrUnder(playerOnePoints))
+        {
+            playerOneScore = getScore(playerOnePoints);
+            playerTwoScore = getScore(playerTwoPoints);
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isHighestScoreOrUnder(playerTwoPoints))
+        {
+            playerOneScore = getScore(playerOnePoints);
+            playerTwoScore = getScore(playerTwoPoints);
+            score = playerOneScore + "-" + playerTwoScore;
+        }
+        
+        if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isHighestScoreOrOver(playerTwoPoints))
+        {
+            score = "Advantage " + playerOneName;
+        }
+        
+        if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isHighestScoreOrOver(playerOnePoints))
+        {
+            score = "Advantage " + playerTwoName;
+        }
+
+        if (isOverHighestScore(playerOnePoints) && isAheadByTwoOrMore(playerOnePoints, playerTwoPoints))
+        {
+            score = "Win for " + playerOneName;
+        }
+        if (isOverHighestScore(playerTwoPoints) && isAheadByTwoOrMore(playerTwoPoints, playerOnePoints))
+        {
+            score = "Win for " + playerTwoName;
+        }
+        return score;
     }
 
-    public void wonPoint(String playerName) {
-        if (playerName == "player1")
-            this.playerOneScore += 1;
+    private String getScore(int playerPoints) {
+        return playerPoints <= highestScore() ? Scores.get(playerPoints) : "";
+    }
+
+    private boolean isAheadByTwoOrMore(int firstPlayerPoints, int secondPlayerPoints) {
+        return (firstPlayerPoints - secondPlayerPoints)>=2;
+    }
+
+    private boolean isOverHighestScore(int playerPoints) {
+        return playerPoints > highestScore();
+    }
+
+    private boolean isUnderHighestScore(int playerPoints) {
+        return playerPoints < highestScore();
+    }
+
+    private boolean isFirstPlayerWinning(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints > secondPlayerPoints;
+    }
+
+    private boolean isHighestScoreOrOver(int playerPoints) {
+        return playerPoints >= highestScore();
+    }
+
+    private boolean isHighestScoreOrUnder(int playerPoints) {
+        return playerPoints <= highestScore();
+    }
+
+    private int highestScore() {
+        return Scores.size()-1;
+    }
+
+    private boolean isTieGame(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints == secondPlayerPoints;
+    }
+
+    public void wonPoint(String player) {
+        if (player == playerOneName)
+            playerOnePoints++;
         else
-            this.playerTwoScore += 1;
-
+            playerTwoPoints++;
     }
-
-    private boolean isPlayerOneWinning() {
-        return playerOneScore > playerTwoScore;
-    }
-
-    private boolean isTieScore() {
-        return playerOneScore == playerTwoScore;
-    }
-
-    private boolean notTiedAtThirty() {
-        return !(playerOneScore + playerTwoScore == 6);
-    }
-
-    private boolean bothPlayersUnderForty() {
-        return isScoreUnderForty(playerOneScore) && isScoreUnderForty(playerTwoScore);
-    }
-
-    private boolean isScoreUnderForty(int playerScore) {
-        return playerScore < 4;
-    }
-
 }
 ~~~
 
-We added a simple method that gets a score and tells you if that score is under forty. Our tests still pass, so we're doing okay.
+Let's first take a look at these changes:
 
-{format: Java, caption: Tennis Class - Rename Items}
+{format: Java, caption: Tennis - Scores}
+~~~
+public List<String> Scores = Arrays.asList(new String[]{"Love", "Fifteen", "Thirty", "Forty"});
+
+...
+
+private String getScore(int playerPoints) {
+    return playerPoints <= highestScore() ? Scores.get(playerPoints) : "";
+}
 ~~~
 
+We added a list that holds all of our scores and we added some code to get the right score based on the number of player's points. Now, we have one place where scores are maintained. We could easily change "Love" to "Naught", should we so desire. One single change in one location. Doesn't that seem easier and less risky?
+
+Now let's take a look at the getScore method, specifically the middle of it:
+
+{format: Java, caption: Tennis - Duplication in getScore}
+~~~
+if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && playerTwoPoints ==0)
+{
+    playerOneScore = getScore(playerOnePoints);
+    playerTwoScore = getScore(playerTwoPoints);
+    score = playerOneScore + "-" + playerTwoScore;
+}
+if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && playerOnePoints ==0)
+{
+    playerOneScore = getScore(playerOnePoints);
+    playerTwoScore = getScore(playerTwoPoints);
+    score = playerOneScore + "-" + playerTwoScore;
+}
+
+if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isHighestScoreOrUnder(playerOnePoints))
+{
+    playerOneScore = getScore(playerOnePoints);
+    playerTwoScore = getScore(playerTwoPoints);
+    score = playerOneScore + "-" + playerTwoScore;
+}
+if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isHighestScoreOrUnder(playerTwoPoints))
+{
+    playerOneScore = getScore(playerOnePoints);
+    playerTwoScore = getScore(playerTwoPoints);
+    score = playerOneScore + "-" + playerTwoScore;
+}
 ~~~
 
+As it turns out, we have a bunch of different conditions that we check for, but no matter what the conditions, we do the same thing. Why check to see if player two is winning and player one has zero points when you're going to do the same thing as if the circumstances were reversed. Since all of these checks do the exact same thing, we can condense them down into one operation. While we are at it, let's make the code just a little more readable.
+
+{format: Java, caption: Tennis}
+~~~
+public class TennisGame
+{
+
+    public List<String> Scores = Arrays.asList(new String[]{"Love", "Fifteen", "Thirty", "Forty"});
+
+    private String playerOneName;
+    public int playerOnePoints = 0;
+
+    private String playerTwoName;
+    public int playerTwoPoints = 0;
+
+
+    public TennisGame(String player1Name, String player2Name) {
+        this.playerOneName = player1Name;
+        this.playerTwoName = player2Name;
+    }
+
+    public String getScore(){
+        if (isATieGame()) {
+            if (isUnderHighestScore()) return getScore(playerOnePoints) + "-All";
+            if (isHighestScoreOrOver()) return "Deuce";
+        }
+
+        if (isPlayerOneAdvantage()) return "Advantage " + playerOneName;
+        if (isPlayerTwoAdvantage()) return "Advantage " + playerTwoName;
+
+        if (isPlayerOneWin()) return "Win for " + playerOneName;
+        if (isPlayerTwoWin()) return "Win for " + playerTwoName;
+
+        return standardScore();
+    }
+
+    private String standardScore() {
+        return getScore(playerOnePoints) + "-" + getScore(playerTwoPoints);
+    }
+
+    private boolean isPlayerTwoWin() {
+        return isWin(playerTwoPoints, playerOnePoints);
+    }
+
+    private boolean isPlayerOneWin() {
+        return isWin(playerOnePoints, playerTwoPoints);
+    }
+
+    private boolean isPlayerTwoAdvantage() {
+        return isAdvantage(playerTwoPoints, playerOnePoints);
+    }
+
+    private boolean isPlayerOneAdvantage() {
+        return isAdvantage(playerOnePoints, playerTwoPoints);
+    }
+
+    private boolean isHighestScoreOrOver() {
+        return isHighestScoreOrOver(playerOnePoints);
+    }
+
+    private boolean isUnderHighestScore() {
+        return isUnderHighestScore(playerOnePoints);
+    }
+
+    private boolean isATieGame() {
+        return isTieGame(playerOnePoints, playerTwoPoints);
+    }
+
+    private boolean isWin(int firstPlayerPoints, int secondPlayerPoints) {
+        return isOverHighestScore(firstPlayerPoints) && isAheadByTwoOrMore(firstPlayerPoints, secondPlayerPoints);
+    }
+
+    private boolean isAdvantage(int firstPlayerPoints, int secondPlayerPoints) {
+        return isFirstPlayerWinning(firstPlayerPoints, secondPlayerPoints) && ( firstPlayerPoints - secondPlayerPoints == 1) && isHighestScoreOrOver(secondPlayerPoints);
+    }
+
+    private String getScore(int playerPoints) {
+        return playerPoints <= highestScore() ? Scores.get(playerPoints) : "";
+    }
+
+    private boolean isAheadByTwoOrMore(int firstPlayerPoints, int secondPlayerPoints) {
+        return (firstPlayerPoints - secondPlayerPoints)>=2;
+    }
+
+    private boolean isOverHighestScore(int playerPoints) {
+        return playerPoints > highestScore();
+    }
+
+    private boolean isUnderHighestScore(int playerPoints) {
+        return playerPoints < highestScore();
+    }
+
+    private boolean isFirstPlayerWinning(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints > secondPlayerPoints;
+    }
+
+    private boolean isHighestScoreOrOver(int playerPoints) {
+        return playerPoints >= highestScore();
+    }
+
+    private boolean isHighestScoreOrUnder(int playerPoints) {
+        return playerPoints <= highestScore();
+    }
+
+    private int highestScore() {
+        return Scores.size()-1;
+    }
+
+    private boolean isTieGame(int firstPlayerPoints, int secondPlayerPoints) {
+        return firstPlayerPoints == secondPlayerPoints;
+    }
+
+    public void wonPoint(String player) {
+        if (player == playerOneName)
+            playerOnePoints++;
+        else
+            playerTwoPoints++;
+    }
+}
+~~~
+
+
+ 
 ### Duplicates no behavior
 
 We hear a lot about duplicate code in the industry. There are automated code checkers called linters that look for code duplication and metrics dashboards that tell you how much of it you have. These tools look for patterns in the structure of the code. At a minimum, they look for code that is character for character identical.
