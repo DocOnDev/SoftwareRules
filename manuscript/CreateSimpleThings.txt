@@ -288,7 +288,7 @@ Anxious about being late for work, Chris was waiting for the police to arrive wh
 "Yes. of course. Well, I noticed something odd in the apartment across the way. So I got out my telescope to take a closer look and I saw two men in the apartment. One was tall and one was heavy set. They were putting stuff in boxes which they then loaded into a white truck."
 {/blurb}
 
-This still isn't a fantastic story, but it is much better. We've reduced ambiguity, eliminated some superfluous parts, and lowered friction. This version of the story is far easier to read and we've maintained the essence.
+This still isn't a fantastic story, but it is much better. We've reduced ambiguity, eliminated some superfluous parts, and lowered friction. This version of the story is far easier to read and we've maintained the essence. The story now more clearly expresses what we intend.
 
 What we've been doing is a practice developers refer to as refactoring[^Refactoring]. Refactoring is when developers change the structure of code without changing its behavior. In our exercise, we were changing the structure of the excerpt without altering the essence of the story. Just as a developer would do when refactoring, we didn't try to rewrite the story all at once, nor did we try to tell a different story. We had a meaning that we wanted to convey, information that we wanted to impart. We made small changes and tested each one against our desired outcomes. Were we true to the essence of the story? Did we eliminate unnecessary details? Did we make it more clear? Did we isolate ideas that didn't necessarily need to be expressed together? Did we make the story easier to edit in the future?
 
@@ -912,8 +912,127 @@ public class TennisGame
 }
 ~~~
 
+Let's take another look at the getScore() method and contrast where we started to were we are after this work.
 
- 
+{format: Java, caption: Tennis - getScore() before}
+~~~
+public String getScore(){
+    String score = "";
+    if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
+    {
+        if (playerOnePoints ==0)
+            score = "Love";
+        if (playerOnePoints ==1)
+            score = "Fifteen";
+        if (playerOnePoints ==2)
+            score = "Thirty";
+        score += "-All";
+    }
+    if (isTieGame(playerOnePoints, playerTwoPoints) && isFortyOrOver(playerOnePoints))
+        score = "Deuce";
+    
+    if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && playerTwoPoints ==0)
+    {
+        if (playerOnePoints ==1)
+            playerOneScore = "Fifteen";
+        if (playerOnePoints ==2)
+            playerOneScore = "Thirty";
+        if (playerOnePoints ==3)
+            playerOneScore = "Forty";
+        
+        playerTwoScore = "Love";
+        score = playerOneScore + "-" + playerTwoScore;
+    }
+    if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && playerOnePoints ==0)
+    {
+        if (playerTwoPoints ==1)
+            playerTwoScore = "Fifteen";
+        if (playerTwoPoints ==2)
+            playerTwoScore = "Thirty";
+        if (playerTwoPoints ==3)
+            playerTwoScore = "Forty";
+        
+        playerOneScore = "Love";
+        score = playerOneScore + "-" + playerTwoScore;
+    }
+    
+    if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isFortyOrUnder(playerOnePoints))
+    {
+        if (playerOnePoints ==2)
+            playerOneScore ="Thirty";
+        if (playerOnePoints ==3)
+            playerOneScore ="Forty";
+        if (playerTwoPoints ==1)
+            playerTwoScore ="Fifteen";
+        if (playerTwoPoints ==2)
+            playerTwoScore ="Thirty";
+        score = playerOneScore + "-" + playerTwoScore;
+    }
+    if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isFortyOrUnder(playerTwoPoints))
+    {
+        if (playerTwoPoints ==2)
+            playerTwoScore ="Thirty";
+        if (playerTwoPoints ==3)
+            playerTwoScore ="Forty";
+        if (playerOnePoints ==1)
+            playerOneScore ="Fifteen";
+        if (playerOnePoints ==2)
+            playerOneScore ="Thirty";
+        score = playerOneScore + "-" + playerTwoScore;
+    }
+    
+    if (isFirstPlayerWinning(playerOnePoints, playerTwoPoints) && isFortyOrOver(playerTwoPoints))
+    {
+        score = "Advantage " + playerOneName;
+    }
+    
+    if (isFirstPlayerWinning(playerTwoPoints, playerOnePoints) && isFortyOrOver(playerOnePoints))
+    {
+        score = "Advantage " + playerTwoName;
+    }
+
+    if (isOverForty(playerOnePoints) && isAheadByTwoOrMore(playerOnePoints, playerTwoPoints))
+    {
+        score = "Win for " + playerOneName;
+    }
+    if (isOverForty(playerTwoPoints) && isAheadByTwoOrMore(playerTwoPoints, playerOnePoints))
+    {
+        score = "Win for " + playerTwoName;
+    }
+    return score;
+}
+~~~
+
+{format: Java, caption: Tennis - getScore() after}
+~~~
+public String getScore(){
+    if (isATieGame()) {
+        if (isUnderHighestScore()) return getScore(playerOnePoints) + "-All";
+        if (isHighestScoreOrOver()) return "Deuce";
+    }
+
+    if (isPlayerOneAdvantage()) return "Advantage " + playerOneName;
+    if (isPlayerTwoAdvantage()) return "Advantage " + playerTwoName;
+
+    if (isPlayerOneWin()) return "Win for " + playerOneName;
+    if (isPlayerTwoWin()) return "Win for " + playerTwoName;
+
+    return standardScore();
+}
+~~~
+
+The after version is clearly more readable. Not only is this method more readable, the code is now genuinely easier to test and safer to change. The code now more clearly expresses the intent.
+
+There's still plenty of room for improvement. There is a concept of a score hiding in the code. A score has more than one attribute. A score has both points and an expression, such as 0 and "Love" or 1 and "Fifteen". In our code, this concept is separated and the game needs to know about how to translate points into expressions. There is also a concept of a player hiding in the code. For our purposes, a player has a name and a score. In our code, these concepts are separated and so for each playerName, we have code that associates it with points and score. But those are adventures for another day.
+
+It is important that our code clearly express our intent. The better the code expresses intent, the easier it is to understand and the easier it is to modify in the ways we desire. Ambiguous, clever, or complicated code adds friction. That friction slows progress and creates risk.
+
+Refactoring code, changing the implementation without changing the behavior, is a critical skill for achieving clear expression. We showed refactoring in a story to help elucidate the concept. And then we showed refactoring in code to show how much impact the practice can have.
+
+As we refactored the code, we saw duplication a number of times and sought ways to clean it up. This helped us clearly express our intent. Even in our final version, we have duplication. Notice there are two places where we say "Advantage" and two places where we say "Win".
+
+Let's look more deeply at duplication.
+
 ### Duplicates no behavior
 
 We hear a lot about duplicate code in the industry. There are automated code checkers called linters that look for code duplication and metrics dashboards that tell you how much of it you have. These tools look for patterns in the structure of the code. At a minimum, they look for code that is character for character identical.
@@ -1149,8 +1268,8 @@ One commonly accepted principle of software development is The Single Responsibi
 
 This is what is means to duplicate no behavior. Each module within a solution has a specific, discrete, and unique purpose.
 
-Closely related to the SRP initialization is the, perhaps, more memorable DRY acronym. DRY (Don't Repeat Yourself), from the book, The Pragmatic Programmer, states, "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." You might hear a developer refer to code as DRY or not DRY, indicating whether or not it has repeated logic. I've also heard people use the acronym WET "write every time" to refer to code with excessive duplication, but I wouldn't say this has caught on in the industry as a "standard".
+Closely related to the SRP initialization is the more memorable DRY acronym. DRY (Don't Repeat Yourself), from the book, The Pragmatic Programmer, states, "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." You might hear a developer refer to code as DRY or not DRY, indicating whether or not it has repeated logic. I've also heard people use the acronym WET "write every time" to refer to code with excessive duplication, but I wouldn't say this has caught on in the industry as a "standard".
 
-Simple things are not often easy to create. In fact, we often start with a complicated thing and then break it apart into simple pieces.
+Simple things are not often easy to create. In fact, teams often build complicated things and then may or may not break it apart into simple pieces. The refactorings I've shown you thus far are typical
 
 ## In Small Steps
