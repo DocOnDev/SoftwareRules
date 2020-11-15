@@ -1,4 +1,5 @@
 Introduction.txt
+Background.txt
 TheSevenRules.txt
 KnowTheProblem.txt
 WorkTogether.txt
