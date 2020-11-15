@@ -106,6 +106,7 @@ FoxPro also had an interesting concept of scope. There were local, private, and 
 
 Local and global variables needed to be explicitly declared as such. Any variable that was declared by use was automatically private. That meant that any method lower in the call chain of the declaring method also had access to that variable.
 
+{aside}
 #### Scope in FoxPro
 local
 : Scoped strictly to the declaring method.
@@ -119,6 +120,7 @@ private
 global
 : Scoped to the entire application. Once declared, global variables are accessible by any method anywhere in the code.
 : Must be explicitly declared.
+{/aside}
 
 ##### An example of FoxPro's scope issues
 Now let's imagine we both write a method. Yours calculates sales tax on an order and mine calculates the entire invoice, including tax. I will, of course, call your method to calculate the tax.
