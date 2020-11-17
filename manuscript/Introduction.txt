@@ -8,11 +8,11 @@ We ran workshops for several days where we looked at every step of the flow from
 
 Then Angie spoke up. Angie ran a small but critical crew who was adept at tweaking systems and processes and figuring out how to make adjustments to schedules as inexpensively as possible. Angie was whip smart and outspoken with short spiky hair died jet black with cobalt blue tips. She rubbed some folks the wrong way, especially those that preferred things to stay as they always were, but Angie had a proven track record of improvements and insightful ideas. She was standing in front of a massive whiteboard upon which we'd drawn a model of the flow. She pointed at a rather complicated piece of the flow and asked, "Can anyone tell me why we do it this way?" There was a long pause and and a lot of blank stares, so she continued, "This has never made sense to me. We get high-level numbers from the dealers, telling us how many of each model they want." She pointed further down and to the right, making a large circle with her extended index finger. "Then, we then go through this whole mess of calculations to tell them what packages and features they are each going to get." She turned back to the group, her index finger still extended, as if she were scolding the group. "We don't really give them much choice. And...", she said with a long pause for effect, "Then the games begin." She turned back to the board and followed the diagram along as she briefly explained each step. "We get all prepared to make all these cars, figuring out exactly what's going to happen in the supply chains, what car will be built when and on what line and all the other work that needs to happen.", she swept her hand to the right, gesturing toward the rest of the steps in the flow.
 
-Tom, a seasoned veteran of the automotive industry and the most tenured member of the department, interrupted her. "We've been over this before, Angie. We need the dealer wholesale commitment to get a sense of what they intend. That is necessary for us to generate recommendations and try to balance dealer needs against our own needs, our market projections, and constraints in the supply chain." Tom is tall and stocky with a very tight buzz cut. He looks like he might be former military. He certainly seems comfortable in a world of hierarchy where there are those that give orders and those that take orders. In this moment, Tom found himself an order giver in a room full of order takers. And as such, this was a waste of his time. "This is the way it is, Angie. We need to focus on areas where we can drive efficiencies. Where can we speed up a step? And I don't want us to forget about cost reductions. Where can we reduce costs?"
+Tom, a seasoned veteran of the automotive industry and the most tenured member of the department, interrupted her. "We've been over this before, Angie. We need the dealer wholesale commitment to get a sense of what they intend. That is necessary for us to generate recommendations and try to balance dealer needs against our own needs, our market projections, and constraints in the supply chain." Tall and stocky with a very tight buzz cut, Tom looks like he might be former military. He certainly seems comfortable in a world of hierarchy where there are those that give orders and those that take orders. In this moment, Tom found himself an order giver in a room full of order takers. And as such, this was a waste of his time. "This is the way it is, Angie. We need to focus on areas where we can drive efficiencies. Where can we speed up a step? And I don't want us to forget about cost reductions. Where can we reduce costs?"
 
 Angie raised a finger, "Hear me out, Tom. I didn't get to the games. Now that we've made our 90-day plan, dealers start modifying the orders. Denver wants more all wheel drives. Florida wants fewer. Customer orders, which take priority, start coming in and wholesale orders start getting canceled. We can see them gaming the system; writing up customer orders that then go on the lot because they 'lost the sale due to manufacturing delays'. There is a ton of re-work that has to happen. We're adjusting on the fly, expediting materials, sometimes taking down production lines for a change-over. Cycle times go up and so do costs. We need wholesale orders 90 days in advance because all of this churn causes delays. Because of the delays, we get more churn. It's a vicious cycle."
 
-Drew, Tom's right-hand man, and probably the most informed on how both the business and IT processes work, has been walking over to where Angie is standing, his hand on his chin as he stares at the board. Drew is in his early forties with a newly minted MBA. He started with the company as an intern when we was 22 and just last year, he celebrated 20 years with the company. Most of his tenure has been under Tom, where Drew's optimism and creativity have been more tolerated than appreciated. But he's never let it get him down. "What are you suggesting, Angie?", he asks, "What do you think needs to happen?" Drew was visibly excited. He's pretty sure of where Angie is going and he knows it is currently not possible, but maybe, just maybe, it could be made possible. This new agile approach he's seen on some teams has given Drew some renewed hope.
+Drew, Tom's right-hand man, and probably the most informed on how both the business and IT processes work, has been walking over to where Angie is standing, his hand on his chin as he stares at the board. In his early forties with a newly minted MBA, Drew's salt and pepper hair falls over his forehead, sweeping the top of his black-rimmed glasses. He started with the company as an intern when we was 22 and has worked his way up. Most of his tenure has been under Tom, where Drew's optimism and creativity have been more tolerated than appreciated, but he's never let it get him down. "What are you suggesting, Angie?", he asks, "What do you think needs to happen?" Drew was visibly excited. He's pretty sure of where Angie is going and he knows it is currently not possible, but maybe, just maybe, it could be made possible. This new agile approach he's seen on some teams has given Drew some renewed hope.
 
 Angie pointed back to the beginning of the flow. "We need to get a real commitment from the dealers. We need to let them choose the cars they want. Not just the models, but the packages and options. We need to work with them to create the schedule. We expect them to just accept the cars we allocate to them. We keep trying to get better at guessing over longer and longer periods of time. Let's guess less and shorten the timeline. Seriously, it could make a huge difference."
 
@@ -22,9 +22,29 @@ Tom furrowed his brow. He'd been down this road before. "Look, Dealers are alway
 
 "Okay, okay.", said Drew, "Step back folks. Angie is on to something here. If we can get a real commitment, we can reduce the re-work. Not only that, but I think we can actually cut entire steps out of the flow and move some other things to later in the flow where re-work won't impact them any more. We just might be able to get this down to under our target. Julia, what do you think? Can we get a commitment system together?"
 
-Julia, a senior systems architect
+Julia, a senior systems architect, has been with the company just under two years. She worked for a start-up in Boston that wrote forecasting software for complex manufacturing. They were acquired for their algorithms, but then the software was shelved because integration with existing systems would have taken too long. "Ummm...", Julia hesitated, "I mean, sure. Anything is possible."
 
-Tom, red-faced and fists clenched, left the session. The rest of the crew stayed to talk through what exactly would need to happen in order to make this work.
+"C'mon, Julia. Tell me what you think.", coaxed Drew, one eyebrow raised above the rim of his glasses. He smiled a little smile. "I know you know this stuff. Give it to us."
+
+A distance runner, Julia was short and thin with an abundance of energy. Her long blonde hair was regularly in a pony tail that bobbed two and fro even when she was seated at her desk as her legs were always moving. Julia got systems. She got software. She got people. But she didn't get big companies. She didn't understand how you could put all these perfectly capable people together and end up with nothing but mediocrity. People didn't like to hear the truth. They didn't want to hear that the reason they couldn't integrate the forecasting software was because the company was about 10 years behind in technology and 20 years behind in software development disciplines. She tended to keep her opinions to herself these days. But when somebody asked...
+
+"Sure, we can get a commitment system together. But we have to be ready to make real changes. We're in love with the recommendations engine. We spent more on it than the scheduling system that got shelved. And the team that writes it is untouchable. Well, that system is going to need to get gutted. It takes 36 hours to complete a cycle and cannot generate anything less than a national recommendation set. We need to be able to go regional, if not local, if not dealer by dealer. And we've got to replace the messaging bus. We're getting dropped packages all over the place. We're going to increase package traffic by an order of magnitude during wholesale. We have to re-think the whole thing."
+
+"Here we go again!", Tom bellowed. "Always with the re-writes. Always with the technical debt! You cannot expect us to cow-tow to the whims of IT and keep putting up big money for no return. This needs to get done. And it needs to get done with what we have. I sure as hell am not going to executive council to get approval to shut everything down in order to spend money chasing the latest technology trend! I do NOT want to hear it!"
+
+Julia looked down and away. She looked as though she was ashamed for having said the wrong thing. But then she looked back up, eyes narrowed and lips pursed, she met Tom's eyes. "Don't ask me my opinion if you don't want to hear it."
+
+"Excuse me, young lady?", Tom looked both stunned and outraged.
+
+"Hey Tom,", said Drew, "Can I talk to you a minute?" He put his arm around Tom's shoulder, walked him across the hall into a private conference room, and shut the door.
+
+The room was buzzing with chatter when a few minutes later, Tom and Drew  returned to the meeting.
+
+Drew stepped to the front of the room, raised a hand, and said, "Tom has agreed to give us some time to noodle on these ideas. Thank you, Tom. We appreciate it."
+
+Tom, gathered his laptop and coffee mug. Red-faced and tight gripped, he left the room. You could hear a pin drop.
+
+"Okay, folks.", Drew said, "Let's take 15 and then reconvene to talk through Ruth's idea and Julia's concerns. Lot's to do. Lot's to do."
 
 By the following week, the crew had come up with a plan and, to Tom's chagrin, senior management approved it. Under this new plan, instead of working in 90 day cycles, dealers would provide a 30-day model forecast and within 24 hours, they would receive recommendations based on the 30 day data. Dealers would have a few days to make adjustments to the recommendations before finalizing their wholesale order commitment. They could make just about any change they wanted, so long as their combination of orders stayed within certain constraints. They'd be informed of the key constraints, such as a limited number of sunroofs or drive trains, ahead of time. And the wholesale software would enforce the constraints, giving dealers clear feedback and guidance.
 
@@ -32,4 +52,26 @@ There were only a couple of minor things to take care of. The wholesale order en
 
 So we set to putting a team together.
 
-"We have a couple of teams that have been working on a special project in manufacturing. We can have them for the next few months starting next week.""
+Drew was looking at a roster of teams and projects. "We have a couple of teams that have been working on a special project in manufacturing. We can have them for the next few months starting next week."
+
+"They're not going to know anything about the problem or our systems", said Julia.
+
+"Well,", I said, "That might be a good thing. Fresh eyes and fresh ideas."
+
+"Maybe.", said Julia, "But how do we know they're any good?"
+
+"What does good look like?", asked Drew.
+
+"What do you mean?", I asked.
+
+"How would we know a good team if we saw it?", he asked.
+
+"Well", said Julia, "we can look at their flow metrics. And their static analysis. I guess we could look at security scans and application logs as well. How many outages have they had? How many escaped defects? Mean time to recovery?"
+
+Drew shrugged. "I don't know if they have any of those things. I guess we can find out."
+
+"What do you think, Doc?"
+
+"I think Julia's right. Those things are all important. But I'm not sure we should just pull over a whole team. I think we should recruit for specific characteristics..."
+
+// TODO: Figure out HOW to get to the seven characteristics.
