@@ -52,7 +52,9 @@ Sales and Marketing identified a vehicle we could start with. It was a low volum
 
 We needed a team - immediately. We needed software developers from existing wholesale, forecasting, recommendations, and dealer experience. Not only were there a great number of updates to existing systems, there was no solution for allowing dealers to adjust commitments based on recommendations. That was going to be all new.
 
-Drew was looking at a roster of teams and projects. "We have a couple of teams that have been working on a special project in manufacturing. We can have them for the next few months starting next week."
+The next morning, I arrived at the office early to find Drew and Julia looking through a roster of teams and projects.
+
+"Morning, Doc.", said Drew, raising his coffee before taking a short sip. He waived his toward Julia's screen. "We have a couple of teams that have been working on a special project in manufacturing. We can have them for the next few months starting next week."
 
 "They're not going to know anything about the problem or our systems", said Julia.
 
