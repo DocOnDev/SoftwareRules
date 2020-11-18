@@ -54,26 +54,57 @@ We needed a team - immediately. We needed software developers from existing whol
 
 The next morning, I arrived at the office early to find Drew and Julia looking through a roster of teams and projects.
 
-"Morning, Doc.", said Drew, raising his coffee before taking a short sip. He waived his toward Julia's screen. "We have a couple of teams that have been working on a special project in manufacturing. We can have them for the next few months starting next week."
+"Morning, Doc.", said Drew, raising his coffee before taking a short sip. He waived his toward Julia's screen. "We have a couple of teams that have been working on a special project in manufacturing. We can have three of them for the next few months starting next week. Three of them plus one developer each from wholesale, forecasting, recommendations, and dealer experience and we have a team of seven."
 
-"They're not going to know anything about the problem or our systems", said Julia.
+"Eight.", said Julia. "You have a team of eight. I am in."
 
-"Well,", I said, "That might be a good thing. Fresh eyes and fresh ideas."
+"Whoah!", said Drew, sloshing coffee all over the floor as he jumped to his feet. "For serious?", he asked, holding his coffee cup in hands of prayer.
 
-"Maybe.", said Julia, "But how do we know they're any good?"
+"For serious.", Julia said. "This is the most interesting thing I've seen since I arrived here. You couldn't keep me away."
 
-"What does good look like?", asked Drew.
+Drew sat back down and nudged Julia with his elbow. "So awesome! Yes!!"
 
-"What do you mean?", I asked.
+Drew and Julia both looked at me, still standing in the doorway.
 
-"How would we know a good team if we saw it?", he asked.
+"Yeah, so, what do you think about this team?", I asked
+
+"They're not going to know anything about the problem or our systems.", said Julia.
+
+"Well,", I replied, "That might be a good thing. Fresh eyes and fresh ideas."
+
+"Maybe.", Julia said, drawing the word out for almost three seconds, "But how do we know they're any good?"
+
+"What does good look like?", asked Drew. "I mean, how would we know a good team if we saw it?"
 
 "Well", said Julia, "we can look at their flow metrics. And their static analysis. I guess we could look at security scans and application logs as well. How many outages have they had? How many escaped defects? Mean time to recovery?"
 
-Drew shrugged. "I don't know if they have any of those things. I guess we can find out."
+Drew shrugged. "We're not going to have any of those things. This is a brand new team on a brand new project. No flow or static. Nada. Ideas and an empty code editor. How will we know we've got the right folks? How will we know they're doing well?"
 
-"What do you think, Doc?"
+I walked over to the white board, Drew and Julia tracked me as I moved, turning in their chairs as they tracked. I picked up a dry erase marker and removed the cap.
 
-"I think Julia's right. Those things are all important. But I'm not sure we should just pull over a whole team. I think we should recruit for specific characteristics..."
+"We should measure all those things. Julia's right. And you're right, too, Drew. We won't have those things right away. But excellent teams exhibit certain, shall we say, characteristics."
 
-// TODO: Figure out HOW to get to the seven characteristics.
+I wrote "EXCELLENCE CHARACTERISTICS" on the board and underlined it. "There are things we can observe outside of formal measurement. I believe these characteristics are present on every high performing software team."
+
+I wrote each characteristic on the board as I described it.
+
+*Knows the Problem.*
+"Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now."
+
+*Works Together*
+"They work together. Not cooperation, but collaboration. This isn't about each of them doing their part and then stitching it together later. They work together as a unit."
+
+*Makes Simple Things in Small Steps*
+"They build complex solutions out of simple components. They do it in small steps. They don't solve problems they don't yet have - see characteristic number one. They don't architect grand future-proof solutions. They keep it simple and small. They let elegance emerge."
+
+*Is Meticulous about Composition*
+"Every good team is deliberate about code composition. They pay attention to whether or not too much behavior is clumped into one place. They refactor mercilessly. They eschew complexity. They don't optimize for easy right now, they optimize for easy in the future."
+
+*Validates Before, During, and After*
+"They don't just write tests. They design the tests first. They are validating constantly - with every little edit, with every check-in, with every release."
+
+*Releases Ridiculously Often*
+"An excellent team is doing continuous integration and is releasing as often as they possibly can. How often? Ridiculously often. They're pushing the boundary. Business says once per month is sufficient - they release once per week. Ridiculous."
+
+*Values Automation over Documentation*
+"Is there a process that can be documented and repeated? Automate it. Humans do creative work. Computers do repetitive work. Need an approval? Automate it. Have a document that shows how to get a developer workstation running? Make a virtual image."
