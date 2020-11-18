@@ -87,7 +87,7 @@ Our goal here is that when we look at a piece of code, it immediately tells us w
 Let's explore the concepts of clear expression and the principle of least surprise by looking at an excerpt from a story. First we'll read the excerpt and then I'll ask you a few questions about how clearly the details were expressed.
 
 {blurb, icon:book, caption: The Incident}
-Chris was growing impatient as he waited for the police to arrive. Despite anxiously awaiting the knock at the door, Chris still paused to peer through the peephole. Seeing an officer, Chris opened the door.
+Chris was growing impatient while waiting for the police to arrive. Despite anxiously awaiting the knock at the door, Chris still paused to peer through the peephole. Seeing an officer, Chris opened the door.
 
 "Hello.", said Chris, greeting the officer in a crisp white shirt, blue work pants and heavy black boots, "Am I glad to see you."
 
