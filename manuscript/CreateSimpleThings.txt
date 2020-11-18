@@ -158,7 +158,7 @@ We've confirmed that Chris was wearing a crisp white shirt, blue work pants, and
 
 Now that it is independent, we are able to make a judgement about the value of the attire details while maintaining the greeting. Honestly, the attire does not seem relevant to the essence of the story and could be removed entirely. It is a superfluous detail. We'll remove it going forward.
 
-So again, we have additional clarity and we've not altered the essence of the story. Let's keep going and see if we know what room they're in.
+So again, we have additional clarity and we've not altered the essence of the story. Let's keep going and see if we can clarify which room they're in.
 
 {blurb, icon:book, caption: The Incident - What room were they seated in?}
 Anxious about being late for work, Chris was waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing an officer, Chris opened the door.
@@ -180,7 +180,7 @@ They sat, he facing the hall and she facing a large photo of flowers in a vase. 
 
 They were in the living room. Did you think they were at a dining table of some sort? Did you guess they were in a dining room or kitchen? I did. I wasn't expecting them to be in the living room. Providing just a little more detail about the table and chairs completely changed my perspective.
 
-So far, so good. We're a lot more clear on the details and we've eliminated concepts that didn't need to be included. And still, we've not altered the essence of the story. What about what each of them was facing?
+So far, so good. We're a lot more clear on the details and we've eliminated concepts that didn't need to be included. And still, we've not altered the essence of the story. What about the question of what each of them was facing?
 
 {blurb, icon:book, caption: The Incident - What was the officer facing?}
 Anxious about being late for work, Chris was waiting for the police to arrive. Finally, Chris heard a knock on the door and peered through the peephole. Seeing a female officer, Chris opened the door.
@@ -266,27 +266,7 @@ They sat, Chris facing the hall and Officer Mercer facing a large photo of flowe
 "Yes. of course. Well, I noticed something odd in the apartment across the way. So I got out my telescope to take a closer look and I saw two men, one tall and one heavy set, in the apartment. They were taking her stuff, putting it in boxes, and carrying it out the door to a white truck in the street."
 {/blurb}
 
-Chris saw two men. In the original telling, we may have assumed he saw one person who was tall and heavy set. By adding a little more clarity, we now know that there were two man in the apartment, one of whom was tall and the other was heavy set.
-
-Let's take one more run at the excerpt and see if we can improve it a little more.
-
-{blurb, icon:book, caption: The Incident - Last Pass}
-Anxious about being late for work, Chris was waiting for the police to arrive when he heard a knock on the door. Chris peered through the peephole, saw an officer, and opened the door.
-
-"Hello.", said Chris, greeting the officer, "Am I glad to see you."
-
-"You are Chris Estes?", asked the officer.
-
-"I am.", said Chris.
-
-"Officer Mercer. You reported witnessing a crime?"
-
-"I did. Come in. Sit down.", said Chris, gesturing to a small coffee table and four wing chairs in the living room. They sat across from one another.
-
-"Okay. So tell me what you saw.", said Mercer, "Provide as much detail as you can."
-
-"Yes. of course. Well, I noticed something odd in the apartment across the way. So I got out my telescope to take a closer look and I saw two men in the apartment. One was tall and one was heavy set. They were putting stuff in boxes which they then loaded into a white truck."
-{/blurb}
+Chris saw two men. In the original telling, we may have assumed he saw one person who was tall and heavy set. By adding a little more clarity, we now know that there were two men in the apartment, one of whom was tall and the other was heavy set.
 
 This still isn't a fantastic story, but it is much better. We've reduced ambiguity, eliminated some superfluous parts, and lowered friction. This version of the story is far easier to read and we've maintained the essence. The story now more clearly expresses what we intend.
 
