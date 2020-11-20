@@ -1,11 +1,13 @@
-Introduction.txt
-Background.txt
-TheSevenRules.txt
-KnowTheProblem.txt
-WorkTogether.txt
-CreateSimpleThings.txt
-InSmallSteps.txt
-BeMeticulousAboutComposition.txt
-ValidateAlways.txt
-ReleaseRidiculouslyOften.txt
-FavorsAutomation.txt
+{fontmatter}
+  Background.txt
+  TheSevenCharacteristics.txt
+{mainmatter}
+  Introduction.txt
+  KnowTheProblem.txt
+  WorkTogether.txt
+  CreateSimpleThings.txt
+  InSmallSteps.txt
+  BeMeticulousAboutComposition.txt
+  ValidateAlways.txt
+  ReleaseRidiculouslyOften.txt
+  FavorsAutomation.txt
