@@ -7,7 +7,7 @@ The most fundamental problem in software development is complexity. There is onl
 C> -- Bjarne Stroustrup
 {/blurb}
 
-## Create Simple Things
+## What Is Simple?
 
 This sounds easy enough. Create simple things. But, what is a simple thing?
 
@@ -274,7 +274,7 @@ What we've been doing is a practice developers refer to as refactoring[^Refactor
 
 [^Refactoring]: Fowler, Martin. “Refactoring Home Page.” Refactoring. Accessed November 8, 2020. https://refactoring.com/. 
 
-Now that we're conceptually familiar with refactoring and we've seen the notion applied to prose, let's take a look at some code. Take a look at this code. What do you suppose it is intended to do? Does it work as intended? Can you primarily read it or do you need to primarily interpret it?
+Now that we're conceptually familiar with refactoring and we've seen the notion applied to prose, let's take a look at some code. Try to read the following code. What do you suppose it is intended to do? Does it work as intended? Can you primarily read it or do you need to primarily interpret it?
 
 {format: Java, caption: Example Code - Original}
 ~~~
@@ -1005,9 +1005,9 @@ The after version is clearly more readable. Not only is this method more readabl
 
 There's still plenty of room for improvement. There is a concept of a score hiding in the code. A score has more than one attribute. A score has both points and an expression, such as 0 and "Love" or 1 and "Fifteen". In our code, this concept is separated and the game needs to know about how to translate points into expressions. There is also a concept of a player hiding in the code. For our purposes, a player has a name and a score. In our code, these concepts are separated and so for each player, we have code that associates a name with points and score. But adding better representation of the concepts for player and score are adventures for another day.
 
-It is important that our code clearly express our intent. The better the code expresses intent, the easier it is to understand and the easier it is to modify in the ways we desire. Ambiguous, clever, or complicated code adds friction. That friction slows progress and creates risk. Just as with a story, the less clearly code expressed its intent, the more likely we are to infer the wrong things.
+It is important that our code clearly express our intent. The better the code expresses intent, the easier it is to understand and the easier it is to modify in the ways we desire. Ambiguous, clever, or complicated code adds friction. That friction slows progress and creates risk. Just as with a story, the less clearly code expresses its intent, the more likely we are to infer the wrong things.
 
-Refactoring code, changing the implementation without changing the behavior, is a critical skill for achieving clear expression. We showed refactoring in a story to help elucidate the concept. And then we showed refactoring in code to show how much impact the practice can have. The next time you wonder why developers want to refactor, remember this experience. Imaging trying to change "Love" to "Naught" or adding "Twenty" as an additional score option in the first version of the code. This is one of the things refactoring does for the code - it makes is more clear, which makes it easier to add new features.
+Refactoring code, changing the implementation without changing the behavior, is a critical skill for achieving clear expression. We showed refactoring in a story to help elucidate the concept. And then we showed refactoring in code to show how much impact the practice can have. The next time you wonder why developers want to refactor, remember this experience. Imaging trying to change "Love" to "Naught" or adding "Twenty" as an additional score option in the first version of the code. This is one of the things refactoring does for the code - it makes it more clear, which makes it easier to add new features.
 
 As we refactored the code, we saw duplication a number of times and sought ways to clean it up. This helped us clearly express our intent. Even in our final version, we have duplication. Notice there are two places where we say "Advantage" and two places where we say "Win".
 
@@ -1179,7 +1179,7 @@ However we go about this, we're going to need to do a lot of testing. Think abou
 
 Well, wait a minute... What if we took this opportunity to first get them all back in sync? What if we chose our favorite version of the average calculation - the one that works the fastest or is the easiest to read or maybe is best based on some other set of criteria - and we replaced all of the versions with that one? We could make them all the same again! And that way, we could make the handicap calculation change once and then know it would work for all of them.
 
-That's pretty good. It would prevent us from having to write 12 different versions of the handicap calculation logic. That's handy. (No pun intended) But we still have 12 different copies of the average calculation and we now know that, given time, we'll eventually drift into having 12 different versions of the code floating around. And who knows, what if the USBC does a study and determines that the current handicap calculations need to change in order to be more equitable. Ugh. 12 different changes all over again.
+That's pretty good. It would prevent us from having to write 12 different versions of the handicap calculation logic. That's handy. (No pun intended.) But we still have 12 different copies of the average calculation and we now know that, given time, we'll eventually drift into having 12 different versions of the code floating around. And who knows, what if the USBC does a study and determines that the current handicap calculations need to change in order to be more equitable. Ugh. 12 different changes all over again.
 
 This is the problem with duplicate behavior. Whenever you have duplicate behavior, you have multiple areas of the code that might need to change. Any change, no matter how simple, takes longer for each implementation of the behavior. Not only that - what if you miss one? Or two? Duplicate behavior means more work and more bugs.
 
