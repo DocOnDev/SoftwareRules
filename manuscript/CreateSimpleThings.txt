@@ -1,5 +1,5 @@
 {#create_simple_things}
-# Create simple things in small steps.
+# Creates simple things
 
 {blurb, icon: quote-left}
 The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
@@ -1250,6 +1250,4 @@ This is what is means to duplicate no behavior. Each module within a solution ha
 
 Closely related to the SRP initialization is the more memorable DRY acronym. DRY (Don't Repeat Yourself), from the book, The Pragmatic Programmer, states, "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." You might hear a developer refer to code as DRY or not DRY, indicating whether or not it has repeated logic. I've also heard people use the acronym WET "write every time" to refer to code with excessive duplication, but I wouldn't say this has caught on in the industry as a "standard".
 
-Simple things are not often easy to create. In fact, teams often build complicated things and then may or may not break it apart into simple pieces. The refactorings I've shown you thus far are typical
-
-## In Small Steps
+Simple things are not often easy to create. In fact, teams often build complicated things and then may or may not break it apart into simple pieces. The refactorings I've shown you thus far are typical for a lot of organizations. Make a big mess, clean it a little bit, make more big mess, repeat. But there is another way; a better way - and that is to work in small steps.

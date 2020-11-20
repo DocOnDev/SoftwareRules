@@ -4,6 +4,7 @@ TheSevenRules.txt
 KnowTheProblem.txt
 WorkTogether.txt
 CreateSimpleThings.txt
+InSmallSteps.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt
 ReleaseRidiculouslyOften.txt
