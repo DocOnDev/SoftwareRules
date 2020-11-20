@@ -88,23 +88,40 @@ I wrote "EXCELLENCE CHARACTERISTICS" on the board and underlined it. "There are 
 
 I wrote each characteristic on the board as I described it.
 
-*Knows the Problem.*
+*Knows the Problem*
+
 "Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now."
 
 *Works Together*
+
 "They work together. Not cooperation, but collaboration. This isn't about each of them doing their part and then stitching it together later. They work together as a unit."
 
-*Makes Simple Things in Small Steps*
-"They build complex solutions out of simple components. They do it in small steps. They don't solve problems they don't yet have - see characteristic number one. They don't architect grand future-proof solutions. They keep it simple and small. They let elegance emerge."
+*Creates Simple Things*
+
+"Now, I know that teams are writing complex systems. But what underlies a good complex system, is simple components. Simple, reliable pieces that can be put together into a solution. They don't architect grand future-proof solutions. They keep it simple and they let elegance emerge."
+
+*Works in Small Steps*
+
+"When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They don't solve problems they don't yet have - see characteristic number one. They are obsessed with creating value, offering options, and learning."
 
 *Is Meticulous about Composition*
+
 "Every good team is deliberate about code composition. They pay attention to whether or not too much behavior is clumped into one place. They refactor mercilessly. They eschew complexity. They don't optimize for easy right now, they optimize for easy in the future."
 
 *Validates Before, During, and After*
+
 "They don't just write tests. They design the tests first. They are validating constantly - with every little edit, with every check-in, with every release."
 
 *Releases Ridiculously Often*
+
 "An excellent team is doing continuous integration and is releasing as often as they possibly can. How often? Ridiculously often. They're pushing the boundary. Business says once per month is sufficient - they release once per week. Ridiculous."
 
-*Values Automation over Documentation*
-"Is there a process that can be documented and repeated? Automate it. Humans do creative work. Computers do repetitive work. Need an approval? Automate it. Have a document that shows how to get a developer workstation running? Make a virtual image."
+*Favors Automation*
+
+"Is there a process that can be documented and repeated? Automate it. Humans do creative work. Computers do repetitive work. Need an approval? Automate it. Have a document that shows how to get a developer workstation running? Make an install script, or better yet a virtual image."
+
+* * *
+
+The story of the characteristics is fictionalized. It is based on real life events, but I took some liberties and most of the names were changed. I really did write the list down and post it on a wall at an automotive company and we really were doing the work I described.
+
+The characteristics are neither mutually exclusive nor collectively exhaustive. This is simply a set of characteristics that I believe to be common among excellent product and software teams. There are certainly other characteristics exhibited by excellent teams. There are quite likely other characteristics, which I do not include here, that are common among excellent product and software teams.
