@@ -1,5 +1,5 @@
-{#automation_over_documentation}
-# Automation over documentation.
+{#favors_automation}
+# Favors Automation.
 
 {icon: quote-left}
 B> ### The most powerful tool we have as developers is automation. 

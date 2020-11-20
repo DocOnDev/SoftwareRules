@@ -8,4 +8,4 @@ InSmallSteps.txt
 BeMeticulousAboutComposition.txt
 ValidateAlways.txt
 ReleaseRidiculouslyOften.txt
-AutomationOverDocumentation.txt
+FavorsAutomation.txt

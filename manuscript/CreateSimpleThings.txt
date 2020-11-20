@@ -1,4 +1,4 @@
-{#create_simple_things}
+{#creates_simple_things}
 # Creates simple things
 
 {blurb, icon: quote-left}
@@ -56,7 +56,7 @@ All of the tests we decided to write?
 All of the tests necessary to verify the software works as desired. The point of "passes all the tests" is that the code reliably accomplishes the desired outcome, that we have a means of proving to ourselves that it does so, and we have a means of assuring ourselves that it will continue to do so.
 
 {aside}
-For more on testing, take a look at the section entitled, ["Validate before, during, and after"](#validate_always)
+For more on testing, take a look at the section entitled, ["Validate before, during, and after"](#validates_always)
 {/aside}
 
 Kent's rules are in order of importance. While rule 2 and 3 have sometimes swapped places over the years due to changes in industry trends, rule number one has always been rule number one. Make sure the software does what it is supposed to do.

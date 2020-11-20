@@ -4,10 +4,11 @@ Building on those lessons learned early on, I've slowly but surely collected a s
 
 Each section of this book explores one rule in detail.
 
-1. [Know the problem you are solving](#know_the_problem)
-1. [Work together](#work_together)
-1. [Create simple things in small steps](#create_simple_things)
-1. [Be meticulous about composition](#meticulous_about_composition)
-1. [Validate before, during, and after](#validate_always)
-1. [Release ridiculously often](#release_often)
-1. [Automation over documentation](#automation_over_documentation)
+1. [Knows the problem](#knows_the_problem)
+1. [Works together](#works_together)
+1. [Creates simple things](#creates_simple_things)
+1. [Works in small steps]{#works_in_small_steps}
+1. [Is meticulous about composition](#meticulous_about_composition)
+1. [Validates before, during, and after](#validates_always)
+1. [Releases ridiculously often](#releases_often)
+1. [Favors Automation](#favors_automation)
