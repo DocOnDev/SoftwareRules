@@ -4,6 +4,7 @@
 THINGS TO (possibly) COVER IN THIS SECTION
 * Understands the business problem
 * Solves the current problem
+* Looks at causal factors
 * Does not solve problems we do not yet have
 * Knows the question being asked
   * Is it true that?
