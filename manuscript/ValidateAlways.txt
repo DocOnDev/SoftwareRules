@@ -1,6 +1,11 @@
 {#validates_always}
 # Validates before, during, and after.
 
+{blurb, icon: quote-left}
+Validation Quote
+
+C> -- Unknown
+{/blurb}
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
 * What types of tests? - unit tests? What does that mean?
