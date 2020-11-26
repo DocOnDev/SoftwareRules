@@ -14,15 +14,14 @@ THINGS TO (possibly) COVER IN THIS SECTION
   * We don't have a purchase history report versus customers need a way to understand their past purchases
 * Whole team participates in experiment creation
 
+## Problems, not requirements
 
-### Excerpts from blogs and/or Escape Velocity
-
+All across the world, right now, there are thousands upon thousands of software teams working to deliver some increment of business value without understanding how the thing they are currently working on is truly valuable. They don't know why this feature was prioritized. They don't know what friction the customer is experiencing. They don't know how this feature is intended to alleviate that friction. They know that this is the next thing to build and there is a description of the work to be completed. They are requirements focused. Build the thing as specified, makes sure it works as intended, deliver it to production. Value realized.
 
 I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value.
 
 Output measurements focus on quantity of delivery, such as the count of features delivered. As a result, output measures tell us how fast we are moving. Outcome measurements focus on quality of delivery - or more accurately, the impact of delivery, such as how many customers are engaging in a key activity. As a result, outcome measures tell us if we are headed in the right direction. And speed (output) is beneficial only if you are headed in the right direction (outcome).
 
-## Know The Problem You Are Solving
 I once worked with a client who became so obsessed with immediate revenue metrics that they would not allow themselves to innovate in certain areas. Essentially, the only measure that mattered for a new feature was whether or not it had a net positive impact on revenue. Revenue was their standard outcome measurement. This was, of course, measured in real time. If they tried three different button colors on the checkout screen, they'd go with the one that achieved a statistically significant higher rate of purchase. Easy enough.
 
 But when they wanted to get into personalization features, the first thing they needed to do was learn more about the customer and their preferences. No matter what they did, an interface that gathered personal data about a customer also resulted in lower purchase rates than the control which gathered no personal data. As a result, no matter how much data a customer volunteered, no matter how much time and energy they spent on customizing their own profile, the experiment was ultimately killed because it generated fewer immediate dollars than the control. As a second order result, the company struggled to figure out personalization and fell behind competitors who were focused on providing a custom experience to each customer over the long term.
@@ -30,6 +29,12 @@ But when they wanted to get into personalization features, the first thing they 
 They were using measures that didn't align with their desired outcomes. They'd grown so accustomed to judging all features by the same criteria, they failed to think critically about the problem they were solving. While revenue generation can be, and often is a fine outcome, it isn't the only outcome. And in some cases, it is counter to the real goal.
 
 Underlying every "requirement" is a problem to solve; a pain point that we hope to alleviate. Our goal should never be to build some functionality; produce some output. It should always be to solve a problem; realize an outcome.
+
+
+
+### Excerpts from blogs and/or Escape Velocity
+
+
 
 I tend to use three questions to prompt thinking and help teams figure out the measurements that can help them determine if they've achieved the outcome.
 
