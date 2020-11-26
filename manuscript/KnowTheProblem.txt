@@ -1,6 +1,18 @@
 {#knows_the_problem}
 # Knows The Problem
 
+THINGS TO (possibly) COVER IN THIS SECTION
+* Understands the business problem
+* Solves the current problem
+* Does not solve problems we do not yet have
+* Knows the question being asked
+  * Is it true that?
+  * What happens if?
+* Knows how to determine if the problem is solved
+* Lack of solution is not a problem
+  * We don't have a purchase history report versus customers need a way to understand their past purchases
+* Whole team participates in experiment creation
+
 
 ### Excerpts from blogs and/or Escape Velocity
 
