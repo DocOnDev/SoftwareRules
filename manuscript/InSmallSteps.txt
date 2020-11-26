@@ -1,3 +1,9 @@
 {#works_in_small_steps}
 # Works In Small Steps
 
+{blurb, icon: quote-left}
+The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
+
+C> -- Bjarne Stroustrup
+{/blurb}
+
