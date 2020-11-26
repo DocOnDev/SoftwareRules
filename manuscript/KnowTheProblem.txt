@@ -1,6 +1,12 @@
 {#knows_the_problem}
 # Knows The Problem
 
+### Things to cover
+* Understands the business problem
+* Solves the current problem
+* Lack of solution is not a problem
+  * We don't have a purchase history report versus customers need a way to understand their past purchases
+
 
 ### Excerpts from blogs and/or Escape Velocity
 
