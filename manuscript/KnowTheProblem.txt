@@ -16,11 +16,116 @@ THINGS TO (possibly) COVER IN THIS SECTION
 
 ## Problems, not requirements
 
-All across the world, right now, there are thousands upon thousands of software teams working to deliver some increment of business value without understanding how the thing they are currently working on is truly valuable. They don't know why this feature was prioritized. They don't know what friction the customer is experiencing. They don't know how this feature is intended to alleviate that friction. They know that this is the next thing to build and there is a description of the work to be completed. They are requirements focused. Build the thing as specified, makes sure it works as intended, deliver it to production. Value realized.
+All across the world, right now, there are thousands upon thousands of software teams working to deliver some "feature" without understanding how the thing they are currently working on is truly valuable. They don't know why this feature was prioritized. They don't know what friction the customer is experiencing. They don't know how this feature is intended to alleviate that friction. What they do know is that this is the next thing to build and that there is a description of the work to be completed. They are requirements focused. Build the thing as specified, makes sure it works as intended, deliver it to production. Pick up the next thing. Repeat.
 
-I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value.
+Many of these teams feel drastically disconnected from the actual customer. They get requirements and they build what they're told. This is efficient. And efficient is good. But this often isn't effective. And efficient is waste if it isn't also effective.
 
-Output measurements focus on quantity of delivery, such as the count of features delivered. As a result, output measures tell us how fast we are moving. Outcome measurements focus on quality of delivery - or more accurately, the impact of delivery, such as how many customers are engaging in a key activity. As a result, outcome measures tell us if we are headed in the right direction. And speed (output) is beneficial only if you are headed in the right direction (outcome).
+{blurb, icon: quote-left}
+There is nothing quite so useless as doing with great efficiency something that should not be done at all.
+
+C> -- Peter Drucker
+{/blurb}
+
+I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value. And some features are unnecessarily complicated because the requestor didn't know what was possible and the creator didn't know why it was being built.
+
+A few years ago, I was coaching a team at a manufacturing company. At the onset of the project, we introduced the entire team to the business processes. We showed the team diagrams that outlined the old business process and diagrams that outlined the new proposed process. We held sessions with business stakeholders and the product team where they discussed the proposed process changes and anyone and everyone could ask and answer questions. And everyone - business stakeholders, developers, and product folks - participated in a story mapping[^StoryMapping] exercise, including determining what slices of functionality would first be delivered. We then had the developers and product folks discuss a further breakdown of the first few features - we chunked them into tiny pieces that could be rapidly delivered. The developers genuinely understood the business problem.
+
+[^StoryMapping]: “User Story Mapping.” Accessed December 20, 2020. https://www.jpattonassociates.com/user-story-mapping/. 
+
+Fast forward a couple of months and the team had released their first version to a small group of premier dealers for a single, simple product line. The products in this line had no options - each came in one size and one color. So the user interface was very simple. The team built just enough code to manage the needs of this single product line.
+
+The pilot was a success - despite being available for a single product line, the dealers appreciated being more in control of the ordering process. And for the business, this cut several days out of the order lead time for this product line which had cascading benefits in forecasting, materials ordering, shipping, and inventory. All of this was shared and celebrated with the team. They weren't just making an order entry system, they were improving the work lives of their dealers and saving the company money through true efficiency realization - process improvement.
+
+With a successful pilot, the team was expanded slightly. A new, dedicated product designer was added along with two new developers.
+
+Over the next few months, the team added increasingly more complicated product lines, allowing them to test each new variation as they went along - products that came in different sizes, but not colors; products that came in different colors, but not sizes; and products that came in different colors and sizes. The premier dealers were delighted and the business continued to realize cost and reputation benefits.
+
+It was time to start the roll-out to other dealers.
+
+Now, I've over-simplified the product lines for the telling of this story. Had the variations been merely size and color, perhaps they would have rolled out the entire catalog to all dealers at once. But along with size and color there were complications such as regional specifications, contractual obligations, supply chain limitations, and negotiations between field managers and dealers for priority. These factors meant that the roll-out needed to exclude certain dealers from seeing various product lines and those exclusions could not be determined by strictly automated means. The team needed a solution.
+
+"I've been modeling a possible solution.", said the Chris, the new product designer, "Give me a couple more days and I'll show you all what I'm thinking."
+
+Two days later, Chris scheduled a meeting with the team to discuss the new product to dealer maintenance screens. Chris walked us through each screen and each feature on each screen, taking questions and explaining how the screens were designed with leading practices in mind regarding usability and accessibility. Everyone was impressed with the level of detail.
+
+Leslie, the product owner, looked around the room, getting a read. Everybody seemed to be tracking the concept so far. "So, how do we suppose we're going to slice this into smaller pieces? I think the historical reports are an obvious candidate for a later release. But I want to hear more from the team."
+
+Chris looked a bit confused. "Um. No. That's not... I mean. These are all necessary features. This is what we need."
+
+Leslie steepled his fingers in front of him and looked down at his hands for a second. "Yes, Chris. We need all of these. But, as you've seen over the past couple of months, we break features down into thin slices; increments. We deliver this way on purpose. It provides a lot of benefit."
+
+"But that's for when we aren't sure about something. In this case, I've designed it all. We don't need to experiment or do small slices when we know what we're going to build."
+
+"We always do small slices and run experiments."
+
+"Always?"
+
+"Always. We've learned again and again that what we know is often not so. There was the way dealers used the forecast column - we expected them to use it to hold possible future orders, but a bunch of them used it for stock levels. We even had some of them review the prototypes and still they used it differently."
+
+"But that's just a weird one-off case."
+
+"It is how we learned they wanted current inventory levels on the screen more than they wanted forecasting. And it's not a one-off case - what else have we learned these past few months? They over-order popular items, they need auto-save, they don't want a separate save and submit ..."
+
+"Yeah. I mean, sure. Those things happened sometimes.", Chris shook her head and waved her hands in front of herself as if to signal a car to stop, "But this is super clear.", Her hands now stable in front of her like she were grasping a basketball, "We have to have a way to manage the roll-out. We need these screens as they are. It's not even for dealers. It's for our internal people."
+
+"Hold on!", came a loud voice from the end of the table. It was Angie, the lead developer. She'd been sitting quietly throughout the entire presentation, but she felt she had to say something. They were discussing a set of requirements; requirements for internal users. And Angie figured if she didn't know what problem was being solved, it was likely others didn't either. She didn't mean to yell - it just kinda slipped out. But now the room had fallen silent and everyone was looking at her.
+
+She looked down for a moment. "Okay. A little loud Angie.", she said to herself in a hushed voice.
+
+Looking up, Angie then addressed the room. "This is for internal people? Who? I mean, what's the problem we're trying to solve here?"
+
+"I just showed you the screens.", said Chris.
+
+"Right. You just showed us a possible solution. What is the problem?", asked Angie.
+
+Chris sighed heavily, scrolled back to the first screen of the presentation, and read the success statement aloud. "This feature will be successful when we ensure the right dealers see the right product lines during the wholesale order window."
+
+"Great. So we need to make sure that the right dealers see the right product lines."
+
+"Yes."
+
+"And all of these screens and reports are to make sure that happens?"
+
+"Yes."
+
+"And there's no other way to solve this problem?"
+
+"Well. Not really."
+
+"How are we doing it today?"
+
+Chris switched over to Excel and opened a spreadsheet. "There is this spreadsheet where the regional VPs manage the data." She clicked on a few of the tabs in the spreadsheet, explaining, "Each VP has a tab in the spreadsheet that represents their region. VPs work with their field managers and create a chart of which dealer is offered which products."
+
+The chart was fairly simple - It showed a dealer name and address, the dealer phone number, and a list of product codes indicating offerings the dealer was restricted from. It was a simple restrict list.
+
+"Okay. And then what happens?", asked Angie, "How does this get implemented in the field?"
+
+"Field managers are instructed to pull pages from the catalog binder before they go into the see the dealer. That way, it's as if the product never existed as far as the dealer is concerned. Sometimes a dealer is savvy and asks about a missing product. Usually, they can accept that the product is not currently available due to volume or some set of constraints."
+
+"Got it.", said Angie, "So... What if we simply uploaded the restrict list from the spreadsheet before dealer ordering begins? No admin interface, no data entry screens, no reports that replicate what the VPs and field managers already have from the business intelligence team. We simply restrict the dealers from seeing the products."
+
+"You can do that?", Chris asked, looking doubtful.
+
+Angie raised a single eyebrow and turned up the opposite corner of her mouth. "Of course we can do that."
+
+"Right. Sorry, no. I mean, yes. Of course. Of course you can do that. I meant will there be problems with data integrity or something like that? I remember asking the production line to enter part numbers they needed into a spreadsheet and that was a complete disaster."
+
+"Oh yeah. That was, what, five maybe six years ago. Before automated inventory. That was a shit show. Never should have happened. We should have tested it out on a single line. We'd have seen it right away. We asked people who are required to wear heavy gloves and have hourly production quotas to key part numbers into a mini keyboard at their workstation. Between being in a constant rush and not being able to hit the right key with those safety gloves on... We had a nightmare pulling the inventory batches into the system at night."
+
+"Ugh.", interjected Leslie, "Not to mention the cost. We spent so much money on all those mini-computers and keyboards. We forced people to use them for six months just because we had to justify the expense. We KNEW it was a failure and we just kept going - rolling it out to one plant after another."
+
+Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with part numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad part number into the restrict field any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
+
+"Great!", said Angie, "Single source of truth. Data integrity. Simple. Sounds like a solution to me."
+
+"But, we are going to need these screens sooner or later.", said Chris.
+
+"Later.", said Leslie, "Much later."
+
+
+
+Organizations that focus on feature delivery tend to measure output, such as the count of features delivered. Output measures tell them how fast they are moving, but give no indication of whether or not the end is being achieved. These organizations need to also consider outcomes - they need to consider the impact of delivery, such as how many customers are engaging in a key activity. These measures will help them determine if they are headed in the right direction. And speed (output) is beneficial only if you are headed in the right direction (outcome).
+
 
 I once worked with a client who became so obsessed with immediate revenue metrics that they would not allow themselves to innovate in certain areas. Essentially, the only measure that mattered for a new feature was whether or not it had a net positive impact on revenue. Revenue was their standard outcome measurement. This was, of course, measured in real time. If they tried three different button colors on the checkout screen, they'd go with the one that achieved a statistically significant higher rate of purchase. Easy enough.
 
