@@ -1,4 +1,4 @@
-# A brief history of the 7 Behaviors
+# A brief history of the 7 Characteristics
 
 My name is Doc Norton and I make software.
 
@@ -265,9 +265,9 @@ This book is an homage to Joe Sladick and the lessons I learned from him.
 
 I owe a great many thanks to those who have helped me along the way, but Joe was the first. He was the first in a long line of mentors and friends who taught me new things by their instruction, example, and argument. And some of them, like Joe, made me feel like maybe, just maybe, I could do that too.
 
-The 7 Rules are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others. People who are are uncovering better ways of developing software by doing it and helping others do it[^AgileManifesto].
+The 7 Characteristics are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others. People who are are uncovering better ways of developing software by doing it and helping others do it[^AgileManifesto].
 
 [^AgileManifesto]: The Agile Manifesto contains 4 values and 12 principles that outline an approach to software development. Beck, K., Beedle, M., Van Bennekum, A., Cockburn, A., Cunningham, W., Fowler, M., . . . Thomas, D. (2001). Manifesto for Agile Software Development. Retrieved from https://agilemanifesto.org/
 
-May the 7 Rules serve you well.
+May the 7 Characteristics serve you well.
 
