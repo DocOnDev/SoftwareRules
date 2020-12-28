@@ -1,4 +1,4 @@
-## A brief history of the 7 Behaviors
+# A brief history of the 7 Behaviors
 
 My name is Doc Norton and I make software.
 
