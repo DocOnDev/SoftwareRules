@@ -28,9 +28,13 @@ C> -- Peter Drucker
 
 I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value. And some features are unnecessarily complicated because the requestor didn't know what was possible and the creator didn't know why it was being built.
 
+{blurb, icon: bullhorn}
+Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
+{/blurb}
+
 A few years ago, I was coaching a team at a manufacturing company. At the onset of the project, we introduced the entire team to the business processes. We showed the team diagrams that outlined the old business process and diagrams that outlined the new proposed process. We held sessions with business stakeholders and the product team where they discussed the proposed process changes and anyone and everyone could ask and answer questions. And everyone - business stakeholders, developers, and product folks - participated in a story mapping[^StoryMapping] exercise, including determining what slices of functionality would first be delivered. We then had the developers and product folks discuss a further breakdown of the first few features - we chunked them into tiny pieces that could be rapidly delivered. The developers genuinely understood the business problem.
 
-[^StoryMapping]: “User Story Mapping.” Accessed December 20, 2020. https://www.jpattonassociates.com/user-story-mapping/. 
+[^StoryMapping]: “User Story Mapping.” Accessed December 20, 2020. https://www.jpattonassociates.com/user-story-mapping/.
 
 Fast forward a couple of months and the team had released their first version to a small group of premier dealers for a single, simple product line. The products in this line had no options - each came in one size and one color. So the user interface was very simple. The team built just enough code to manage the needs of this single product line.
 
