@@ -5,39 +5,6 @@
 Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
 {/blurb}
 
-{blurb, icon: highlighter}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: key}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: lightbulb}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: pencil-ruler}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: scroll}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: tools}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: toolbox}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-{blurb, icon: trophy}
-Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
-{/blurb}
-
-
 THINGS TO (possibly) COVER IN THIS SECTION
 * Understands the business problem
 * Solves the current problem
@@ -67,7 +34,9 @@ I've worked with many companies who've conflated delivery of features with deliv
 
 A few years ago, I was coaching a team at a manufacturing company with a highly complicated product offering. Every product had multiple options and there were often complicated relationships between the options.
 
-Imagine something as seemingly simple as a garage door. When you go to your local hardware store, they'll offer you doors in a few specific sizes. If you choose windows, you'll have a hand full of inserts to choose from in order to dress up the windows. That's about it. Seems simple enough. And it is, but only because the retailer has drastically reduced the options available to you and made a number of choices on your behalf. In reality, a garage door has varying insulation values, comes in heights and widths ranging from a single car garage to an airplane hangar, and is offered in over a dozen colors with several textures. These attributes impact one another in varying ways. If you require a certain insulation value, you can't get windows. Depending on width or height, you can't get certain textures or colors. And all of these choices impact the types of tracks and lift systems the door can come with. All things considered, a single model of garage door may have literally millions of different valid combinations. I knew of one that was calculated at over 2.5 Billion combinations. As a result, product like this are usually offered with feature bundles which create less complicated options for consumers to choose from. When you choose the Carriage House look, for example, you are choosing a bundle that combines texture, inserts, and r-value (insulation).
+Imagine something as seemingly simple as a garage door. When you go to your local hardware store, they'll offer you doors in a few specific sizes. If you choose windows, you'll have a hand full of inserts to choose from in order to dress up the windows. That's about it. Seems simple enough. And it is, but only because the retailer has drastically reduced the options available to you and made a number of choices on your behalf.
+
+In reality, a garage door has varying insulation values, comes in heights and widths ranging from a single car garage to an airplane hangar, and is offered in over a dozen colors with several textures. These attributes impact one another in varying ways. If you require a certain insulation value, you can't get windows. Depending on width or height, you can't get certain textures or colors. And all of these choices impact the types of tracks and lift systems the door can come with. All things considered, a single model of garage door may have literally millions of different valid combinations. I knew of one that was calculated at over 2.5 billion combinations. As a result, product like this are usually offered with feature bundles which create less complicated options for consumers to choose from. When you choose the Carriage House look, for example, you are choosing a bundle that combines texture, inserts, and r-value (insulation).
 
 This client had a product offering that was significantly more complicated than garage doors. They relied very heavily on bundling to help simplify the product, but even then, consumers often had dozens of choices to make in a single purchase.
 
