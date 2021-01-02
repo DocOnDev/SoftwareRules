@@ -8,17 +8,26 @@ Every good team knows the problems they are solving. They know what they're doin
 {blurb, icon: highlighter}
 Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
 {/blurb}
+
 {blurb, icon: key}
+Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
+{/blurb}
 
 {blurb, icon: lightbulb}
 Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
 {/blurb}
+
 {blurb, icon: pencil-ruler}
+Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
+{/blurb}
 
 {blurb, icon: scroll}
 Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
 {/blurb}
+
 {blurb, icon: tools}
+Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
+{/blurb}
 
 {blurb, icon: toolbox}
 Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now.
