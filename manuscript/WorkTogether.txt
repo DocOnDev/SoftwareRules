@@ -1,6 +1,10 @@
 {#works_together}
 # Works Together
 
+{blurb, icon: bullhorn}
+"They work together. Not cooperation, but collaboration. This isn't about each of them doing their part and then stitching it together later. They work together as a unit."
+{/blurb}
+
 {icon: quote-left}
 B> ## Great things in business are never done by one person; they're done by a team of people.
 
@@ -71,7 +75,7 @@ Look at "Innovate the Pixar Way"
 
 https://www.fastcompany.com/3027135/inside-the-pixar-braintrust - Excerpt from Creativity, Inc.
 
-* * * 
+* * *
 
 Wreck-It Ralph has been the beneficiary of all that positive energy and then some. How the turnaround happened:
 
@@ -108,7 +112,7 @@ And these guys were really threatened by us. They kept us under their thumb, and
 From - https://www.thewrap.com/disney-fired-john-lasseter-came-back-heal-studio/
 
 
-* * * 
+* * *
 
 
 
