@@ -42,13 +42,13 @@ I've worked with many companies who've conflated delivery of features with deliv
 
 A few years ago, I was coaching a team at a manufacturing company with a highly complicated product offering. Every product had multiple options and there were often complicated relationships between the options.
 
-Imagine something as seemingly simple as a garage door. When you go to your local hardware store, they'll offer you doors in a few specific sizes. If you choose windows, you'll have a hand full of inserts to choose from in order to dress up the windows. That's about it. Seems simple enough. And it is, but only because the retailer has drastically reduced the options available to you and made a number of choices on your behalf.
+Imagine something as seemingly simple as a garage door. When you go to your local hardware store, they'll offer you doors in a few specific sizes. If you choose windows, you'll have a hand full of inserts to choose from in order to dress up the windows. That's about it. Seems simple enough. And it is, but only because the manufacturer and retailer have drastically reduced the options available to you and made a great number of choices on your behalf.
 
-In reality, a garage door has varying insulation values, comes in heights and widths ranging from a single car garage to an airplane hangar, and is offered in over a dozen colors with several textures. These attributes impact one another in varying ways. If you require a certain insulation value, you can't get windows. Depending on width or height, you can't get certain textures or colors. And all of these choices impact the types of tracks and lift systems the door can come with. All things considered, a single model of garage door may have literally millions of different valid combinations. I knew of one that was calculated at over 2.5 billion combinations. As a result, product like this are usually offered with feature bundles which create less complicated options for consumers to choose from. When you choose the Carriage House look, for example, you are choosing a bundle that combines texture, inserts, and r-value (insulation).
+In reality, a garage door has varying insulation values, comes in heights and widths ranging from a single car garage to an airplane hangar, and is offered in over a dozen colors with several textures. These attributes impact one another in varying ways. If you require a certain insulation value, you can't get windows. Depending on width or height, you can't get certain textures or colors. And all of these choices impact the types of tracks and lift systems the door can come with. All things considered, a single model of garage door may have literally millions of different valid combinations. I knew of one model of garage door that was calculated at over 2.5 billion possible combinations. As a result, products like this are usually offered with feature bundles which create less complicated options for consumers to choose from. When you choose the Carriage House look, for example, you are choosing a bundle that combines texture, inserts, and r-value (insulation).
 
-This client had a product offering that was significantly more complicated than garage doors. They relied very heavily on bundling to help simplify the product, but even then, consumers often had dozens of choices to make in a single purchase.
+This particular client had a product offering that was significantly more complicated than garage doors. They relied very heavily on bundling to help simplify the product, but even then, consumers often had dozens of interdependent choices to make in a single purchase.
 
-Adding to the challenge was the supply chain itself. Many of the sub-components of the product were manufactured by third parties, some of whom had limitations to the volume they could produce in a given time period. Such constraints impacted the manufacturer's ability to offer certain products. No matter the demand, the manufacturer couldn't scale production any faster then the suppliers were able to scale production.
+Adding to the challenge was the supply chain itself. Many of the sub-components of the product were manufactured by third parties, some of whom had limitations on the volume they could produce in a given time period. Such constraints impacted the manufacturer's ability to offer certain products. No matter the demand, the manufacturer couldn't scale production any faster than the suppliers were able to scale production.
 
 At the onset of the project, we introduced the entire team to the business processes. We showed the team diagrams that outlined the old business process and diagrams that outlined the new proposed process. We held sessions with business stakeholders and the product team where they discussed the proposed process changes and anyone and everyone could ask and answer questions. And everyone - business stakeholders, developers, and product folks - participated in a story mapping[^StoryMapping] exercise, including determining what slices of functionality would first be delivered. We then had the developers and product folks discuss a further breakdown of the first few features - we chunked them into tiny pieces that could be rapidly delivered. The developers genuinely understood the business problem. And as a result, they understood what they were building, they knew why they were building it, and they had a good sense of how to know whether or not the business problem was being addressed.
 
@@ -60,21 +60,21 @@ The pilot was a success - despite being available for a single product line, the
 
 With a successful pilot, the team was expanded slightly. A new, dedicated product designer was added along with two new developers.
 
-Over the next few months, the team added increasingly more complicated product lines, allowing them to test the increasing complicatedness as they went along.  The premier dealers were delighted and the business continued to realize cost and reputation benefits.
+Over the next few months, the team added increasingly more complicated product lines, allowing them to test the increasing complicatedness as they went along. They started by expanding into products that had more options, then products with very few constraints, eventually moving into products with multiple constraints. The premier dealers were delighted and the business continued to realize cost and reputation benefits.
 
 It was time to start the roll-out to other dealers.
 
 Complicated products were handled well by the system, including accounting for supply chain constraints, but to roll it out to other dealers, there were additional factors such as regional specifications, contractual obligations, and negotiations between field managers and dealers for priority. These factors meant that the roll-out needed to exclude certain dealers from seeing various product lines and those exclusions could not be determined by strictly automated means. The team needed a solution.
 
-"I've been modeling a possible solution.", said the Chris, the new product designer, "Give me a couple more days and I'll show you all what I'm thinking."
+The new product designer, Chris, was excited at the prospect. She'd been on the team for a few months, and this was the first opportunity to really dig into a new problem. Chris told the team, "I've been modeling a possible solution. Give me a couple more days and I'll show you all what I'm thinking."
 
-Two days later, Chris scheduled a meeting with the team to discuss the new product to dealer maintenance screens. Chris walked us through each screen and each feature on each screen, taking questions and explaining how the screens were designed with leading practices in mind regarding usability and accessibility. Everyone was impressed with the level of detail.
+Two days later, Chris scheduled a meeting with the team to discuss the new product to dealer maintenance screens. Chris walked them through each screen and each feature on each screen, taking questions and explaining how the screens were designed with leading practices in mind regarding usability and accessibility. Everyone was impressed with the level of detail.
 
 Leslie, the product owner, looked around the room, getting a read. Everybody seemed to be tracking the concept so far. "So, how do we suppose we're going to slice this into smaller pieces? I think the historical reports are an obvious candidate for a later release. But I want to hear more from the team."
 
 Chris looked a bit confused. "Um. No. That's not... I mean. These are all necessary features. This is what we need."
 
-Leslie steepled his fingers in front of him and looked down at his hands for a second. "Yes, Chris. We need all of these. But, as you've seen over the past couple of months, we break features down into thin slices; increments. We deliver this way on purpose. It provides a lot of benefit."
+Leslie steepled his fingers in front of himself and looked down at his hands for a second. "Yes, Chris. We need all of these. But, as you've seen over the past couple of months, we break features down into thin slices; increments. We deliver this way on purpose. It provides a lot of benefit."
 
 "But that's for when we aren't sure about something. In this case, I've designed it all. We don't need to experiment or do small slices when we know what we're going to build."
 
@@ -82,19 +82,25 @@ Leslie steepled his fingers in front of him and looked down at his hands for a s
 
 "Always?"
 
-"Always. We've learned again and again that what we know is often not so. There was the way dealers used the forecast column - we expected them to use it to hold possible future orders, but a bunch of them used it for stock levels. We even had some of them review the prototypes and still they used it differently."
+"Always. We've learned again and again that what we know is often not so. There was the way dealers used the forecast column - we expected them to use it to hold possible future orders, but a bunch of them used it for stock levels. We did field studies, had dealers give us feedback on screens, and even had some come in to work with prototypes. We knew exactly what we were building. After all of that? Well, still they used it differently."
 
 "But that's just a weird one-off case."
 
-"It is how we learned they wanted current inventory levels on the screen more than they wanted forecasting. And it's not a one-off case - what else have we learned these past few months? They over-order popular items, they need auto-save, they don't want a separate save and submit ..."
+"Chris, small slices is how we learned they wanted current inventory levels on the screen more than they wanted forecasting. And it's not a one-off case - what else have we learned these past few months? They over-order popular items, they need auto-save, they don't want a separate save and submit. What else?"
 
-"Yeah. I mean, sure. Those things happened sometimes.", Chris shook her head and waved her hands in front of herself as if to signal a car to stop, "But this is super clear.", Her hands now stable in front of her like she were grasping a basketball, "We have to have a way to manage the roll-out. We need these screens as they are. It's not even for dealers. It's for our internal people."
+One by one, team members shared lessons learned.
 
-"Hold on!", came a loud voice from the end of the table. It was Angie, the lead developer. She'd been sitting quietly throughout the entire presentation, but she felt she had to say something. They were discussing a set of requirements; requirements for internal users. And Angie figured if she didn't know what problem was being solved, it was likely others didn't either. She didn't mean to yell - it just kinda slipped out. But now the room had fallen silent and everyone was looking at her.
+"They'd rather key in a part number than choose from a drop-down."
 
-She looked down for a moment. "Okay. A little loud Angie.", she said to herself in a hushed voice.
+"Field managers don't use the by model view, even though they said they needed it. They always use the by dealer view."
 
-Looking up, Angie then addressed the room. "This is for internal people? Who? I mean, what's the problem we're trying to solve here?"
+"The sales window almost never matches the published dates and times."
+
+Chris shook her head and waved her hands in front of herself as if to signal a car to stop, "Yeah. I mean, sure. Those things happened sometimes. But this is super clear.", Her hands now stable in front of her like she were grasping a basketball, "We have to have a way to manage the roll-out. We need these screens as they are. It's not even for dealers. It's for our internal people."
+
+"Hold on!", came a voice from the end of the table. It was Angie, the lead developer. She'd been sitting quietly throughout the entire presentation, but she felt she had to say something. They were discussing a set of requirements; requirements for internal users. And Angie figured if she didn't know what problem was being solved, it was likely others didn't either.
+
+Angie didn't care for the spotlight. She looked down for a moment and took a deep breath. Looking up, Angie then addressed the room. "This is for internal people? Who? I mean, what's the problem we're trying to solve here?"
 
 "I just showed you the screens.", said Chris.
 
@@ -122,7 +128,7 @@ The chart was fairly simple - It showed a dealer name and address, the dealer ph
 
 "Okay. And then what happens?", asked Angie, "How does this get implemented in the field?"
 
-"Field managers are instructed to pull pages from the catalog binder before they go into the see the dealer. That way, it's as if the product never existed as far as the dealer is concerned. Sometimes a dealer is savvy and asks about a missing product. Usually, they can accept that the product is not currently available due to volume or some set of constraints."
+"Field managers are instructed to pull pages from the catalog binder before they go in to see the dealer. That way, it's as if the product never existed as far as the dealer is concerned. Sometimes a dealer is savvy and asks about a missing product. Usually, they can accept that the product is not currently available due to volume or some set of constraints."
 
 "Got it.", said Angie, "So... What if we simply uploaded the restrict list from the spreadsheet before dealer ordering begins? No admin interface, no data entry screens, no reports that replicate what the VPs and field managers already have from the business intelligence team. We simply restrict the dealers from seeing the products."
 
@@ -136,7 +142,7 @@ Angie raised a single eyebrow and turned up the opposite corner of her mouth. "O
 
 "Ugh.", interjected Leslie, "Not to mention the cost. We spent so much money on all those mini-computers and keyboards. We forced people to use them for six months just because we had to justify the expense. We KNEW it was a failure and we just kept going - rolling it out to one plant after another."
 
-Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with part numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad part number into the restrict field any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
+Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with model and combo numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad number into the restrict field any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
 
 "Great!", said Angie, "Single source of truth. Data integrity. Simple. Sounds like a solution to me."
 
