@@ -14,7 +14,7 @@ B> ### -- Hazel Edwards
 {pagebreak}
 
 THINGS TO (possibly) COVER IN THIS SECTION
-* Understands the business problem
+* Understands the business problem √
 * Solves the current problem
 * Looks at causal factors
 * Does not solve problems we do not yet have
@@ -22,7 +22,7 @@ THINGS TO (possibly) COVER IN THIS SECTION
   * Is it true that?
   * What happens if?
 * Knows how to determine if the problem is solved
-* Lack of solution is not a problem
+* Lack of solution is not a problem √
   * We don't have a purchase history report versus customers need a way to understand their past purchases
 * Whole team participates in experiment creation
 
@@ -39,6 +39,8 @@ C> -- Peter Drucker
 {/blurb}
 
 I've worked with many companies who've conflated delivery of features with delivery of value. They begin with the assumption that a feature adds value to the customer. This is often the case, but it is not always so. Some features are rarely or never used, providing little to no realized value. Some features are used out of necessity, but actually detract from the customer experience, potentially offering negative realized value. And some features are unnecessarily complicated because the requestor didn't know what was possible and the creator didn't know why it was being built.
+
+* * * *
 
 A few years ago, I was coaching a team at a manufacturing company with a highly complicated product offering. Every product had multiple options and there were often complicated relationships between the options.
 
@@ -150,6 +152,17 @@ Leslie closed his eyes and shook his head for a second before continuing, "We do
 
 "Later.", said Leslie, "Much later."
 
+* * * *
+
+Underlying every "requirement" is a problem to solve; a pain point that we hope to alleviate. Our goal should never be to build some functionality; produce some output. It should always be to solve a problem; realize an outcome.
+
+When the whole team is aligned, understands the business domain, and understands the problem they are trying to solve in partnership with the business, you unleash creativity and ingenuity. Time spent getting the team up to speed on the business domain and the specific challenges being faced pays off by an order of magnitude.
+
+
+## Solves the current problem
+
+
+
 
 
 Organizations that focus on feature delivery tend to measure output, such as the count of features delivered. Output measures tell them how fast they are moving, but give no indication of whether or not the end is being achieved. These organizations need to also consider outcomes - they need to consider the impact of delivery, such as how many customers are engaging in a key activity. These measures will help them determine if they are headed in the right direction. And speed (output) is beneficial only if you are headed in the right direction (outcome).
@@ -161,7 +174,7 @@ But when they wanted to get into personalization features, the first thing they 
 
 They were using measures that didn't align with their desired outcomes. They'd grown so accustomed to judging all features by the same criteria, they failed to think critically about the problem they were solving. While revenue generation can be, and often is a fine outcome, it isn't the only outcome. And in some cases, it is counter to the real goal.
 
-Underlying every "requirement" is a problem to solve; a pain point that we hope to alleviate. Our goal should never be to build some functionality; produce some output. It should always be to solve a problem; realize an outcome.
+
 
 
 
