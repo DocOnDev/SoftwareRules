@@ -4,6 +4,8 @@
 {mainmatter}
   Introduction.txt
   KnowTheProblem.txt
+  KnowTheProblem-NotRequirements.txt
+  KnowTheProblem-CurrentProblem.txt
   WorkTogether.txt
   CreateSimpleThings.txt
   InSmallSteps.txt
