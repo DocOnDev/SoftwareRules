@@ -1,1 +1,29 @@
 ## Solves the current problem
+
+Writing software these days is a complex endeavor. When I say complex, I mean non-deterministic adaptive environments wherein our very participation changes the environment in unpredictable ways.
+
+When I started working in software, we were automating processes that had been around for decades, had been refined, honed, and standardized across industries. We worked on accounting systems, payroll systems, and filing systems. We wrote docketing software for law firms and library management systems for, well, libraries. The audience was small, knew the domain, and could be trained to use the software. Back then, writing software was complicated. The problems we were solving were relatively simple, but there were many paths to a good, acceptable solution. Our job was to take the components of data elements, some logical operators, and simple screens and build something that got the job done.
+
+Today, that is rarely the case. Today, we are not automating the known, we are inventing through automation. We are creating user interfaces for automotive dashboards with voice interaction. We are inventing and exploring. We don't actually know what is going to happen. We don't know how customers will respond. Sometimes, we don't even know for certain who the customer is. And sometimes, the customer does something we could have never guessed and we've discovered a whole new market.
+
+
+
+{blurb, icon: quote-left}
+A step at as time . . . One problem at a time—just figure out this one problem.
+
+C> -- Linda Sue Park
+{/blurb}
+
+
+{blurb, icon: quote-left}
+Leaps of greatness require the combined problem-solving ability of people who trust each other.
+
+C> -- Simon Sinek
+{/blurb}
+
+
+{blurb, icon: quote-left}
+One step at a time is all it takes to get you there.
+
+C> -- Emily Dickinson
+{/blurb}
