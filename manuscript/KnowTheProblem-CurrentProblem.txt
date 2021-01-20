@@ -6,14 +6,19 @@ When I started working in software, we were automating processes that had been a
 
 Today, that is rarely the case. Today, we are not automating the known, we are inventing through automation. We are exploring. We are creating new markets, radically disrupting established markets, and redesigning the economy while we're at it. We don't actually know what is going to happen. We don't know how customers will respond. Sometimes, we don't even know for certain who the customer is. And sometimes, the customer does something we could have never guessed and we've discovered yet a whole new market. The audience is opaque and fickle. They're not interested in being trained, it needs to just work. Our job is not to assemble the known from a set of requirements. Our job is to discover the possible from a set of hypotheses.
 
-
-
-
 {blurb, icon: quote-left}
 A step at as time . . . One problem at a time—just figure out this one problem.
 
 C> -- Linda Sue Park
 {/blurb}
+
+In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result.
+
+In 2004, Jeremy Stoppleman and Russel Simmons launched an email recommendation service. Among the features was something called "Real Reviews" where users voluntarily wrote reviews of local businesses. The feature became so popular that they pivoted the company and Yelp, as we now know it, was born.
+
+The Point was a consumer activism site where anyone could create a campaign for social good and invite others to participate. The authors of the site noticed some interesting behavior where a campaign would start, become very active, and then suddenly the activity would stop. Doing some research, they discovered that some users were leveraging the platform for group buying in order to get lower costs. And the idea of Groupon was born.
+
+Ben Silbermann and Paul Sciarra partnered up to launch Tote, a mobile app for shopping and sharing purchases with friends. The app was a flop. The only feature people used regularly was the ability to share images of your purchases with friends. Ben and Paul added Evan Sharp to the team and they decided to take that one feature - sharing images - and turn it into a full-fledged application. They launched in 2010 to a relatively slow start, but in 2011 they iPhone app launched and Pinterest became a hot commodity.
 
 
 {blurb, icon: quote-left}
