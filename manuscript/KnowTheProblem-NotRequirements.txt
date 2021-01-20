@@ -114,7 +114,7 @@ Angie raised a single eyebrow and turned up the opposite corner of her mouth. "O
 
 "Oh yeah. That was, what, five maybe six years ago. Before automated inventory. That was a shit show. Never should have happened. We should have tested it out on a single line. We'd have seen it right away. We asked people who are required to wear heavy gloves and have hourly production quotas to key part numbers into a mini keyboard at their workstation. Between being in a constant rush and not being able to hit the right key with those safety gloves on... We had a nightmare pulling the inventory batches into the system at night."
 
-"Ugh.", interjected Leslie, "Not to mention the cost. We spent so much money on all those mini-computers and keyboards. We forced people to use them for six months just because we had to justify the expense. We KNEW it was a failure and we just kept going - rolling it out to one plant after another."
+Leslie nodded at Angie and added to the story. "Not to mention the cost. We spent so much money on all those mini-computers and keyboards. We forced people to use them for six months just because we had to justify the expense. We KNEW it was a failure and we just kept going - rolling it out to one plant after another."
 
 Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with model and combo numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad number into the restrict field any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
 
