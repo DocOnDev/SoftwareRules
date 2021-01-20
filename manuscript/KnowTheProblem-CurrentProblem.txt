@@ -14,7 +14,9 @@ C> -- Linda Sue Park
 
 In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result.
 
-In 2004, Jeremy Stoppleman and Russel Simmons launched an email recommendation service. Among the features was something called "Real Reviews" where users voluntarily wrote reviews of local businesses. The feature became so popular that they pivoted the company and Yelp, as we now know it, was born.
+In 2004, Jeremy Stoppleman and Russel Simmons launched an email recommendation service. Among the features was something called "Real Reviews" where users voluntarily wrote reviews of local businesses. The feature became so popular that they pivoted the company and Yelp[^YelpStart], as we now know it, was born.
+
+[^YelpStart]: Technologies, KNOWARTH. “10 Apps That Became Successful After They Pivoted,” June 15, 2017. https://medium.com/@KNOWARTH/10-apps-that-became-successful-after-they-pivoted-fc1766b3257a.
 
 The Point was a consumer activism site where anyone could create a campaign for social good and invite others to participate. The authors of the site noticed some interesting behavior where a campaign would start, become very active, and then suddenly the activity would stop. Doing some research, they discovered that some users were leveraging the platform for group buying in order to get lower costs. And the idea of Groupon was born.
 
