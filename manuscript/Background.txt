@@ -23,7 +23,7 @@ Computers became a mainstay in my life. I got a computer for a birthday, picked 
 
 My hobby transformed into my career as I took on new challenges and learned new languages. BASIC, Pascal, Fortran, COBOL, RPG, and WANG VS Batch (it's a language) were my first few languages.
 
-I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989. It was a relatively simple application that automated away a lot of the tedium involved in being a night batch operator in a computer room for a large law firm. 
+I wrote my first professional (paid for) application in COBOL and WANG VS Batch in 1989. It was a relatively simple application that automated away a lot of the tedium involved in being a night batch operator in a computer room for a large law firm.
 
 I'd been hired to essentially lift heavy drives in and out of casings and load tapes onto high reels in order to run nightly backups on a set of WANG VS mini computers. I was a perfect fit - I was strong, tall, and geeky.
 
@@ -51,7 +51,7 @@ Joe invited me to join him. We could not allow it to disrupt our core duties. Th
 I jumped at the opportunity.
 
 ### FoxPro is awesome
-It was weird to move back and forth from the Object Orientation and strictness of C++ to the primarily procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro. 
+It was weird to move back and forth from the Object Orientation and strictness of C++ to the primarily procedural orientation and lack of restriction of FoxPro. These were such different worlds. While I enjoyed them both, I grew to love the freedom and speed of developing in FoxPro.
 
 Loose scopes and looser types let me do some crazy things. And since it was interpreted, I could write FoxPro in FoxPro. On the fly. I wrote software that wrote new software and executed it at run time in order to dynamically modify its own behavior. I'd never really seen anything like this. I was able to build some pretty cool stuff. If I'm being honest - some of it was more than a bit too clever.
 
@@ -131,23 +131,23 @@ I have a variable that holds the subtotal. I've named it subtotal. Because that 
 ~~~
 FUNCTION calcInvoice(invNo)
   SELECT * from Orders where invoice = invNo INTO CURSOR csrInv
-  
+
   SELECT csrInv
   SCAN
     subtotal = subtotal + Orders.cost
   ENDSCAN
-  
+
   RETURN subtotal + calcTax(invNo)
 ENDFUNC
 
 FUNCTION calcTax(invNo)
   SELECT * FROM Orders where invoice = invNo INTO CURSOR csrTax
-  
+
   SELECT csrTax
   SCAN
     total = total + Orders.cost
   ENDSCAN
-  
+
   RETURN total * .07
 ENDFUNC
 ~~~
@@ -158,12 +158,12 @@ Fast forward a few months and the tax rules have changed. Now, you have to calcu
 ~~~
 FUNCTION calcInvoice(INT invNo)
   SELECT * from Orders where invoice = invNo INTO CURSOR csrInv
-  
+
   SELECT csrInv
   SCAN
     subtotal = subtotal + Orders.cost
   ENDSCAN
-  
+
   RETURN subtotal + calcTax(invNo)
 ENDFUNC
 
@@ -177,16 +177,16 @@ FUNCTION calcTax(invNo)
     subtotal = subtotal + Orders.cost * .05
     hasSpecialTax = TRUE
   ENDSCAN
-  
+
   SCAN FOR type = 3
     subtotal = subtotal + Orders.cost * .09
     hasSpecialTax = TRUE
   ENDSCAN
-  
+
   SCAN FOR type = 2
     total = total + Orders.cost * .07
   ENDSCAN
-  
+
   RETURN IIF(hasSpecialTax, subtotal + total, total)
 ENDFUNC
 ~~~
@@ -265,9 +265,8 @@ This book is an homage to Joe Sladick and the lessons I learned from him.
 
 I owe a great many thanks to those who have helped me along the way, but Joe was the first. He was the first in a long line of mentors and friends who taught me new things by their instruction, example, and argument. And some of them, like Joe, made me feel like maybe, just maybe, I could do that too.
 
-The 7 Characteristics are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others. People who are are uncovering better ways of developing software by doing it and helping others do it[^AgileManifesto].
+The 7 Characteristics are not really my own. I believe them to be merely my articulation of what I've learned from others like Joe. People who, like me, enjoy doing this and want to share what they know with others. People who are uncovering better ways of developing software by doing it and helping others do it[^AgileManifesto].
 
 [^AgileManifesto]: The Agile Manifesto contains 4 values and 12 principles that outline an approach to software development. Beck, K., Beedle, M., Van Bennekum, A., Cockburn, A., Cunningham, W., Fowler, M., . . . Thomas, D. (2001). Manifesto for Agile Software Development. Retrieved from https://agilemanifesto.org/
 
 May the 7 Characteristics serve you well.
-
