@@ -4,13 +4,7 @@ Writing software these days is a complex endeavor. When I say complex, I mean no
 
 When I started working in software, we were automating processes that had been around for decades, had been refined, honed, and standardized across industries. We worked on accounting systems, payroll systems, and filing systems. We wrote docketing software for law firms and library management systems for, well, libraries. The audience was small, knew the domain, and could be trained to use the software. Back then, writing software was complicated. The problems we were solving were relatively simple, but there were many paths to a good, acceptable solution. Our job was to take the components of data elements, some logical operators, and simple screens and build something that got the job done. Our job was to assemble the known from a set of requirements.
 
-Today, that is rarely the case. Today, we are not automating the known, we are inventing through automation. We are exploring. We are creating new markets, radically disrupting established markets, and redesigning the economy while we're at it. We don't actually know what is going to happen. We don't know how customers will respond. Sometimes, we don't even know for certain who the customer is. Every once in a while, the customer does something we could have never guessed a whole new market opportunity is discovered. Today, the audience is opaque and fickle. They're not interested in being trained, it needs to just work. Our job is not to assemble the known from a set of requirements. Our job is to discover the possible from a set of hypotheses.
-
-{blurb, icon: quote-left}
-A step at as time . . . One problem at a time—just figure out this one problem.
-
-C> -- Linda Sue Park
-{/blurb}
+Today, that is rarely the case. Today, we are not automating the known, we are inventing through automation. We are exploring. We are creating new markets, radically disrupting established markets, and redesigning the economy while we're at it. We don't actually know what is going to happen. We don't know how customers will respond. Sometimes, we don't even know for certain who the customer is. Every once in a while, the customer does something we could have never guessed and a whole new market opportunity is discovered. Today, the audience is opaque and fickle. They're not interested in being trained, it needs to just work. Our job is not to assemble the known from a set of requirements. Our job is to discover the possible from a set of hypotheses.
 
 In 2004, Jeremy Stoppleman and Russel Simmons launched an email recommendation service. Among the features was something called "Real Reviews" where users voluntarily wrote reviews of local businesses. The feature became so popular that they pivoted the company and Yelp[^YelpStart], as we now know it, was born.
 
@@ -29,7 +23,13 @@ Ben Silbermann and Paul Sciarra partnered up to launch Tote, a mobile app for sh
 [^PinterestHistory]: “Company.” Pinterest Newsroom. Accessed February 7, 2021. https://newsroom.pinterest.com/en/company.
 
 
-In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result.
+In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result. The stories of Yelp, Groupon, and Pinterest are all unique. While there have been and will continue to be similar stories, each is distinct from the others. None is repeatable. 
+
+{blurb, icon: quote-left}
+A step at as time . . . One problem at a time—just figure out this one problem.
+
+C> -- Linda Sue Park
+{/blurb}
 
 
 
