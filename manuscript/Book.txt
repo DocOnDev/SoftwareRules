@@ -2,6 +2,7 @@
   Background.txt
   TheSevenCharacteristics.txt
 {mainmatter}
+  YouMightLikeThisBook.txt
   Introduction.txt
   KnowTheProblem.txt
   KnowTheProblem-NotRequirements.txt
