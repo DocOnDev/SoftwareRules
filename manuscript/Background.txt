@@ -249,10 +249,6 @@ We didn't have comprehensive coverage (we didn't have code coverage metrics at a
 These new standards along with the tests helped to significantly reduce the number of issues being found by docket clerks and get us back on track for continued rapid delivery.
 
 ### And then ...
-No and then.
-
-Well, okay, a little and then.
-
 It took us about a year to complete the entire application. It had many more features then the original and worked exactly as they wanted it to. The application lived on for another decade before being replaced by a module in a commercial suite of legal firm management software.
 
 As happens in life, Joe and I eventually drifted apart. We talked for a while about starting a software consultancy together, but I was young and impatient and left the law firm to find more exciting work. Soon thereafter, I started my own consultancy and Joe and I talked less and less.
