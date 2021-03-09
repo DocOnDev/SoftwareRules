@@ -1,2 +1,9 @@
 {#meticulous_about_composition}
 # Be meticulous about composition.
+
+
+THINGS TO (possibly) COVER IN THIS SECTION
+* What do we mean by composition?
+  * Should this have a different name as Composition has a specific meaning in OOP?
+* REFACTORING?
+* 
