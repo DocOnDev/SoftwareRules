@@ -2,4 +2,10 @@
 
 You lead one or more software teams. You've been through a couple agile transformations. You got your certification. You built your release train. You sprinted, pointed, burned-down and stood-up.
 
-And yet, you feel as though something is missing. Most of these changes end up being superficial. They're process and ceremony but the software still breaks and the customer still complains. You've been putting veneer on cardboard,  lipstick on pigs, paper over holes, and band-aids on bullet wounds.
+And yet, you feel as though something is missing. Most of the changes ended up being superficial. They're process and ceremony but the software still breaks and the customer still complains. You've been putting veneer on cardboard,  lipstick on pigs, paper over holes, and band-aids on bullet wounds.
+
+Look, I have absolutely no problem with agile. I picked up XP in early 2000. Only a few years later, I got my scrum certification from Mr. Schwaber hisself. I was there when Ron Jeffries and Chet Hendrickson put together the first Scrum Certified Developer course and I even co-taught the course with them. I was present for the first ever Certified Scrum Product Owner class, designed and delivered by my friend, Jeff Patton.
+
+I don't mean to name drop. It's just that I've been deeply connected to the agile scene for a long time. I have absolutely no problem with agile.
+
+But I know an awful lot of you have been sold the warm gooey chocolate fudge fountain cake of agile only to be served a microwaved chocolate donut with a Hersey's kiss in the hole.
