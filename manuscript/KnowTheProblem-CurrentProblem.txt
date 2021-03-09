@@ -23,13 +23,17 @@ Ben Silbermann and Paul Sciarra partnered up to launch Tote, a mobile app for sh
 [^PinterestHistory]: “Company.” Pinterest Newsroom. Accessed February 7, 2021. https://newsroom.pinterest.com/en/company.
 
 
-In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result. The stories of Yelp, Groupon, and Pinterest are all unique. While there have been and will continue to be similar stories, each is distinct from the others. None is repeatable. 
+In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result. The stories of Yelp, Groupon, and Pinterest are all unique. While there have been and will continue to be similar stories, each is distinct from the others. None is repeatable.
 
 {blurb, icon: quote-left}
 A step at as time . . . One problem at a time—just figure out this one problem.
 
 C> -- Linda Sue Park
 {/blurb}
+
+If this is true (and it is true) - If we can't know cause and effect and we cannot predict what will actually happen, then how do we proceed? We focus on the next step. We focus on the problem at hand. We don't put much effort into solving future problems we may never encounter. We put our efforts into solving the problem we know we have right now.
+
+
 
 
 
