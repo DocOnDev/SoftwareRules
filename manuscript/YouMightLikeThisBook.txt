@@ -8,9 +8,9 @@ You're kinda fed up with this agile bullshit.
 
 Me too.
 
-Just to be clear, I have absolutely no problem with agile. I picked up XP in early 2000. Only a few years later, I got my scrum certification from Mr. Schwaber hisself. I was there when Ron Jeffries and Chet Hendrickson put together the first Scrum Certified Developer course and I even co-taught the course with them. I was present for the first ever Certified Scrum Product Owner class, designed and delivered by my friend, Jeff Patton.
+Just to be clear, I have absolutely no problem with agile. I picked up XP in early 2000. Only a few years later, I got my scrum certification from Mr. Schwaber hisself. I was there when Ron Jeffries and Chet Hendrickson put together the first Scrum Certified Developer course and I even co-taught the course with them. I was present for the first ever Certified Scrum Product Owner class, designed and delivered by my friend, Jeff Patton. I've done instructional videos for Robert Martin, paired with Ward Cunningham, collaborated with Alistair Coburn, and spent quality time with Jon Kern and James Grenning.
 
-I don't mean to name drop. It's just that I've been deeply connected to the agile scene for a long time.
+Sure. I'm name dropping. I know. I just really want you to understand that I've been deeply connected to the agile scene for a long time.
 
 Like I said, I have absolutely no problem with agile, but I do have a problem with all the bullshit.
 
@@ -19,7 +19,9 @@ I know an awful lot of you have been sold the warm gooey chocolate fudge lava ca
 I get it. I've seen it. I've railed against it - sometimes to no avail, sometimes to mild avail, and occasionally to great avail.
 
 
-I can't say this book is about agile or agility. I mean, it sort of is and it sort of isn't. I'm not going to blather on about values or principles or mindsets. I'm not going to introduce you to my new DesArcDevTestSecOps that fixes all that's wrong with agile by cramming another role into the DevOps name. And I sure as hell am not going to repackage some lean concepts into a "radically new" framework.
+I can't say this book is about agile or agility. I mean, it sort of is.
+
+But I'm not going to talk much about agile directly. I'm not going to offer platitudes about values or principles or mindsets. I'm not going to introduce you to my new DesArcDevTestSecOps that fixes all that's wrong with agile by cramming another role into the DevOps name. I'm not going to tell you about the one true way to scale, spread, or move the needle on agile.
 
 Instead, I'm going to tell you about some success and some failure I've seen in my 30+ years delivering software solutions. I'm going to share with you some key behaviors I believe excellent teams exhibit. Behaviors that help a team deliver better quality software sooner, get rapid feedback, and adjust as they go. Behaviors that are aligned with agility.
 
