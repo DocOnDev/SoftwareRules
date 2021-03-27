@@ -1,6 +1,6 @@
 # You Might Like This Book if...
 
-You lead one or more software teams. You've been through a couple agile transformations. You got your certification. You built your release train. You sprinted, pointed, continuously-integrated, burned-down and stood-up.
+You lead one or more software teams. You've survived a couple agile transformation attempts. You got your certification. You built your release train. You sprinted, pointed, continuously-integrated, burned-down and stood-up.
 
 And yet, you feel as though something is missing. Most of the changes ended up being superficial. You put in a lot of process, tools, and ceremony but the software still breaks and the customer still complains. You feel like maybe you've been putting veneer on cardboard, lipstick on pigs, paper over holes, or band-aids on bullet wounds.
 
