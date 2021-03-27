@@ -1,6 +1,6 @@
 ## Solves the current problem
 
-Writing software these days is a complex endeavor. When I say complex, I mean non-deterministic adaptive environments wherein our very participation changes the environment in unpredictable ways.
+Writing software is hard. In fact, it is complex. When I say complex, I mean non-deterministic adaptive environments wherein our very participation changes the environment in unpredictable ways. What I am saying is - we can prognosticate and pontificate all we wish, but we don't actually know what is going to happen when we release that next feature. It is only when we release the feature that we learn. And the moment we release the feature, we have a new and unique system.
 
 When I started working in software, we were automating processes that had been around for decades, had been refined, honed, and standardized across industries. We worked on accounting systems, payroll systems, and filing systems. We wrote docketing software for law firms and library management systems for, well, libraries. The audience was small, knew the domain, and could be trained to use the software. Back then, writing software was complicated. The problems we were solving were relatively simple, but there were many paths to a good, acceptable solution. Our job was to take the components of data elements, some logical operators, and simple screens and build something that got the job done. Our job was to assemble the known from a set of requirements.
 
@@ -33,7 +33,7 @@ C> -- Linda Sue Park
 
 If this is true (and it is true) - If we can't know cause and effect and we cannot predict what will actually happen, then how do we proceed? We focus on the next step. We focus on the problem at hand. We don't put much effort into solving future problems we may never encounter. We put our efforts into solving the problem we know we have right now.
 
-
+Doing this well requires discipline.
 
 
 
@@ -44,9 +44,7 @@ Leaps of greatness require the combined problem-solving ability of people who tr
 C> -- Simon Sinek
 {/blurb}
 
-
-{blurb, icon: quote-left}
-One step at a time is all it takes to get you there.
-
-C> -- Emily Dickinson
-{/blurb}
+# Stories
+1. Pre-determined architecture at Southwest Airlines
+1. Colorado start-up : Containerized CI/CD
+1. Incremental Delivery at SWA
