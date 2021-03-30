@@ -47,4 +47,4 @@ C> -- Simon Sinek
 # Stories
 1. Pre-determined architecture at Southwest Airlines
 1. Colorado start-up : Containerized CI/CD
-1. Incremental Delivery at SWA
+1. Incremental Delivery at SWA - One Way & Round Trip, no pets or special needs
