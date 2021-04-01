@@ -116,9 +116,9 @@ I wrote each characteristic on the board as I described it.
 
 "An excellent team is doing continuous integration and is releasing as often as they possibly can. How often? Ridiculously often. They're pushing the boundary. Business says once per month is sufficient - they release once per week. Ridiculous."
 
-*Favors Automation*
+*Reduces Friction*
 
-"Is there a process that can be documented and repeated? Automate it. Humans do creative work. Computers do repetitive work. Need an approval? Automate it. Have a document that shows how to get a developer workstation running? Make an install script, or better yet a virtual image."
+"An excellent team addresses things in the system that make their work more difficult. Is there a process they can documented and repeated? They automate it. Humans do creative work. Computers do repetitive work. These teams eliminate or automate approvals and gates. They de-couple, de-clutter, and de-bureaucratize. Anything that causes friction is game for overhaul, if not eradication."
 
 * * *
 

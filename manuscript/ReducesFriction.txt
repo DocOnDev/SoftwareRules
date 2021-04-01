@@ -1,0 +1,28 @@
+{#reduces_friction}
+# Reduces Friction.
+
+{icon: quote-left}
+B> ### The most powerful tool we have as developers is automation.
+B>
+B> #### -- Scott Hanselman
+
+### Maybe this section is Reduces Friction...
+
+THINGS TO (possibly) ANSWER IN THIS SECTION
+* What gets automated?
+  * Automated Tests
+  * Automated builds
+  * Automated traceability
+  * Automated deployments
+  * Automated approvals
+  * Automated provisioning
+  * Automated breakers
+  * Automated Chaos
+*
+
+Favors Automation is good, but it focuses on one aspect of flow/improvement for the team. Starting to think "Reduces Friction" is better.
+
+When we reduce friction, we are actively eliminating the things that cause drag. Automation plays a role, of course, but this can also be reducing general bureaucracy, changing procedures without automation, reducing dependencies, etc. This is kind of like continuously improves, but "continuous improvement" feels almost cliche at this point.
+
+# Stories
+1.

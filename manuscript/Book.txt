@@ -13,4 +13,4 @@
   BeMeticulousAboutComposition.txt
   ValidateAlways.txt
   ReleaseRidiculouslyOften.txt
-  FavorsAutomation.txt
+  ReducesFriction.txt
