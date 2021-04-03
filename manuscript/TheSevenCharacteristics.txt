@@ -11,4 +11,4 @@ Each section of this book explores one characteristic in detail.
 1. [Is meticulous about composition](#meticulous_about_composition)
 1. [Validates before, during, and after](#validates_always)
 1. [Releases ridiculously often](#releases_often)
-1. [Favors Automation](#reduces_friction)
+1. [Reduces Friction](#reduces_friction)

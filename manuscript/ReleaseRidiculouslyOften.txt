@@ -9,3 +9,10 @@ B> #### -- David Farley
 ## Release
 
 ## Ridiculously Often
+
+
+THINGS TO (possibly) ANSWER IN THIS SECTION
+* Releases are batches and smaller batches are better
+* Surface area correlates to risk
+* Make recovery a priority
+* 
