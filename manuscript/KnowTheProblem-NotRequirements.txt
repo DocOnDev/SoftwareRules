@@ -1,6 +1,8 @@
 ## Problems, not requirements
 
-All across the world, right now, there are thousands upon thousands of software teams working to deliver some "feature" without understanding how the thing they are currently working on is truly valuable. They don't know why this feature was prioritized. They don't know what friction the customer is experiencing. They don't know how this feature is intended to alleviate that friction. What they do know is that this is the next thing to build and that there is a description of the work to be completed. They are requirements focused. Build the thing as specified, makes sure it works as intended, deliver it to production. Pick up the next thing. Repeat.
+All across the world, right now, there are thousands upon thousands of software teams working to deliver some "feature" without understanding how the thing they are currently working on is truly valuable. They don't know why this feature was prioritized. They don't know what friction the customer is experiencing. They don't know how this feature is intended to alleviate that friction. What they do know is that this is the next thing to build and that there is a description of the work to be completed. These teams are requirements focused. Build the thing as specified, makes sure it works as intended, deliver it to production. Pick up the next thing. Repeat.
+
+Success is bits delivered. Value is somebody else's concern.
 
 Many of these teams feel drastically disconnected from the actual customer. They get requirements and they build what they're told. This is efficient. And efficient is good. But this often isn't effective. And efficient is waste if it isn't also effective.
 
@@ -96,9 +98,9 @@ Chris sighed heavily, scrolled back to the first screen of the presentation, and
 
 "How are we doing it today?"
 
-Chris switched over to Excel and opened a spreadsheet. "There is this spreadsheet where the regional VPs manage the data." She clicked on a few of the tabs in the spreadsheet, explaining, "Each VP has a tab in the spreadsheet that represents their region. VPs work with their field managers and create a chart of which dealer is offered which products."
+Chris switched over to Excel and opened a spreadsheet. "There is this spreadsheet where the regional VPs manage the data." She clicked on a few of the tabs in the spreadsheet, explaining, "Each VP has a tab in the spreadsheet that represents their region. VPs work with their field managers and create a table of which dealer is offered which products."
 
-The chart was fairly simple - It showed a dealer name and address, the dealer phone number, and a list of product codes indicating offerings the dealer was restricted from. It was a simple restrict list.
+The table was fairly simple - It showed a dealer name and address, the dealer phone number, and a list of product codes indicating offerings the dealer was restricted from. It was a simple restrict list.
 
 "Okay. And then what happens?", asked Angie, "How does this get implemented in the field?"
 
@@ -116,7 +118,7 @@ Angie raised a single eyebrow and turned up the opposite corner of her mouth. "O
 
 Leslie nodded at Angie and added to the story. "Not to mention the cost. We spent so much money on all those mini-computers and keyboards. We forced people to use them for six months just because we had to justify the expense. We KNEW it was a failure and we just kept going - rolling it out to one plant after another."
 
-Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with model and combo numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad number into the restrict field any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
+Leslie closed his eyes and shook his head for a second before continuing, "We don't have that problem here. We've been using this spreadsheet for years. There used to be issues with model and combo numbers, but last year one of the interns added a feature to the spreadsheet where it gets part numbers from a nightly feed and you can't type a bad number into the restrict fields any more. And with the office cloud solution, nobody emails the sheet around anymore. So the information is always up to date."
 
 "Great!", said Angie, "Single source of truth. Data integrity. Simple. Sounds like a solution to me."
 
