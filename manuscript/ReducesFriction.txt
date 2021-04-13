@@ -39,12 +39,12 @@ THINGS TO (possibly) ANSWER IN THIS SECTION
   * Incentive misaligned to values - James Rosen @jamesarosen
   * Unclear plans - Tommy Williams @twwilliams
   * Time pressure - Rob Myers @agilecoach
-  
+
 
 
 Favors Automation is good, but it focuses on one aspect of flow/improvement for the team. Starting to think "Reduces Friction" is better.
 
 When we reduce friction, we are actively eliminating the things that cause drag. Automation plays a role, of course, but this can also be reducing general bureaucracy, changing procedures without automation, reducing dependencies, etc. This is kind of like continuously improves, but "continuous improvement" feels almost cliche at this point.
 
-# Stories
+* Stories
 1.
