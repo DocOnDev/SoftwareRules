@@ -118,7 +118,7 @@ I wrote each characteristic on the board as I described it.
 
 *Reduces Friction*
 
-"An excellent team addresses things in the system that make their work more difficult. Is there a process they can documented and repeated? They automate it. Humans do creative work. Computers do repetitive work. These teams eliminate or automate approvals and gates. They de-couple, de-clutter, and de-bureaucratize. Anything that causes friction is game for overhaul, if not eradication."
+"An excellent team addresses things in the system that make their work more difficult. Is there a process they can document and repeat? They automate it. Humans do creative work. Computers do repetitive work. These teams eliminate or automate approvals and gates. They de-couple, de-clutter, and de-bureaucratize. Anything that causes friction is game for overhaul, if not eradication."
 
 * * *
 
