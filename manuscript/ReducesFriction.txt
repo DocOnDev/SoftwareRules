@@ -14,7 +14,6 @@ B> #### -- Scott Hanselman
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
 * What gets automated?
-  * Automated Tests
   * Automated builds
   * Automated traceability
   * Automated deployments
@@ -22,7 +21,17 @@ THINGS TO (possibly) ANSWER IN THIS SECTION
   * Automated provisioning
   * Automated breakers
   * Automated Chaos
-*
+* What is Friction?
+  * Bureaucracy
+  * Onerous Standards
+  * Approvals
+  * Too many dependencies / Tight coupling
+Friction answers from Twitter
+  * Long Deploy Queues - Cory Wilkerson @corywilkerson
+  * Anything that impedes the team's ability to move fluidly - Andy Morgan @andymorgan
+  * Barriers to Prod Deployments - Mike Coon @mikeonitstuff
+  * People aren't working well together - Jared Cosulich @jaredcosulich
+
 
 Favors Automation is good, but it focuses on one aspect of flow/improvement for the team. Starting to think "Reduces Friction" is better.
 
