@@ -14,3 +14,8 @@ C> -- Bjarne Stroustrup
 {pagebreak}
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
+* Incremental Development
+  * BDD
+  * TDD
+  * Example Mapping
+* Prioritizing for Value, Options, and Learning
