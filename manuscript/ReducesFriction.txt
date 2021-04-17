@@ -5,6 +5,14 @@
 An excellent team addresses things in the system that make their work more difficult. Is there a process they can document and repeat? They automate it. Humans do creative work. Computers do repetitive work. These teams eliminate or automate approvals and gates. They de-couple, de-clutter, and de-bureaucratize. Anything that causes friction is game for overhaul, if not eradication.
 {/blurb}
 
+{blurb, icon: quote-left}
+The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
+
+C> -- Bjarne Stroustrup
+{/blurb}
+
+{pagebreak}
+
 {icon: quote-left}
 B> ### The most powerful tool we have as developers is automation.
 B>

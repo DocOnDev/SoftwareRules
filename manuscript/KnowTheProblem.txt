@@ -6,10 +6,11 @@ Every good team knows the problems they are solving. They know what they're doin
 {/blurb}
 
 
-{icon: quote-left}
-B> ## Ease your customers’ pain.
+{blurb, icon: quote-left}
+Ease your customers’ pain.
 
-B> ### -- Hazel Edwards
+C> -- Hazel Edwards
+{/blurb}
 
 {pagebreak}
 

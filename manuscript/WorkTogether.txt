@@ -5,10 +5,11 @@
 "They work together. Not cooperation, but collaboration. This isn't about each of them doing their part and then stitching it together later. They work together as a unit."
 {/blurb}
 
-{icon: quote-left}
-B> ## Great things in business are never done by one person; they're done by a team of people.
+{blurb, icon: quote-left}
+Great things in business are never done by one person; they're done by a team of people.
 
-B> ### -- Steve Jobs
+C> -- Steve Jobs
+{/blurb}
 
 {pagebreak}
 

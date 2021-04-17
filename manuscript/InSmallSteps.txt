@@ -1,9 +1,16 @@
 {#works_in_small_steps}
 # Works In Small Steps
 
+{blurb, icon: bullhorn}
+When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They don't solve problems they don't yet have - see characteristic number one. They are obsessed with creating value, offering options, and learning.
+{/blurb}
+
 {blurb, icon: quote-left}
 The most fundamental problem in software development is complexity. There is only one basic way of dealing with complexity: divide and conquer.
 
 C> -- Bjarne Stroustrup
 {/blurb}
 
+{pagebreak}
+
+THINGS TO (possibly) ANSWER IN THIS SECTION
