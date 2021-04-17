@@ -10,8 +10,6 @@ B> ### The most powerful tool we have as developers is automation.
 B>
 B> #### -- Scott Hanselman
 
-### Maybe this section is Reduces Friction...
-
 THINGS TO (possibly) ANSWER IN THIS SECTION
 * What gets automated?
   * Automated builds
