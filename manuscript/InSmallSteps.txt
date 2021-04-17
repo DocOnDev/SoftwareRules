@@ -2,7 +2,7 @@
 # Works In Small Steps
 
 {blurb, icon: bullhorn}
-When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They don't solve problems they don't yet have - see characteristic number one. They are obsessed with creating value, offering options, and learning.
+When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They [don't solve problems they don't yet have]{#current_problem}. They are obsessed with creating value, offering options, and learning.
 {/blurb}
 
 {blurb, icon: quote-left}
@@ -14,6 +14,9 @@ C> -- Bjarne Stroustrup
 {pagebreak}
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
+* complexity
+  * Cynefin
+  * simplicty
 * Incremental Development
   * BDD
   * TDD
