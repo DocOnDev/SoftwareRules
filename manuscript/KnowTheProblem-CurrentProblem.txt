@@ -1,3 +1,4 @@
+{#current_problem}
 ## Solves the current problem
 
 Writing software is hard. In fact, it is complex. When I say complex, I mean non-deterministic adaptive environments wherein our very participation changes the environment in unpredictable ways. What I am saying is - we can prognosticate and pontificate all we wish, but we don't actually know what is going to happen when we release that next feature. It is only when we release the feature that we learn. And the moment we release the feature, we have a new and unique system.
