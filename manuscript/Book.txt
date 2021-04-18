@@ -1,5 +1,4 @@
 {fontmatter}
-  Background.txt
   TheSevenCharacteristics.txt
 {mainmatter}
   YouMightLikeThisBook.txt
@@ -14,3 +13,5 @@
   ValidateAlways.txt
   ReleaseRidiculouslyOften.txt
   ReducesFriction.txt
+{backmatter}
+  Background.txt
