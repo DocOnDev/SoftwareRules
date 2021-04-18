@@ -1,8 +1,8 @@
 {fontmatter}
-  TheSevenCharacteristics.txt
-{mainmatter}
   YouMightLikeThisBook.txt
   Introduction.txt
+  TheSevenCharacteristics.txt
+{mainmatter}
   KnowTheProblem.txt
   KnowTheProblem-NotRequirements.txt
   KnowTheProblem-CurrentProblem.txt
