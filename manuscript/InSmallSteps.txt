@@ -13,6 +13,19 @@ C> -- Bjarne Stroustrup
 
 {pagebreak}
 
+When we have grand plans, it can be a challenge to work in small steps. The more enamoured we allow ourselves to become with our ideas, the harder it is to let any of them go.
+
+But if we want to deliver sooner, we necessarily have to deliver less. I mean, you're not planning to shove garbage our there and call it an MVP, are you?
+
+Right. I didn't think so.
+
+Now, if we are going to deliver less (because garbage is not an option), we should make sure what we're delivering is the next most useful thing. I used to say, "the next most valuable thing", but I now think that is either too myopic or at least a poor articulation.
+
+You see, when we say valuable, lots of folks think that means something the customer will use with delight. You know, visible features. Stuff the customer will fawn over on social media.
+
+Features the customer gets giddy over are wonderful, but if we obsess over features, we lose extremely valuable opportunities. Opportunities to expand our options and opportunities to learn. Options and learning better set us up for future fawnable features.
+
+
 THINGS TO (possibly) ANSWER IN THIS SECTION
 * Small, independently deliverable
 * Prioritizing for Value, Options, and Learning
