@@ -14,6 +14,14 @@ C> -- Bjarne Stroustrup
 {pagebreak}
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
+* Small, independently deliverable
+* Prioritizing for Value, Options, and Learning
+* Slicing guidelines
+  * Avoid
+    * Slicing along architectural seams
+    * Slicing along organizational seams
+  * Try
+    *
 * complexity
   * Cynefin
   * simplicty
@@ -21,4 +29,15 @@ THINGS TO (possibly) ANSWER IN THIS SECTION
   * BDD
   * TDD
   * Example Mapping
-* Prioritizing for Value, Options, and Learning
+
+Slicing Resorces:
+
+[Story Splitting Map](https://3p72t53zzqr23puj171gfblg-wpengine.netdna-ssl.com/wp-content/uploads/2020/12/Story-Splitting-Flowchart.pdf)
+
+[Dinwiddie Suggestions](http://idiacomputing.com/pub/UserStories.pdf)
+
+[Bill Wake](https://xp123.com/articles/twenty-ways-to-split-stories/)
+
+[JB Rainsberger](https://blog.jbrains.ca/permalink/how-youll-probably-learn-to-split-features)
+
+[InfoQ Article](https://www.infoq.com/news/2011/04/how-to-split-user-stories/)
