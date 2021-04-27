@@ -88,35 +88,35 @@ I wrote "EXCELLENCE CHARACTERISTICS" on the board and underlined it. "There are 
 
 I wrote each characteristic on the board as I described it.
 
-*Knows the Problem*
+*[Knows the problem](#knows_the_problem)*
 
 "Every good team knows the problems they are solving. They know what they're doing and why. They aren't building something to specification. They are solving a real problem. The problem they have right now."
 
-*Works Together*
+*[Works together](#works_together)*
 
 "They work together. Not cooperation, but collaboration. This isn't about each of them doing their part and then stitching it together later. They work together as a unit."
 
-*Creates Simple Things*
+*[Creates simple things](#creates_simple_things)*
 
 "Now, I know that teams are writing complex systems. But what underlies a good complex system, is simple components. Simple, reliable pieces that can be put together into a solution. They don't architect grand future-proof solutions. They keep it simple and they let elegance emerge."
 
-*Works in Small Steps*
+*[Works in small steps]{#works_in_small_steps}*
 
 "When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They don't solve problems they don't yet have - see characteristic number one. They are obsessed with creating value, offering options, and learning."
 
-*Is Meticulous about Composition*
+*[Is meticulous about composition](#meticulous_about_composition)*
 
 "Every good team is deliberate about code composition. They pay attention to whether or not too much behavior is clumped into one place. They refactor mercilessly. They eschew complexity. They don't optimize for easy right now, they optimize for easy in the future."
 
-*Validates Before, During, and After*
+*[Validates before, during, and after](#validates_always)*
 
 "They don't just write tests. They design the tests first. They are validating constantly - with every little edit, with every check-in, with every release."
 
-*Releases Ridiculously Often*
+*[Releases ridiculously often](#releases_often)*
 
 "An excellent team is doing continuous integration and is releasing as often as they possibly can. How often? Ridiculously often. They're pushing the boundary. Business says once per month is sufficient - they release once per week. Ridiculous."
 
-*Reduces Friction*
+*[Reduces Friction](#reduces_friction)*
 
 "An excellent team addresses things in the system that make their work more difficult. Is there a process they can document and repeat? They automate it. Humans do creative work. Computers do repetitive work. These teams eliminate or automate approvals and gates. They de-couple, de-clutter, and de-bureaucratize. Anything that causes friction is game for overhaul, if not eradication."
 
