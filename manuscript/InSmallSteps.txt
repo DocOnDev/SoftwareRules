@@ -25,6 +25,18 @@ You see, when we say valuable, lots of folks think that means something the cust
 
 Features the customer fawns over are wonderful and earning money is generally good for business. Heck, even ticking off an OKR can be rewarding. But if we focus only on features customers can immediately see and hitting business targets, we lose some extremely valuable opportunities. Opportunities to expand our options and opportunities to learn. Options and learning better set us up for future fawnable fortune-generating features.
 
+Seriously. Options and learning are egregiously overlooked in most backlogs - And they can be incredibly useful, even extremely valuable (depending on the measure of valuable).
+
+## Options
+
+Actions that expand our future possibilities.
+Actions that move us in a direction, but leave alternate paths open for longer.
+
+
+## Learning
+Actions that help us to gain insights.
+Actions that confirm or disprove a hypothesis.
+
 
 THINGS TO (possibly) ANSWER IN THIS SECTION
 * Small, independently deliverable
