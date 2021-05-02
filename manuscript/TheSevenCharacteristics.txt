@@ -7,7 +7,7 @@ Each section of this book explores one characteristic in detail.
 1. [Knows the problem](#knows_the_problem)
 1. [Works together](#works_together)
 1. [Creates simple things](#creates_simple_things)
-1. [Works in small steps]{#works_in_small_steps}
+1. [Works in small steps](#works_in_small_steps)
 1. [Is meticulous about composition](#meticulous_about_composition)
 1. [Validates before, during, and after](#validates_always)
 1. [Releases ridiculously often](#releases_often)

@@ -100,7 +100,7 @@ I wrote each characteristic on the board as I described it.
 
 "Now, I know that teams are writing complex systems. But what underlies a good complex system, is simple components. Simple, reliable pieces that can be put together into a solution. They don't architect grand future-proof solutions. They keep it simple and they let elegance emerge."
 
-*[Works in small steps]{#works_in_small_steps}*
+*[Works in small steps](#works_in_small_steps)*
 
 "When they build complex solutions out of simple components, they do it in small steps. They focus on the next simplest thing that can be done. They don't solve problems they don't yet have - see characteristic number one. They are obsessed with creating value, offering options, and learning."
 
