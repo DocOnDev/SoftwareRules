@@ -45,7 +45,10 @@ Leaps of greatness require the combined problem-solving ability of people who tr
 C> -- Simon Sinek
 {/blurb}
 
-# Stories
+STORIES TO (possibly) SHARE IN THIS SECTION
 1. Pre-determined architecture at Southwest Airlines
 1. Colorado start-up : Containerized CI/CD
 1. Incremental Delivery at SWA - One Way & Round Trip, no pets or special needs
+1. Incremental Delivery at Ford - Simple vehicle, adding in options, adding in constraints
+1. Personalization at Groupon - How do we collect data, how do we best present the results; home page, search, product page.
+1. Authorization/Authentication at Ford - CDSID, allow list, basic roles, full integration
