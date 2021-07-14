@@ -3,7 +3,7 @@
 
 Writing software is hard. In fact, it is complex. When I say complex, I mean non-deterministic adaptive environments wherein our very participation changes the environment in unpredictable ways. What I am saying is - we can prognosticate and pontificate all we wish, but we don't actually know what is going to happen when we release that next feature. It is only when we release the feature that we learn. And the moment we release the feature, we have a new and unique system.
 
-When I started working in software, we were automating processes that had been around for decades, had been refined, honed, and standardized across industries. We worked on accounting systems, payroll systems, and filing systems. We wrote docketing software for law firms and library management systems for, well, libraries. The audience was small, knew the domain, and could be trained to use the software. Back then, writing software was complicated. The problems we were solving were relatively simple, but there were many paths to a good, acceptable solution. Our job was to take the components of data elements, some logical operators, and simple screens and build something that got the job done. Our job was to assemble the known from a set of requirements.
+When I started working in software, we were automating processes that had been around for decades, had been refined, honed, and standardized across industries. We worked on accounting systems, payroll systems, and filing systems. We wrote docketing software for law firms and library management systems for, well, libraries. The audience was small, knew the domain, and could be trained to use the software. Back then, writing software was complicated. The problems we were solving were relatively clear, but there were many paths to a good, acceptable solution. Our job was to take the components of data elements, some logical operators, and simple screens and build something that got the job done. Our job was to assemble the known from a set of requirements.
 
 Today, that is rarely the case. Today, we are not automating the known, we are inventing through automation. We are exploring. We are creating new markets, radically disrupting established markets, and redesigning the economy while we're at it. We don't actually know what is going to happen. We don't know how customers will respond. Sometimes, we don't even know for certain who the customer is. Every once in a while, the customer does something we could have never guessed and a whole new market opportunity is discovered. Today, the audience is opaque and fickle. They're not interested in being trained, it needs to just work. Our job is not to assemble the known from a set of requirements. Our job is to discover the possible from a set of hypotheses.
 
@@ -27,7 +27,7 @@ Ben Silbermann and Paul Sciarra partnered up to launch Tote, a mobile app for sh
 In a complex environment, we cannot know cause and effect. We cannot predict what will happen. Nor can we, with certainty, look back and say what exactly contributed to a particular outcome. We can guess. We can feel it in our guts. But we cannot know. Repeating the steps, exactly as we recall, will very likely produce a different result. The stories of Yelp, Groupon, and Pinterest are all unique. While there have been and will continue to be similar stories, each is distinct from the others. None is repeatable.
 
 {blurb, icon: quote-left}
-A step at as time . . . One problem at a time—just figure out this one problem.
+A step at a time . . . One problem at a time—just figure out this one problem.
 
 C> -- Linda Sue Park
 {/blurb}
@@ -35,8 +35,6 @@ C> -- Linda Sue Park
 If this is true (and it is true) - If we can't know cause and effect and we cannot predict what will actually happen, then how do we proceed? We focus on the next step. We focus on the problem at hand. We don't put much effort into solving future problems we may never encounter. We put our efforts into solving the problem we know we have right now.
 
 Doing this well requires discipline.
-
-
 
 
 {blurb, icon: quote-left}
@@ -52,3 +50,10 @@ STORIES TO (possibly) SHARE IN THIS SECTION
 1. Incremental Delivery at Ford - Simple vehicle, adding in options, adding in constraints
 1. Personalization at Groupon - How do we collect data, how do we best present the results; home page, search, product page.
 1. Authorization/Authentication at Ford - CDSID, allow list, basic roles, full integration
+
+
+Around 2006, I was working for ThoughtWorks and helping to lead a large re-write for a major client. This particular client was an industry leader in a multi-billion dollar space. They had their own in-house development staff complete with architects, designers, project managers, and software developers. While they'd contracted to us for this significant effort, they kept their teams very active in the process - something we welcomed from our clients.
+
+Their commerce website was a huge revenue source and key to their business strategy. They weren't going to let this project fail. Prior to engaging us, their team had done a great deal of discovery and design. They had a comprehensive architecture design and a backlog of prioritized stories detailed with functional specifications and high-fidelity screen prototypes. The re-write was to take two years to complete and would then replace the old system all at once.
+
+As you might imagine, this wasn't the way ThoughtWorks operated. We convinced them to do the job iteratively and incrementally. We'd tease out and replace aspects of the software while leaving the rest of it in place. No grand ta-da after a multi-year effort. We'd start delivering working software and real value in the first couple of months and every week, if not multiple times per week, thereafter.
