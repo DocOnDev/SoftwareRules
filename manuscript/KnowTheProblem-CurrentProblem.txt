@@ -50,10 +50,3 @@ STORIES TO (possibly) SHARE IN THIS SECTION
 1. Incremental Delivery at Ford - Simple vehicle, adding in options, adding in constraints
 1. Personalization at Groupon - How do we collect data, how do we best present the results; home page, search, product page.
 1. Authorization/Authentication at Ford - CDSID, allow list, basic roles, full integration
-
-
-Around 2006, I was working for ThoughtWorks and helping to lead a large re-write for a major client. This particular client was an industry leader in a multi-billion dollar space. They had their own in-house development staff complete with architects, designers, project managers, and software developers. While they'd contracted to us for this significant effort, they kept their teams very active in the process - something we welcomed from our clients.
-
-Their commerce website was a huge revenue source and key to their business strategy. They weren't going to let this project fail. Prior to engaging us, their team had done a great deal of discovery and design. They had a comprehensive architecture design and a backlog of prioritized stories detailed with functional specifications and high-fidelity screen prototypes. The re-write was to take two years to complete and would then replace the old system all at once.
-
-As you might imagine, this wasn't the way ThoughtWorks operated. We convinced them to do the job iteratively and incrementally. We'd tease out and replace aspects of the software while leaving the rest of it in place. No grand ta-da after a multi-year effort. We'd start delivering working software and real value in the first couple of months and every week, if not multiple times per week, thereafter.

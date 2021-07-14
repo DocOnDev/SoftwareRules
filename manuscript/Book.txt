@@ -6,6 +6,7 @@
   KnowTheProblem.txt
   KnowTheProblem-NotRequirements.txt
   KnowTheProblem-CurrentProblem.txt
+  KnowTheProblem-ThoughtWorks.txt
   WorkTogether.txt
   CreateSimpleThings.txt
   InSmallSteps.txt
