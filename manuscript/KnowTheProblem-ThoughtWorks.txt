@@ -11,5 +11,8 @@ The primary issue with the booking flow was response times. The site often took 
 * Customer provided detailed designs of screens, architecture, database schemas, and the object model.
 * Design accounted for one way, round trip, multi-stop, open-ended, children, pets, and other special circumstances
 * Decided to start simple and build as we needed with the detailed design as a guide, but not a requirement
-* In September 2009 - learned new security measures were being put into place by the TSA, effective January 2010.
+* In September 2009 - learned new security measures were being put into place by the TSA, effective January 2010 [^TSARegs].
 * Were able to get new passenger identification requirements in place
+
+
+[^TSARegs]: “Air Travel Rules FAQ.” Findlaw, June 21, 2016. https://www.findlaw.com/consumer/travel-rules-and-rights/air-travel-rules-faq.html.
