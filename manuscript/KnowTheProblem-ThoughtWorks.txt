@@ -20,7 +20,7 @@ Finally, was their object model. This too was quite detailed. They'd pre-designe
 
 *** Pick up here.
 
-* Customer provided detailed designs of screens, architecture, database schemas, and the object model.
+* Customer provided detailed designs of screens, architecture, database schemas, and the object model. √
 * Design accounted for one way, round trip, multi-stop, open-ended, children, pets, and other special circumstances
 * Decided to start simple and build as we needed with the detailed design as a guide, but not a requirement
 * In September 2009 - learned new security measures were being put into place by the TSA, effective January 2010 [^TSARegs].
