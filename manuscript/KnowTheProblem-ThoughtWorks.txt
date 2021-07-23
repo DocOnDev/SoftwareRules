@@ -18,13 +18,13 @@ Speaking of database schema changes breaking the system - they had a way of miti
 
 Finally, was their object model. This too was quite detailed. They'd pre-designed the classes and documented them all via UML (Unified Modeling Language). The fields, methods, inheritance, and interfaces were all laid out for us to implement. For the most part, the object model looked a great deal like the database schema.
 
-It's a common mistake for teams to design their object model to reflect the database schema. On the surface, this makes sense. Data comes from the database, gets manipulated, and gets written back to the database. If the database has a phone number and an address, the object should also have a phone number and an address. Get data from the database, update the data, write the data - simple. This is such a common practice, that there are tools and libraries that developers can use which automate the process of mapping database fields to class fields.
+It's common for teams to design their object model to reflect the database schema. On the surface, this makes sense. Data comes from the database, gets manipulated, and gets written back to the database. If the database has a phone number and an address, the object should also have a phone number and an address. Get data from the database, update the data, write the data - simple. This is such a common practice, that there are tools and libraries that developers can use which automate the process of mapping database fields to class fields.
 
 "If it both makes sense and is very common, what is the problem?"", You might ask.
 
 Good question.
 
-The problem is that a database is for storing data and a class is for acting on that data. Sure, some classes are for storing and moving data around, but all classes include some behavior - even if it is the basic behavior of storing and retrieving data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. And there are ways of storing dates and times. That's about it. If we map the database too tightly to the class design, we are bound by the limits of the database.
+The problem is that a database is for storing data and an object is for acting on that data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. And there are ways of storing dates and times. That's about it. If we map the database too tightly to the object design, we are bound by the limits of the database.
 
 To make this more clear - let's think about that phone number for a moment.
 
@@ -43,13 +43,15 @@ Australia: (xx) xxxx xxxx
 Belgium: 04xx xx xx xx
 Poland: xxx-xxx-xxx
 
-You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In fact, in different regions around the world, local dialing numbers can range from 4 to 13 digits.
+You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In different regions around the world, local dialing numbers can range from 4 to 13 digits with seemingly infinite possibilities for formatting.
 
+Now that we understand phone numbers a little bit better, let's get back to that challenge of the object design reflecting the database design.
+
+*** Pick up here.
 
 We can choose to store a phone number in a database as a number, as a combination of numbers, or as some combination of text. They're all sufficient for storage, but none of them are capable of truly representing the whole concept of a phone number.
 
 
-*** Pick up here.
 
 √ Customer provided detailed designs of screens, architecture, database schemas, and the object model.
 * Design accounted for one way, round trip, multi-stop, open-ended, children, pets, and other special circumstances
