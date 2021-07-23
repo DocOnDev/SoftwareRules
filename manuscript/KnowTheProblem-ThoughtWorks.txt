@@ -24,9 +24,29 @@ It's a common mistake for teams to design their object model to reflect the data
 
 Good question.
 
-The problem is that a database is for storing information and a class is for acting on that data. Sure, some classes are for storing and moving data around, but all classes include some behavior - even if it is the basic behavior of storing and retrieving data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. And there are ways of storing dates and times. That's about it. If we map the database too tightly to the class design, we are bound by the limits of the database.
+The problem is that a database is for storing data and a class is for acting on that data. Sure, some classes are for storing and moving data around, but all classes include some behavior - even if it is the basic behavior of storing and retrieving data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. And there are ways of storing dates and times. That's about it. If we map the database too tightly to the class design, we are bound by the limits of the database.
 
-To make this more clear - let's think about that phone number for a moment. What is a phone number? Is it a bunch of numbers or is it a bunch of text? Is it a combination of numbers and/or text? It does not make sense to do math on a phone number, so it isn't a cardinal number. It doesn't represent a place in a sequence, so it isn't an ordinal number. If it is neither cardinal nor ordinal, then it is nominal - it is a name to identify something. A phone number is a name to uniquely identify a means of contacting someone. We can choose to store a phone number in a database as a number, as a combination of numbers, or as some combination of strings. They're all sufficient for storage, but none of them are capable of truly representing the whole concept of a phone number.
+To make this more clear - let's think about that phone number for a moment.
+
+What is a phone number? We call it a number and it is made up of numerals. So it must be a number - but what kind of number? It does not make sense to do math on a phone number, so it isn't a cardinal number. It doesn't represent a place in a sequence such as first or second, so it isn't an ordinal number. If it is neither cardinal nor ordinal, then it is nominal meaning it is a name or label to identify something. A phone number is a name to uniquely identify a means of contacting someone.
+
+Is a phone number one name or a series of names? Well, a phone number is composed of a country code, an area code, a prefix, and a line number. So technically, a phone number is a composition of names. This is much like how your full name is composed of names such as your given name, middle name, and surname.
+
+And then there is the question of presentation. Are there parenthesis? Do we hyphenate anything? Do we use any other punctuation? Are spaces significant? The following are proper domestic phone number formats for different countries:
+
+United States: (xxx) xxx-xxxx
+United Kingdom: (01xx xx) xx xxx
+Canada: xxx/xxx-xxxx
+China: (0xxx) xxxx xxxx
+Morocco: 07 xx xx xx xx
+Australia: (xx) xxxx xxxx
+Belgium: 04xx xx xx xx
+Poland: xxx-xxx-xxx
+
+You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In fact, in different regions around the world, local dialing numbers can range from 4 to 13 digits.
+
+
+We can choose to store a phone number in a database as a number, as a combination of numbers, or as some combination of text. They're all sufficient for storage, but none of them are capable of truly representing the whole concept of a phone number.
 
 
 *** Pick up here.
