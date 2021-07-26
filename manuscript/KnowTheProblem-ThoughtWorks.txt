@@ -24,7 +24,7 @@ It's common for teams to design their object model to reflect the database schem
 
 Good question.
 
-The problem is that a database is for storing data and an object is for acting on that data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. And there are ways of storing dates and times. That's about it. If we map the database too tightly to the object design, we are bound by the limits of the database.
+The problem is that a database is for storing data and an object is for acting on that data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. There are ways of storing dates and times that take timezones into consideration. And there are ways of storing large binary objects like photos and whole documents. That's about it. If we map the database too tightly to the object design, we are bound by the limits of the database.
 
 To make this more clear - let's think about that phone number for a moment.
 
@@ -43,13 +43,19 @@ Australia: (xx) xxxx xxxx
 Belgium: 04xx xx xx xx
 Poland: xxx-xxx-xxx
 
-You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In different regions around the world, local dialing numbers can range from 4 to 13 digits with seemingly infinite possibilities for formatting.
+You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In different regions around the world, local dialing numbers can range from 4 to 13 digits with seemingly infinite possibilities for formatting. Even mobile numbers, which were originally all 10 digits, now range from 10 to 13 digits.
 
-Now that we understand phone numbers a little bit better, let's get back to that challenge of the object design reflecting the database design.
+One additional factor to consider is that while an area code used to represent a location, such as 216 for Cleveland, Ohio. This is no longer reliable. Phone numbers are now
+
 
 *** Pick up here.
 
-We can choose to store a phone number in a database as a number, as a combination of numbers, or as some combination of text. They're all sufficient for storage, but none of them are capable of truly representing the whole concept of a phone number.
+
+Now that we understand phone numbers a little bit better, let's get back to that challenge of the object design reflecting the database design.
+
+We can choose to store a phone number in parts or as a whole. We can store a phone number as a number, as text, or as some combination. Numbers and text are sufficient for storage, but neither of them are capable of truly representing the whole concept of a phone number.
+
+Let's say we decide that phone numbers are best stored as three components - country code, area code, and regional number which is a combination of the prefix and line number.
 
 
 
