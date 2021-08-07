@@ -28,15 +28,19 @@ The problem is that a database is for storing data and an object is for acting o
 
 To make this more clear - let's focus on phone numbers for a moment.
 
-In this case, the design indicated we were to store a phone number as a number, specifically as an integer. Integers are whole numbers - there is no fractional element. This seemed logical enough. For every Customer record in the database, there was a single integer PhoneNumber which represented the primary contact number for that customer. As we might expect, the object model looked quite similar. There was a Customer object which had a phoneNumber field of type integer.
+In this case, the design indicated we were to store a phone number as a number, specifically as an integer. Integers are whole numbers - there is no fractional element; no decimal. This seemed logical enough. For every Customer record in the database, there was a single integer PhoneNumber which represented the primary contact number for that customer. As we might expect, the object model looked quite similar. There was a Customer object which had an integer phoneNumber field.
 
 A> Integers in both an Oracle database and the Java language have a maximum value of 2,147,483,647. While that is ten digits long, it won't hold most phone numbers. For the database, we used LONGINTEGER and for the object, we used BigInteger. For simplicity, we are referring to them as integers.
 
-***** RESUME HERE ****
-
 With the integer PhoneNumber database field mapped directly to the integer phoneNumber object field, we could read and write data from the database with no problem.
 
-Good to go, right?
+Easy enough. Good to go, right?
+
+Maybe.
+
+Reading and writing a phone number to the database is only one of the things we'd want to do with a phone number. We'd also want to display the phone number, edit the phone number, and maybe verify the phone number.
+
+Let's display the phone number. It's an integer, so if we display it as is, we'll get something like xxxxxxxxxx. That's accurate, but not great. Instead, we probably want to show it using a more common format for a phone number. Say xxx-xxx-xxxx or (xxx) xxx-xxxx. But how?
 
 
 
