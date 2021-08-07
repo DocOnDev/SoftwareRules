@@ -30,6 +30,8 @@ To make this more clear - let's focus on phone numbers for a moment.
 
 In this case, the design indicated we were to store a phone number as a number, specifically as an integer. Integers are whole numbers - there is no fractional element. This seemed logical enough. For every Customer record in the database, there was a single integer PhoneNumber which represented the primary contact number for that customer. As we might expect, the object model looked quite similar. There was a Customer object which had a phoneNumber field of type integer.
 
+For the more technically oriented reader, we were using an Oracle database, which uses signed integers. While an INTEGER field does allow for up to 10 digits, the maximum value is (2^31)-1 or 2,147,483,647. That won't accommodate most 10 digit phone numbers. As a result, the actual field was a LONGINTEGER, which allowed for numbers with 19 digits and a maximum value around 9.2 quintillion.
+
 ***** RESUME HERE ****
 
 With the integer PhoneNumber database field mapped directly to the integer phoneNumber object field, we could read and write data from the database with no problem.
