@@ -16,15 +16,17 @@ There were specifications for how messages were to be constructed, including how
 
 Speaking of database schema changes breaking the system - they had a way of mitigating that risk. They presented us with a complete database schema - every table, every field, every relationship, and every view was detailed along with the recommended code for several stored procedures. Their data team was at the ready to go over the details with us. If we had any reasonable suggestions for change, they'd review them and get back to us within three weeks with any approved updates. We were to review the change procedures and controls and sign off that we understood that once development began, schema changes would not be allowed except for under special circumstances. Pre-designing the database and blocking all future changes was one way to ensure the schema didn't break things. But it also meant that we couldn't very well respond to change. Any new functionality requests that required a change to a database would take weeks to get approved. Most likely, there would be a compromise and rather than updating the databases in an optimal way, hacks would be used to get the job done with minimal disruption. This would likely result, over time, in a Frankenstein schema that would then cascade its oddities into the code itself.
 
-Finally, was their object model. This too was quite detailed. They'd pre-designed the classes and documented them all via UML (Unified Modeling Language). The fields, methods, inheritance, and interfaces were all laid out for us to implement. For the most part, the object model looked a great deal like the database schema.
+Finally, was their object model. This too was quite detailed. They'd pre-designed the objects and documented them all via UML (Unified Modeling Language). The fields, methods, inheritance, and interfaces were all laid out for us to implement. For the most part, the object model looked a great deal like the database schema.
 
-It's common for teams to design their object model to reflect the database schema. On the surface, this makes sense. Data comes from the database, gets manipulated, and gets written back to the database. If the database has a phone number field, the object should also have a phone number field. Get data from the database and put it in an object, update the data in the object, write the objet data back to the database - simple. This is such a common practice, that there are tools and libraries that developers can use which automate the process of mapping database fields to object fields.
+A> Classes are templates that define properties and behavior. Objects are instances of classes that have state and can be manipulated. For simplicity, I am referring to both as objects.
+
+It's common for teams to design their object model to reflect the database schema. On the surface, this makes sense. Data comes from the database, gets manipulated, and gets written back to the database. If the database has a phone number field, the object should also have a phone number field. Get data from the database and put it in an object, update the data in the object, write the object data back to the database - simple. This is such a common practice, that there are tools and libraries that developers can use which automate the process of mapping database fields to object fields.
 
 "If it both makes sense and is very common, what is the problem?"", You might ask.
 
 Good question.
 
-The problem is that a database is for storing data and an object is for acting on that data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. There are ways of storing dates and times that take timezones into consideration. And there are ways of storing large binary objects like photos and whole documents. That's about it. If we map the database too tightly to the object design, we are bound by the limits of the database.
+The problem is that a database is for storing data and an object is for acting on that data. A database, no matter how robust, has a limited means of representing data. There are ways of storing numbers that account for the size of the number, the signature (plus or minus), and whether or not it has decimals. There are ways of storing text that account for the length and whether or not it needs to allow for extended characters such as emojis. There are ways of storing dates and times that take timezones into consideration. And there are ways of storing large binary documents - like photos and PDF files. That's about it. If we map the database too tightly to the object model, we are bound by the limits of the database.
 
 To make this more clear - let's focus on phone numbers for a moment.
 
@@ -32,7 +34,7 @@ In this case, the design indicated we were to store a phone number as a number, 
 
 A> Integers in both an Oracle database and the Java language have a maximum value of 2,147,483,647. While that is ten digits long, it won't hold most phone numbers. For the database, we used LONGINTEGER and for the object, we used BigInteger. For simplicity, we are referring to them as integers.
 
-With the integer PhoneNumber database field mapped directly to the integer phoneNumber object field, we could read and write data from the database with no problem.
+With the integer PhoneNumber database field mapped directly to the integer phoneNumber object field, we could use objects to read and write data from the database with no problem.
 
 Easy enough. Good to go, right?
 
@@ -40,7 +42,27 @@ Maybe.
 
 Reading and writing a phone number to the database is only one of the things we'd want to do with a phone number. We'd also want to display the phone number, edit the phone number, and maybe verify the phone number.
 
-Let's display the phone number. It's an integer, so if we display it as is, we'll get something like xxxxxxxxxx. That's accurate, but not great. Instead, we probably want to show it using a more common format for a phone number. Say xxx-xxx-xxxx or (xxx) xxx-xxxx. But how?
+Let's start simple - let's display the phone number. It's an integer, so if we display it as is, we'll get something like xxxxxxxxxx. That's accurate, but not great. Instead, we probably want to show it using a more common format for a phone number. Say xxx-xxx-xxxx or (xxx) xxx-xxxx. But how?
+
+We might choose to chunk the phone number into three pieces - the first three digits as the area code, the next three digits as the prefix, and the last four digits as the line number.
+
+Since the phone number is technically an integer, we could do this by dividing the phone number by 10,000,000. We'd store the result as the area code and the remainder as the local phone number. We could then take the local phone number (still an integer) and divide it by 10,000. This time the result becomes our prefix and the remainder becomes the line number.
+
+We could also covert the integer to a string of text and then parse out the chunks of text into the area code, prefix, and line number. To do this, we could chunk the text using a substring function to pull out each part, one at a time. We could also use regular expressions to pull out each part, one at a time. There's also the option of using a more sophisticated regular expression to pull out all the parts in one statement.
+
+Alternatively, we could use some formatting library that does the conversions and parsing for us.
+
+So many choices. That's five different ways to accomplish the task - and that is by no means a comprehensive list of our options. If I asked 1000 developers to do this very simple task of displaying an integer phone number formatted as "(xxx) xxx-xxxx", I could very easily get hundreds of different answers. From what general approach they used, to the libraries they used, to the objectes they used, to the methods they used, to the logical structure of the code, to specific syntactical choices, there are literally thousands of possible ways to accomplish this seemingly basic task.
+
+But I digress a bit. The myriad of choices is a challenge, but that's not precisely what I'm driving at here. Just know that when it comes to writing software, there are thousands of ways to accomplish even the most basic of tasks.
+
+Coupling objects to the database is what we're driving at here. So let's get back to it.
+
+Recall that in the object model and in the database, the phone number belongs to the customer and is an integer.
+
+Since the the customer owns the phone number and objects generally act on their own data, then logically the customer object formats their own phone number. That means that there is some method in the customer object that manipulates the integer phone number into a formatted string. Following this basic logic, the code for validating that the phone number has ten digits, that the area code is valid, that the prefix and area code are valid matches, and other such rules is also going to be in the customer object as well.
+
+Seems a tad messy. Why does a customer have to know so much about how phone numbers are formatted?
 
 
 
