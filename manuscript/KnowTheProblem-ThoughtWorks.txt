@@ -52,7 +52,7 @@ We could also covert the integer to a string of text and then parse out the chun
 
 Alternatively, we could use some formatting library that does the conversions and parsing for us.
 
-So many choices. That's five different ways to accomplish the task - and that is by no means a comprehensive list of our options. If I asked 1000 developers to do this very simple task of displaying an integer phone number formatted as "(xxx) xxx-xxxx", I could very easily get hundreds of different answers. From what general approach they used, to the libraries they used, to the objectes they used, to the methods they used, to the logical structure of the code, to specific syntactical choices, there are literally thousands of possible ways to accomplish this seemingly basic task.
+So many choices. That's five different ways to accomplish the task - and that is by no means a comprehensive list of our options. If I asked 1000 developers to do this very simple task of displaying an integer phone number formatted as "(xxx) xxx-xxxx", I could very easily get hundreds of different answers. From what general approach they used, to the libraries they used, to the objects they used, to the methods they used, to the logical structure of the code, to specific syntactical choices, there are literally thousands of possible ways to accomplish this seemingly basic task.
 
 But I digress a bit. The myriad of choices is a challenge, but that's not precisely what I'm driving at here. Just know that when it comes to writing software, there are thousands of ways to accomplish even the most basic of tasks.
 
@@ -60,10 +60,28 @@ Coupling objects to the database is what we're driving at here. So let's get bac
 
 Recall that in the object model and in the database, the phone number belongs to the customer and is an integer.
 
-Since the the customer owns the phone number and objects generally act on their own data, then logically the customer object formats their own phone number. That means that there is some method in the customer object that manipulates the integer phone number into a formatted string. Following this basic logic, the code for validating that the phone number has ten digits, that the area code is valid, that the prefix and area code are valid matches, and other such rules is also going to be in the customer object as well.
+Since the the customer owns the phone number and objects generally act on their own data, then logically the customer object formats their own phone number. That means that there is some method in the customer object that manipulates the integer phone number into a formatted string. Following this pattern, the code for validating that the phone number has ten digits, that the area code is valid, that the prefix and area code are valid matches, and other such rules is also going to be in the customer object.
 
-Seems a tad messy. Why does a customer have to know so much about how phone numbers are formatted?
+This all seems a tad messy. Why does a customer have to know so much about phone numbers? You're a customer. Think of your favorite vendor - a shop or a restaurant or a bar. As a customer of theirs, they might ask you for your phone number, but they'd probably never ask you how to format your phone number on a receipt and they'd certainly not ask you how to verify that your phone number is valid.
 
+But this wasn't the extent of it. Not only did customers have phone numbers, but so did employees. The employee had an integer PhoneNumber database field mapped directly to the integer phoneNumber object field. The employee object also had logic about how to validate and format a phone number. This meant the logic for phone numbers had to be in two different places - customer and employee.
+
+Duplicated logic means that if there is a defect in one chunk of code, there is probably a defect in the other. It also means that if anything changed, such as the logic to determine if a prefix is valid for an area code, then we'd have to make that same change in the customer object and the employee object. In software, the "Don't Repeat Yourself" (DRY) principle[^DRY] says "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system". When we want to make one behavioral change, such as verifying a prefix and area code combination, but we need to make it in more than one place, we've violated the DRY principle.
+
+[^DRY]: Cunningham, Ward. “Don't Repeat Yourself.” wiki.c2.com, November 11, 2014. https://wiki.c2.com/?DontRepeatYourself.
+
+So maybe we push this logic out of the customer and employee and centralize it somewhere.
+
+One commonly used technique is to create a separate utility object that holds all of the logic for validating phone numbers - the phoneNumberValidator. Do the same thing for formatting the phone number and make a phoneNumberFormatter utility object. Now we've eliminated the duplicate logic. Better. Any time we want to validate a phone number, we use the phoneNumberValidator. Any time we want to format a phone number, we use the phoneNumberFormatter.
+
+While we've resolved the DRY Principle, we've created another problem. The logic for phone numbers is still scattered all over the code. While it isn't duplicated, it isn't exactly well designed. Imagine the client decides that it would be better to store a phone number as a string. We'd need to change a ton of code in multiple different objects - the customer, the employee, the phoneNumberValidator, and the phoneNumberFormatter to name a few. In software, this is known as the shotgun surgery smell[^ShotgunSurgery]. Shotgun Surgery refers to when a single change is made to multiple classes simultaneously. A simple change like migrating one field from an integer to a string shouldn't break the program in multiple places.
+
+[^ShotgunSurgery]: “Shotgun Surgery.” Wikipedia. Wikimedia Foundation, January 2, 2021. https://en.wikipedia.org/wiki/Shotgun_surgery.
+
+These problems (and more) are going to plague us until we solve the underlying problem. We're running into all of this trouble because we're treating the phone number like it is an integer or a string in our object model. We're doing that because the phone number is an integer or string in our database. But in the object model, we can make the phone number an object as well. When we do that, we can encapsulate the validation and formatting logic into the phone number object itself. Now, when the PhoneNumber database field changes, we only need to change the phoneNumber object.
+
+
+*** PICK UP HERE ***
 
 
 What is a phone number? We call it a number and it is made up of numerals. So it must be a number - but what kind of number? It does not make sense to do math on a phone number, so it isn't a cardinal number. It doesn't represent a place in a sequence such as first or second, so it isn't an ordinal number. If it is neither cardinal nor ordinal, then it is nominal meaning it is a name or label to identify something. A phone number is a name to uniquely identify a means of contacting someone.
