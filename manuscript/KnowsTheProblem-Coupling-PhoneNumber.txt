@@ -1,0 +1,82 @@
+*** Copy focused on a phone number field ***
+
+In this case, the design indicated we were to store a phone number as a number, specifically as an integer. Integers are whole numbers - there is no fractional element; no decimal. This seemed logical enough. For every Customer record in the database, there was a single integer PhoneNumber which represented the primary contact number for that customer. As we might expect, the object model looked quite similar. There was a Customer object which had an integer phoneNumber field.
+
+A> Integers in both an Oracle database and the Java language have a maximum value of 2,147,483,647. While that is ten digits long, it won't hold most phone numbers. For the database, we used LONGINTEGER and for the object, we used BigInteger. For simplicity, we are referring to them as integers.
+
+With the integer PhoneNumber database field mapped directly to the integer phoneNumber object field, we could use objects to read and write data from the database with no problem.
+
+Easy enough. Good to go, right?
+
+Maybe.
+
+Reading and writing a phone number to the database is only one of the things we'd want to do with a phone number. We'd also want to display the phone number, edit the phone number, and maybe verify the phone number.
+
+Let's start simple - let's display the phone number. It's an integer, so if we display it as is, we'll get something like xxxxxxxxxx. That's accurate, but not great. Instead, we probably want to show it using a more common format for a phone number. Say xxx-xxx-xxxx or (xxx) xxx-xxxx. But how?
+
+We might choose to chunk the phone number into three pieces - the first three digits as the area code, the next three digits as the prefix, and the last four digits as the line number.
+
+Since the phone number is technically an integer, we could do this by dividing the phone number by 10,000,000. We'd store the result as the area code and the remainder as the local phone number. We could then take the local phone number (still an integer) and divide it by 10,000. This time the result becomes our prefix and the remainder becomes the line number.
+
+We could also covert the integer to a string of text and then parse out the chunks of text into the area code, prefix, and line number. To do this, we could chunk the text using a substring function to pull out each part, one at a time. We could also use regular expressions to pull out each part, one at a time. There's also the option of using a more sophisticated regular expression to pull out all the parts in one statement.
+
+Alternatively, we could use some formatting library that does the conversions and parsing for us.
+
+So many choices. That's five different ways to accomplish the task - and that is by no means a comprehensive list of our options. If I asked 1000 developers to do this very simple task of displaying an integer phone number formatted as "(xxx) xxx-xxxx", I could very easily get hundreds of different answers. From what general approach they used, to the libraries they used, to the objects they used, to the methods they used, to the logical structure of the code, to specific syntactical choices, there are literally thousands of possible ways to accomplish this seemingly basic task.
+
+But I digress a bit. The myriad of choices is a challenge, but that's not precisely what I'm driving at here. Just know that when it comes to writing software, there are thousands of ways to accomplish even the most basic of tasks.
+
+Coupling objects to the database is what we're driving at here. So let's get back to it.
+
+Recall that in the object model and in the database, the phone number belongs to the customer and is an integer.
+
+Since the the customer owns the phone number and objects generally act on their own data, then logically the customer object formats their own phone number. That means that there is some method in the customer object that manipulates the integer phone number into a formatted string. Following this pattern, the code for validating that the phone number has ten digits, that the area code is valid,  and that the prefix and area code are valid matches is also going to be in the customer object.
+
+This all seems a tad messy. Why does a customer have to know so much about phone numbers? You're a customer. Think of your favorite vendor - a shop or a restaurant or a bar. As a customer of theirs, they might ask you for your phone number, but they'd probably never ask you how to format your phone number on a receipt and they'd certainly not ask you how to verify that your phone number is valid.
+
+But this wasn't the extent of it. Not only did customers have phone numbers, but so did employees. The employee had an integer PhoneNumber database field mapped directly to the integer phoneNumber object field. The employee object also had logic about how to validate and format a phone number. This meant the logic for phone numbers had to be in two different places - customer and employee.
+
+Duplicated logic means that if there is a defect in one chunk of code, there is probably a defect in the other. It also means that if anything changed, such as the logic to determine if a prefix is valid for an area code, then we'd have to make that same change in the customer object and the employee object. In software, the "Don't Repeat Yourself" (DRY) principle[^DRY] says "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system". When we want to make one behavioral change, such as verifying a prefix and area code combination, but we need to make it in more than one place, we've violated the DRY principle.
+
+[^DRY]: Cunningham, Ward. “Don't Repeat Yourself.” wiki.c2.com, November 11, 2014. https://wiki.c2.com/?DontRepeatYourself.
+
+So maybe we push this logic out of the customer and employee and centralize it somewhere.
+
+One commonly used technique is to create a separate utility object that holds all of the logic for validating phone numbers - the phoneNumberValidator. Do the same thing for formatting the phone number and make a PhoneNumberFormatter utility object. Now we have one place for validation logic and one place for formatting logic. That's certainly better. Any time we want to validate a phone number, we use the PhoneNumberValidator. Any time we want to format a phone number, we use the PhoneNumberFormatter.
+
+While we've resolved the DRY Principle, we've created other problems because the logic for phone numbers is scattered all over the code.
+
+Let's say that we wanted to print the customer phone number on a receipt. The code to print a receipt would need to know about the Customer and how to get the Integer that represents the customer's phone number. It would also need to know about the PhoneNumberFormatter and which method(s) to call in order to properly format the number on the receipt. And the customer profile screen needs to know about the phoneNumber Integer field, the PhoneNumberValidator, and the PhoneNumberFormatter. This seems a bit tedious. These screens shouldn't have to know so much about how to reason about phone numbers.
+
+Now, imagine the client decides that it would be better to store a phone number as a string. They might do this in order to follow the ITU Standard format for phone numbers[^ITU]. If so, we'd need to change a ton of code in multiple different objects - the customer, the employee, the phoneNumberValidator, and the phoneNumberFormatter to name a few. In software, this is known as the shotgun surgery smell[^ShotgunSurgery]. Shotgun Surgery refers to when a single change is made to multiple classes simultaneously. A simple change like migrating one field from an integer to a string shouldn't break the program in multiple places.
+
+[^ITU]: “E.164 : The International Public Telecommunication Numbering Plan.” ITU-T Publications, April 23, 2021. https://www.itu.int/rec/T-REC-E.164/en.
+
+[^ShotgunSurgery]: “Shotgun Surgery.” Wikipedia. Wikimedia Foundation, January 2, 2021. https://en.wikipedia.org/wiki/Shotgun_surgery.
+
+In this case, we can avoid making changes to our customer, employee and utility objects by making a small change in the way we interact with the database. We can keep the majority of the code the same and change only the code that reads and writes to the database. Now, when we read the String phone number from the database, we convert it to an Integer to put into the Customer or Employee. And we do the inverse before we write the data back to the database.
+
+This option is good, but not great. More importantly, it gives us a hint. Let's explore it a bit deeper.
+
+We have the concept of a phone number. A phone number can be stored as a string or an integer. Neither really represents a phone number, but they can store the digits. We need other code, which is in other objects, to reason about the phone number. Now, we are considering writing code that converts a phone number from a string to an integer and more code that converts it back.
+
+This time, let's create a PhoneNumber object in our object model. This object could be created by passing it a ITU Formatted String or an Integer representing the digits. This object would then convert that String or Integer into whatever internal format it wanted. Maybe it breaks the digits up into components or maybe it stores them all in a string with punctuation. Who knows? Who cares? How the phone number is stored is encapsulated inside of the PhoneNumber object. Nobody needs to know but the PhoneNumber object. That's private information. Validation and formatting now move into the PhoneNumber object. Because the logic is now part of the PhoneNumber itself, the customer profile screen no longer needs to know about PhoneNumberValidator and PhoneNumberFormatter. It just needs to know about PhoneNumber.
+
+What is a phone number? We call it a number and it is made up of numerals. So it must be a number - but what kind of number? It does not make sense to do math on a phone number, so it isn't a cardinal number. It doesn't represent a place in a sequence such as first or second, so it isn't an ordinal number. If it is neither cardinal nor ordinal, then it is nominal meaning it is a name or label to identify something. A phone number is a name to uniquely identify a means of contacting someone.
+
+Is a phone number one name or a series of names? Well, a phone number is composed of a country code, an area code, a prefix, and a line number. So technically, a phone number is a composition of names. This is similar to how your full name is composed of elements like your given name, middle name, and surname.
+
+And then there is the question of presentation. Are there parenthesis? Do we hyphenate anything? Do we use any other punctuation? Are spaces significant? The following are proper domestic phone number formats for different countries:
+
+United States: (xxx) xxx-xxxx
+United Kingdom: (01xx xx) xx xxx
+Canada: xxx/xxx-xxxx
+China: (0xxx) xxxx xxxx
+Morocco: 07 xx xx xx xx
+Australia: (xx) xxxx xxxx
+Belgium: 04xx xx xx xx
+Poland: xxx-xxx-xxx
+
+You may have noticed that not all of these phone numbers have 10 digits. Some have as few as 8 and some have as many as 11. This is not a comprehensive list. In different regions around the world, local dialing numbers can range from 4 to 13 digits with seemingly infinite possibilities for formatting. Even mobile numbers, which were originally all 10 digits, now range from 10 to 13 digits.
+
+One additional factor to consider is that while an area code once represented a location, such as 216 for Cleveland Ohio, this is no longer reliable. Phone numbers are now portable. People who reside in Cleveland Ohio can have cell phone numbers with a Cleveland Mississippi area code.
