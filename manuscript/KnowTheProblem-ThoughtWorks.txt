@@ -36,7 +36,7 @@ A URL is a Uniform Resource Locator[^URL]. A web address, like https://www.googl
 
 Now, in the database model, the URL was to be stored as a String. The same was true in the object model.
 
-But this was a mistake - or at least a poor design decision. You see, while a URL is technically a string, it is also technically made up of several parts.
+But this was a mistake - or at least a poor design decision. A URL can be represented as a String, but in reality a URL has more information and specific attributes that are not easily accessible when we think of it as simply a string.
 
 Let's look at the following URL:
 
@@ -51,6 +51,12 @@ Next is the host. A host always begins with a double slash ("//") and ends at th
 Next is the path. In our case, the path is "search". The path begins at the first single slash and continues until either the end of the URL or a question mark ("?").
 
 Finally is the query string. In our case, the query string is "q=URL+Specification".
+
+There are other elements of a URL that are optional and we didn't include in our example, such as username, password, and port.
+
+In our object model, we want to be able to more accurately represent a URL. Rather than using a String, we want to use a URL object. The URL object would then encapsulate the URL rules, such as ensuring the URL is not too long, the URL has a valid scheme and host, and the URL query string looks safe.
+
+*** PICK UP HERE ***
 
 
 
