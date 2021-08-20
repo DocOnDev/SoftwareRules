@@ -34,7 +34,7 @@ A URL is a Uniform Resource Locator[^URL]. A web address, like https://www.googl
 
 [^URL]: Berners-Lee, Tim. “URL Specification.” Uniform Resource Locators, 1995. https://www.w3.org/Addressing/URL/url-spec.html.
 
-Now, in the database model, the URL was to be stored as a String. The same was true in the object model.
+Now, in the database model, each customer company had a String field for holding the URL of the company's website. The same was true in the object model. Each Customer object has a URL String field.
 
 But this was a mistake - or at least a poor design decision. A URL can be represented as a String, but in reality a URL has more information and specific attributes that are not easily accessible when we think of it as simply a string.
 
@@ -42,19 +42,23 @@ Let's look at the following URL:
 
 https://www.google.com/search?q=URL+Specification
 
-There is the scheme, which is represented by "https", indicating this is a hypertext transfer protocol with security.
 
-The scheme is always followed by a colon.
+At the start of the URL, there is the scheme. The scheme is a series of characters followed by a colon. In this case, our scheme is "https", indicating this is a hypertext transfer protocol with security. Other common schemes include file transfer protocol (ftp) and email (mailto). Each scheme has its own set of rules for how the rest of the URL can be formatted. For example, https allows for an optional username and password in the URL, whereas mailto does not.
 
-Next is the host. A host always begins with a double slash ("//") and ends at the first single slash ("/"). In this case, our host is "www.google.com".
+The https scheme has several possible components. Following the scheme is the host. An https host always begins with a double slash ("//") and ends at the first single slash ("/"). In this case, our host is "www.google.com".
 
-Next is the path. In our case, the path is "search". The path begins at the first single slash and continues until either the end of the URL or a question mark ("?").
+Following the host is the path. In our case, the path is "search". The path begins at the first single slash and continues until either the end of the URL or a question mark ("?").
 
-Finally is the query string. In our case, the query string is "q=URL+Specification".
+The last part of our example https URL is the query string. Query strings are optional for an https URL. In our case, the query string is "q=URL+Specification". Google parses this query string and turns it into a search for "URL Specification".
 
-There are other elements of a URL that are optional and we didn't include in our example, such as username, password, and port.
+There are other optional elements of an https URL that we didn't include in our example, such as username, password, and port.
 
-In our object model, we want to be able to more accurately represent a URL. Rather than using a String, we want to use a URL object. The URL object would then encapsulate the URL rules, such as ensuring the URL is not too long, the URL has a valid scheme and host, and the URL query string looks safe.
+By making the URL a String field in the Customer object, developers were forced to put the logic for validating a URL either into the Customer object itself or in a separate object whose job was to reason about the URL String.
+
+
+In our object model, we want to be able to more accurately represent a URL. Rather than using a String, we want to use a URL object. The URL object would then encapsulate the URL rules, such as ensuring the URL is not too long, the URL has a valid scheme and host, and the URL query string looks safe. This keeps the code for URLs together in one place. It also allows us to have different type of URLs through an inheritance model.
+
+
 
 *** PICK UP HERE ***
 
