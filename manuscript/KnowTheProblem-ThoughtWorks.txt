@@ -2,13 +2,13 @@ Around 2009, I was working for ThoughtWorks and helping to lead a large re-write
 
 Their commerce website was key to their business strategy. They weren't going to let this project fail. Prior to engaging us, their team had done a great deal of discovery and design. They had a comprehensive architecture design and a backlog of prioritized stories detailed with functional specifications and high-fidelity screen prototypes. The re-write was to take two years to complete and would then replace the old system all at once.
 
-As you might imagine, this wasn't the way ThoughtWorks operated. We convinced them to do the job iteratively and incrementally. We'd tease out and replace aspects of the software while leaving the rest of it in place. No grand ta-da after a multi-year effort. We'd start delivering working software and real value in the first couple of months and every week, if not multiple times per week, thereafter.
+As you might imagine, this wasn't the way ThoughtWorks operated. We convinced them to do the job iteratively and incrementally. We'd tease out and replace aspects of the software while leaving the rest of it in place. No grand ta-da after a multi-year effort. We'd start delivering working software and real value in the first few of weeks and every week, if not multiple times per week, thereafter.
 
 We decided to start with the booking flow as this was not only where the majority of customer complaints came from, but it had a direct impact on revenue. Over the past year, abandonment rates were increasing on the site and calls to central booking were increasing. Quite simply - customers booking flights through a central booking agent was more expensive to the company than customers booking flights online.
 
 The primary issue with the booking flow was response times. The site often took over a minute to display a listing of flight options. The listing showed departure and arrival times, flight duration, and tickets available. If you wanted to see details such as the location and length of a layover, you had to click on the flight and wait for another screen to load. If you didn't like the layover, you had to return to the search, which would take another minute or more to display. Booking flights often took thirty minutes or more for a basic round-trip fare. It took less than 10 minutes to book the same flight through an agent. Quite simply - booking flights through a central booking agent was faster and easier than booking flights online.
 
-As this was a critical piece of the solution, the client's designs were quite detailed.
+As this was a critical piece of the solution, the client's designs around this were quite detailed.
 
 We were presented with a set of pixel-perfect screen flows showing every conceivable interaction on the screen, including failure cases and messages. In some cases, informational messages caused the entire screen to shift up or down by a couple of pixels. Some error messages caused the screen to shift by several lines of text. The flight listings themselves were identical to the existing design, except now when you clicked on a flight, you got an accordion effect that opened up and showed some additional details like the layover city and duration. Flights that didn't have a layover didn't have the accordion details. This seemed like a potentially frustrating user interface where the screen would randomly shift around and some but not all listings had an accordion.
 
@@ -66,6 +66,9 @@ In our object model, we want to be able to more accurately represent a URL. Rath
 
 
 *** PICK UP HERE ***
+
+So there we were with detailed screen designs, message standards, database schemas, and object models - all intended to help prevent any future problems. They'd done everything they could to mitigate future problems.
+
 
 
 
