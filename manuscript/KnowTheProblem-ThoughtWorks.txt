@@ -55,9 +55,10 @@ There are other optional elements of an https URL that we didn't include in our 
 
 By making the URL a String field in the Customer object, developers were forced to put the logic for validating a URL either into the Customer object itself or in a separate object whose job was to reason about the URL String.
 
+In our object model, we want to be able to more accurately represent a URL. Rather than using a String, we want to create and use a URL object. The URL object would then encapsulate the URL rules, such as ensuring the URL is not too long, the URL has a valid scheme and host, and the URL query string looks safe. This keeps the code for URLs together in one place. It also allows us to have different type of URLs through an inheritance model. This way, the rules that apply to all URLs would be contained in the base object and the rules specific to each type of URL would be stored in the appropriate object.
 
-In our object model, we want to be able to more accurately represent a URL. Rather than using a String, we want to use a URL object. The URL object would then encapsulate the URL rules, such as ensuring the URL is not too long, the URL has a valid scheme and host, and the URL query string looks safe. This keeps the code for URLs together in one place. It also allows us to have different type of URLs through an inheritance model.
-
+{alt: "Example UML Diagram for a URL", fullbleed: true}
+![URL class model](resources/images/url_uml.jpg)
 
 
 *** PICK UP HERE ***
