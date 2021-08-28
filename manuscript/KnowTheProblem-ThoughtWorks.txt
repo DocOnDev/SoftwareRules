@@ -16,7 +16,9 @@ There were specifications for how messages were to be constructed, including how
 
 Speaking of database schema changes breaking the system - they had a way of mitigating that risk. They presented us with a complete database schema - every table, every field, every relationship, and every view was detailed along with the recommended code for several stored procedures. Their data team was at the ready to go over the details with us. If we had any reasonable suggestions for change, they'd review them and get back to us with any approved updates. The turn around time on change reviews was no more than 3 working days.
 
-We were to review the change procedures and controls and sign off that we understood that once development began, schema changes would not be allowed except for under special circumstances. Pre-designing the database and blocking all future changes was one way to ensure the schema didn't break things. But it also meant that we couldn't very well respond to change. Any new functionality requests that required a change to a database would take several days and more likely weeks to get approved. Most likely, there would be a compromise and rather than updating the databases in an optimal way, hacks would be used to get the job done with minimal disruption. For example, rather than adding a middle name to the customer table, which would cause a potentially breaking schema change, we might end up creating a MiddleName table that indicated which customer this middle name belonged to. Of course, middle name seems ridiculous, but compromises like this happen all the time for things like items and orders. Over time these compromises result in a Frankenstein schema that then cascades its oddities into the code itself.
+We were to review the change procedures and controls and sign off that we understood that once development began, schema changes would not be allowed except for under special circumstances. Pre-designing the database and blocking all future changes was one way to ensure the schema didn't break things. But it also meant that we couldn't very well respond to change. Any new functionality requests that required a change to a database would take several days and more likely weeks to get approved. Most likely, there would be a compromise and rather than updating the databases in an optimal way, hacks would be used to get the job done with minimal disruption.
+
+For example, rather than adding a middle name to the customer table, which would cause a potentially breaking schema change, we might end up creating a MiddleName table that indicated which customer this middle name belonged to. Of course, middle name seems ridiculous, but compromises like this happen all the time for things like items and orders. Over time these compromises result in a Frankenstein schema that then cascades its oddities into the code itself.
 
 Finally, was their object model. This too was quite detailed. They'd pre-designed the objects and documented them all via UML (Unified Modeling Language). The fields, methods, inheritance, and interfaces were all laid out for us to implement. For the most part, the object model looked a great deal like the database schema. For each table, there was a corresponding object where the fields in the table matched the fields on the objects.
 
@@ -67,9 +69,9 @@ In our object model, we want to be able to more accurately represent a URL. Rath
 
 *** PICK UP HERE ***
 
-So there we were with detailed screen designs, message standards, database schemas, and object models - all intended to help prevent any future problems. They'd done everything they could to mitigate future problems.
+So there we were with detailed screen designs, message standards, database schemas, and object models - all intended to help prevent any future problems. They'd done everything they could to mitigate future problems. Knowable future problems.
 
-
+What they hadn't accounted for in the design was the unknown and the unknowable. Or more accurately stated, in an effort to try to account for everything they could think of, they'd made a design that was so rigid, it couldn't very well accommodate what they didn't think of.
 
 
 √ Customer provided detailed designs of screens, architecture, database schemas, and the object model.
